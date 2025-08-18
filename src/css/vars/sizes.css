@@ -1,0 +1,36 @@
+:root {
+    /* Кнопки-текст */
+    --vertical-btn-text-padding: .2rem;
+    --horizontal-btn-text-padding: 1rem;
+
+    --btn-text-height: 2rem;
+    --btn-text-border: 0;
+    --btn-text-border-radius: 1rem;
+    --btn-text-font-weight: 600;
+    --sm-btn-text-font-size: .6rem;
+    --md-btn-text-font-size: .8rem;
+    --lg-btn-text-font-size: 1rem;
+
+    /*----------------------
+        Кнопки с бордюром
+    ----------------------*/
+    --btn-text-bordered-border: 2px;
+
+    /*-------------------------------------
+        Кнопки-текст с маленьким радиусом
+      -------------------------------------*/
+    --btn-text-sm-rad-height: 2rem;
+    --btn-text-sm-rad-border-radius: .4rem;
+
+    /*  -----------------------------
+    Кнопки с подчеркнутым текстом
+     ----------------------------- */
+    --btn-text-underline-border: 2px;
+
+    /*---------------------
+        Неоморфизм кнопки
+      ---------------------*/
+    --btn-text-neu-border-radius: 1rem;
+    --btn-text-neu-box-shadow: 0.3rem 0.3rem 0.6rem var(--c-brand-gray), -0.2rem -0.2rem 0.5rem var(--c-brand-gray-100);
+
+}

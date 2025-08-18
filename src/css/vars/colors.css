@@ -1,0 +1,45 @@
+:root {
+    --success-900: hsl(165,94%,10%);
+    --success-800: hsl(165,86%,15%);
+    --success-700: hsl(165,80%,25%);
+    --success-600: hsl(165,70%,36%);
+    --success-primary: hsl(165, 55%, 47%);
+    --success-400: hsl(165,47%,63%);;
+    --success-300: hsl(165,41%,76%);;
+    --success-200: hsl(212, 36%, 86%);
+    --success-100: hsl(165,37%,94%);;
+
+
+    --danger-btn-bg: #dc3545;
+    --danger-btn-hover-bg: #bb2d3b;
+    --warning-btn-bg: hsl(45, 100%, 51%);
+    --warning-btn-hover-bg: #ddac1b;
+
+    /*-------------
+        DISABLED
+    -------------*/
+    --brand-disabled-bg: hsl(212, 62%, 80%);
+    --secondary-disabled-bg: hsl(226,16%,90%);
+    --success-disabled-bg: hsl(165,70%,80%);
+    --danger-disabled-bg: hsl(354, 70%, 70%);
+    --warning-disabled-bg: hsl(45, 100%, 70%);
+    --light-disabled-bg: hsl(240,14%,90%);
+    --dark-disabled-bg: hsl(225,10%,53%);
+
+    --c-brand-gray-900: hsl(228,10%,20%);
+    --c-brand-gray-800: hsl(229,10%,34%);
+    --c-brand-gray-700: hsl(225,10%,53%);
+    --c-brand-gray-600: hsl(226,16%,70%);
+    --c-brand-gray-500: hsl(226,16%,84%);
+    --c-brand-gray-400: hsl(228,10%,90%);
+    --c-brand-gray: hsl(240,10%,96%);
+    --c-brand-gray-200: hsl(240,14%,99%);
+    --c-brand-gray-100: hsl(0,0%,100%);
+    /*----------------------------------
+        SECTION: Glass элементы
+    ----------------------------------*/
+    --glass-bg: rgba(47, 47, 47, 0.6);
+    --glass-blur: 10px;
+
+}
+
