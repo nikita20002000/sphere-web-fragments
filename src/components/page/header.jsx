@@ -5,7 +5,7 @@ import Search from './Search';
 const Header = ({ searchQuery, onSearchChange }) => {
     return (
         <header className="header">
-            <h1>UI Component Library</h1>
+            <h1>СФЕРА UI Components</h1>
 
             <div className="header-search">
                 <Search 
