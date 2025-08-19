@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Header, Sidebar, ElementsWrapper } from './components';
 import { filterElements } from './utils/filterElements';
 import categories from './data/categories';
+import { ThemeProvider } from './context/ThemeContext';
 
 const App = () => {
     const [selectedCategory, setSelectedCategory] = useState('buttons');
@@ -25,32 +26,34 @@ const App = () => {
     const filteredElements = filterElements(currentCategory, searchQuery);
 
     return (
-        <div className="app-container">
-            <Header 
-                searchQuery={searchQuery}
-                onSearchChange={setSearchQuery}
-            />
-
-            <div className="main-content">
-                <Sidebar
-                    categories={categories}
-                    selectedCategory={selectedCategory}
-                    onSelect={setSelectedCategory}
+        <ThemeProvider>
+            <div className="app-container">
+                <Header 
+                    searchQuery={searchQuery}
+                    onSearchChange={setSearchQuery}
                 />
 
-                <div className="content">
-                    <div className="category-header">
-                        <h1>{selectedCategory === 'search' ? 'Search Results' : categories[selectedCategory]?.name || 'UI Components'}</h1>
-                        <p className="component-count">
-                            {filteredElements.length} component{filteredElements.length !== 1 ? 's' : ''}
-                            {searchQuery && ` matching "${searchQuery}"`}
-                        </p>
-                    </div>
+                <div className="main-content">
+                    <Sidebar
+                        categories={categories}
+                        selectedCategory={selectedCategory}
+                        onSelect={setSelectedCategory}
+                    />
 
-                    <ElementsWrapper elements={filteredElements} />
+                    <div className="content">
+                        <div className="category-header">
+                            <h1>{selectedCategory === 'search' ? 'Search Results' : categories[selectedCategory]?.name || 'UI Components'}</h1>
+                            <p className="component-count">
+                                {filteredElements.length} component{filteredElements.length !== 1 ? 's' : ''}
+                                {searchQuery && ` matching "${searchQuery}"`}
+                            </p>
+                        </div>
+
+                        <ElementsWrapper elements={filteredElements} />
+                    </div>
                 </div>
             </div>
-        </div>
+        </ThemeProvider>
     );
 };
 

@@ -1,5 +1,4 @@
-@import '../../../styles/vars/sizes';
-@import '../../../styles/vars/themes';
+@import "../../../styles/vars/sizes";
 
 .sidebar {
     width: 5rem;
@@ -33,7 +32,7 @@
 }
 
 .sidebar-nav__item svg {
-    color: var(--dark-color);
+    fill: var(--dark-color);
     width: 100%;
     height: 100%;
     padding: .4rem;
@@ -51,8 +50,8 @@
     position: absolute;
     background: var(--color-sidebar-active);
     transform: translate(100%, 0);
-    padding: var(--spacing-xs) var(--spacing-sm);
-    border-radius: var(--border-radius-md);
+    padding: $spacing-xs $spacing-sm;
+    border-radius: $border-radius-md;
     text-wrap: nowrap;
     right: -1rem;
     display: none;

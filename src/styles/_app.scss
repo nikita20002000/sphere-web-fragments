@@ -1,5 +1,12 @@
 /* Global Styles */
 :root {
+  /* Common variables that don't change with theme */
+  --sidebar-width: 280px;
+  --header-height: 60px;
+  --border-radius: 8px;
+  --transition: all 0.3s ease;
+
+  /* Default theme (light) */
   --primary-color: #4a6cf7;
   --secondary-color: #6c757d;
   --success-color: #28a745;
@@ -9,11 +16,41 @@
   --light-color: #f8f9fa;
   --dark-color: #343a40;
   --background-color: #f5f7fb;
-  --sidebar-width: 280px;
-  --header-height: 60px;
-  --border-radius: 8px;
+  --text-color: #333333;
   --box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  --transition: all 0.3s ease;
+  --color-sidebar-active: #e0e0e0;
+}
+
+/* Light theme (default) */
+[data-theme="light"] {
+  --primary-color: #4a6cf7;
+  --secondary-color: #6c757d;
+  --success-color: #28a745;
+  --danger-color: #dc3545;
+  --warning-color: #ffc107;
+  --info-color: #17a2b8;
+  --light-color: #f8f9fa;
+  --dark-color: #343a40;
+  --background-color: #f5f7fb;
+  --text-color: #333333;
+  --box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  --color-sidebar-active: #e0e0e0;
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+  --primary-color: #4a6cf7;
+  --secondary-color: #6c757d;
+  --success-color: #28a745;
+  --danger-color: #dc3545;
+  --warning-color: #ffc107;
+  --info-color: #17a2b8;
+  --light-color: #222222;
+  --dark-color: #f8f9fa;
+  --background-color: #1a1a1a;
+  --text-color: #f5f5f5;
+  --box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  --color-sidebar-active: #444444;
 }
 
 * {
@@ -25,7 +62,7 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: var(--background-color);
-  color: var(--dark-color);
+  color: var(--text-color);
   line-height: 1.6;
 }
 
@@ -59,7 +96,7 @@ body {
 .category-header h1 {
   font-size: 1.8rem;
   margin-bottom: 5px;
-  color: var(--dark-color);
+  color: var(--text-color);
 }
 
 .component-count {
@@ -79,7 +116,7 @@ body {
 }
 
 .element-card {
-  background-color: white;
+  background-color: var(--color-bg-primary, white);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   overflow: hidden;
@@ -125,18 +162,18 @@ body {
 }
 
 .modal-content {
-  background-color: white;
+  background-color: var(--color-bg-primary, white);
   border-radius: var(--border-radius);
   width: 90%;
   max-width: 800px;
   max-height: 90vh;
   overflow-y: auto;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--box-shadow);
 }
 
 .modal-header {
   padding: 15px 20px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--color-border, #eee);
   display: flex;
   align-items: center;
   justify-content: space-between;
