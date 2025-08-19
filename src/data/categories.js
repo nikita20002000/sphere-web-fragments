@@ -146,27 +146,7 @@ export default {
             })
         ]
     },
-    navigation: {
-        name: 'Навигация',
-        elements: [
-            createComponent(Button, 'nav-1', 'Navbar', {
-                className: 'nav-placeholder',
-                children: 'Navbar'
-            }),
-            createComponent(Button, 'nav-2', 'Tabs', {
-                className: 'nav-placeholder',
-                children: 'Tabs'
-            }),
-            createComponent(Button, 'nav-3', 'Breadcrumbs', {
-                className: 'nav-placeholder',
-                children: 'Breadcrumbs'
-            }),
-            createComponent(Button, 'nav-4', 'Pagination', {
-                className: 'nav-placeholder',
-                children: 'Pagination'
-            })
-        ]
-    },
+
     modals: {
         name: 'Модальные окна',
         elements: [
@@ -181,27 +161,6 @@ export default {
             createComponent(Button, 'modal-3', 'Drawer', {
                 className: 'modal-placeholder',
                 children: 'Drawer'
-            })
-        ]
-    },
-    feedback: {
-        name: 'Обратная связь',
-        elements: [
-            createComponent(Button, 'feedback-1', 'Alert', {
-                className: 'feedback-placeholder',
-                children: 'Alert'
-            }),
-            createComponent(Button, 'feedback-2', 'Toast', {
-                className: 'feedback-placeholder',
-                children: 'Toast'
-            }),
-            createComponent(Button, 'feedback-3', 'Progress Bar', {
-                className: 'feedback-placeholder',
-                children: 'Progress Bar'
-            }),
-            createComponent(Button, 'feedback-4', 'Spinner', {
-                className: 'feedback-placeholder',
-                children: 'Spinner'
             })
         ]
     },

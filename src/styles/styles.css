@@ -32,13 +32,6 @@
     align-items: center;
 }
 
-#Header {
-    display: flex;
-    flex-direction: row;
-    padding: 4rem;
-    justify-content: center;
-    align-items: center;
-}
 
 #Header input {
     width: clamp(350px, 50%, 1200px);
