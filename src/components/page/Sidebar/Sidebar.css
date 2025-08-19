@@ -1,5 +1,5 @@
 .sidebar {
-    width: 6rem;
+    width: 5rem;
     background-color: var(--background-color);
     display: flex;
     flex-direction: column;
@@ -8,7 +8,6 @@
 }
 
 .sidebar-nav {
-    width: 5rem;
     display: flex;
     flex-direction: column;
     padding: 2rem;
@@ -64,4 +63,14 @@
 .sidebar-nav__item__hint span {
     font-size: var(--font-size-sm);
     color: var(--color-text-secondary);
+}
+
+
+.sidebar-footer {
+    padding: var(--spacing-md) var(--spacing-lg);
+}
+
+
+.logout-icon {
+    margin-right: var(--spacing-md);
 }
