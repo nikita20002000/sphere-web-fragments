@@ -1,0 +1,14 @@
+/* Import scss mixins */
+@import 'mixins';
+
+/* Import size variables */
+@import 'vars/sizes';
+
+/* Import color scheme */
+@import 'vars/themes';
+
+/* Import common web styles */
+@import 'app';
+
+/* Import one more common web styles */
+@import 'styles';

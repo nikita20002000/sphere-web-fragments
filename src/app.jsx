@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Header, Sidebar, ElementsWrapper } from './components';
 import { filterElements } from './utils/filterElements';
 import categories from './data/categories';
-import './styles/app.css';
 
 const App = () => {
     const [selectedCategory, setSelectedCategory] = useState('buttons');

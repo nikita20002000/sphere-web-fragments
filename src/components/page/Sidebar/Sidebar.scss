@@ -1,3 +1,6 @@
+@import '../../../styles/vars/sizes';
+@import '../../../styles/vars/themes';
+
 .sidebar {
     width: 5rem;
     background-color: var(--background-color);
@@ -37,7 +40,7 @@
 }
 
 .sidebar-nav__item.active svg {
-    fill: var(--color-primary);
+    fill: var(--primary-color);
 }
 
 .sidebar-nav__item:hover {

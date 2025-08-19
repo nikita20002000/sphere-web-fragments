@@ -1,7 +1,7 @@
 // Импорт React и ReactDOM
 import React, {StrictMode} from 'react';
 import ReactDOM from 'react-dom/client';
-import './styles/styles.css'
+import './styles/index.scss'
 export {  Button } from './components/ui-components/buttons/Button';
 
 // Импорт корневого компонента приложения
