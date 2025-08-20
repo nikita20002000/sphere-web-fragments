@@ -1,8 +1,3 @@
-/* Accent colors */
-$accent-primary: #0F5ABD;
-$accent-400: #6F9CD7;
-$accent-100: #EAF2FD;
-
 /* Status colors */
 $success-color: #28a745;
 $danger-color: #dc3545;
@@ -17,7 +12,7 @@ $monospace-font: "Fira Code", monospace;
 
 [data-theme="light"] {
   --full-white: rgb(255, 255, 255);
-  --color-primary: #4a6cf7;
+  --color-primary: #0F5ABD;
   --color-primary-hover: #3a5ce4;
   --color-secondary: #6c757d;
   --color-secondary-hover: #5a6268;
@@ -67,8 +62,8 @@ $monospace-font: "Fira Code", monospace;
 [data-theme="dark"] {
   /* Colors */
   --full-white: rgb(255, 255, 255);
-  --color-primary: #4a6cf7;
-  --color-primary-hover: #3a5ce4;
+  --color-primary: #6F9CD7;
+  --color-primary-hover: #5782b9;
   --color-secondary: #6c757d;
   --color-secondary-hover: #5a6268;
 

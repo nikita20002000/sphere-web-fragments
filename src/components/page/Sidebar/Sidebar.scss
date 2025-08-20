@@ -1,7 +1,7 @@
 @import '@/styles/index';
 
 .sidebar {
-    width: 5rem;
+    width: $sidebar-width;
     background-color: var(--color-background);
     display: flex;
     flex-direction: column;
@@ -11,28 +11,28 @@
     &-nav {
         display: flex;
         flex-direction: column;
-        padding: 2rem;
+        padding: $spacing-md;
         align-items: center;
 
         &__item {
             display: flex;
             justify-content: center;
             align-items: center;
-            border-radius: 12px;
+            border-radius: $border-radius-md;
             cursor: pointer;
-            margin-bottom: 1rem;
+            margin-bottom: $spacing-md;
             position: relative;
 
             svg {
                 fill: var(--color-text-contrast);
-                width: 100%;
-                height: 100%;
-                padding: .4rem;
+                width: $icon-xl;
+                height: $icon-xl;
+                padding: $spacing-s;
             }
 
             &.active {
                 svg {
-                    fill: $accent-primary;
+                    fill: var(--color-primary);
                 }
             }
 
@@ -46,8 +46,9 @@
             }
 
             &-icon {
-                width: 2.2rem;
-                height: 2.2rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
 
             &__hint {
@@ -59,7 +60,7 @@
                 text-wrap: nowrap;
                 right: -1rem;
                 display: none;
-                transition: all .5s;
+                transition: $all-ease-slow;
 
                 span {
                     font-size: $font-size-sm;
