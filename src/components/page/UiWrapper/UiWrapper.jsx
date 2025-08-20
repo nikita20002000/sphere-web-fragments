@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import './UiWrapper.scss';
 
 const ElementsWrapper = ({ elements }) => {
     const [selectedElement, setSelectedElement] = useState(null);

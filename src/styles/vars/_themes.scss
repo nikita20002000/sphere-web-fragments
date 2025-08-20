@@ -9,6 +9,11 @@ $danger-color: #dc3545;
 $warning-color: #ffc107;
 $info-color: #17a2b8;
 
+/* Components modal */
+$modal-overlay-bg: rgba(0, 0, 0, 0.5);
+
+/* Fonts */
+$monospace-font: "Fira Code", monospace;
 
 [data-theme="light"] {
   --full-white: rgb(255, 255, 255);

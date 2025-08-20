@@ -11,6 +11,15 @@ $font-size-2xl: 1.5rem;
 $font-size-3xl: 1.875rem;
 $font-size-4xl: 2.25rem;
 
+/* Base font weights */
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-extrabold: 800;
+$font-weight-black: 900;
+
 /* Base spacing */
 $spacing-xs: 0.25rem;
 $spacing-s: 0.35rem;
@@ -25,3 +34,11 @@ $border-radius-sm: 0.25rem;
 $border-radius-md: 0.5rem;
 $border-radius-lg: 1rem;
 $border-radius-full: 9999px;
+
+
+/* Transitions */
+$all-ease-fast: all 0.2s ease;
+$all-ease-medium: all 0.5s ease;
+$all-ease-slow: all 1s ease;
+
+
