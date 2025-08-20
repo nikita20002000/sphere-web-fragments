@@ -82,8 +82,6 @@ $theme-dark: (
     color-primary-hover: #3a5ce4,
     color-secondary: #6c757d,
     color-secondary-hover: #5a6268,
-    color-accent: #9b59b6,
-    color-accent-hover: #8e44ad,
 
     /* Text colors */
     color-text-primary: #f5f5f5,
@@ -124,82 +122,3 @@ $theme-dark: (
     shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.3),
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3)
 );
-
-/* CSS Variables */
-:root {
-  /* Common variables that don't change with theme */
-  --header-height: 60px;
-  --border-radius: 8px;
-  --transition: all 0.3s ease;
-
-  /* Default theme (light) */
-  --color-primary: #{map-get($theme-light, color-primary)};
-  --color-secondary: #{map-get($theme-light, color-secondary)};
-  --color-success: #{map-get($theme-light, color-success)};
-  --color-danger: #{map-get($theme-light, color-danger)};
-  --color-warning: #{map-get($theme-light, color-warning)};
-  --color-info: #{map-get($theme-light, color-info)};
-  --color-light: #{map-get($theme-light, color-light)};
-  --color-dark: #{map-get($theme-light, color-dark)};
-  --color-background: #{map-get($theme-light, color-background)};
-  --color-text-primary: #{map-get($theme-light, color-text-primary)};
-  --color-text-contrast: #{map-get($theme-light, color-text-contrast)};
-  --color-bg-primary: #{map-get($theme-light, color-bg-primary)};
-  --color-border: #{map-get($theme-light, color-border)};
-  --box-shadow: #{map-get($theme-light, box-shadow)};
-  --color-sidebar-active: #{map-get($theme-light, color-sidebar-active)};
-}
-
-/* Light theme (default) */
-[data-theme="light"] {
-  --color-primary: #{map-get($theme-light, color-primary)};
-  --color-secondary: #{map-get($theme-light, color-secondary)};
-  --color-success: #{map-get($theme-light, color-success)};
-  --color-danger: #{map-get($theme-light, color-danger)};
-  --color-warning: #{map-get($theme-light, color-warning)};
-  --color-info: #{map-get($theme-light, color-info)};
-  --color-light: #{map-get($theme-light, color-light)};
-  --color-dark: #{map-get($theme-light, color-dark)};
-  --color-background: #{map-get($theme-light, color-background)};
-  --color-text-primary: #{map-get($theme-light, color-text-primary)};
-  --color-text-secondary: #{map-get($theme-light, color-text-secondary)};
-  --color-text-tertiary: #{map-get($theme-light, color-text-tertiary)};
-  --color-text-inverse: #{map-get($theme-light, color-text-inverse)};
-  --color-text-contrast: #{map-get($theme-light, color-text-contrast)};
-  --color-bg-primary: #{map-get($theme-light, color-bg-primary)};
-  --color-bg-secondary: #{map-get($theme-light, color-bg-secondary)};
-  --color-bg-tertiary: #{map-get($theme-light, color-bg-tertiary)};
-  --color-bg-accent: #{map-get($theme-light, color-bg-accent)};
-  --color-border: #{map-get($theme-light, color-border)};
-  --color-border-light: #{map-get($theme-light, color-border-light)};
-  --color-border-dark: #{map-get($theme-light, color-border-dark)};
-  --color-sidebar-active: #{map-get($theme-light, color-sidebar-active)};
-  --box-shadow: #{map-get($theme-light, box-shadow)};
-}
-
-/* Dark theme */
-[data-theme="dark"] {
-  --color-primary: #{map-get($theme-dark, color-primary)};
-  --color-secondary: #{map-get($theme-dark, color-secondary)};
-  --color-success: #{map-get($theme-dark, color-success)};
-  --color-danger: #{map-get($theme-dark, color-danger)};
-  --color-warning: #{map-get($theme-dark, color-warning)};
-  --color-info: #{map-get($theme-dark, color-info)};
-  --color-light: #{map-get($theme-dark, color-light)};
-  --color-dark: #{map-get($theme-dark, color-dark)};
-  --color-background: #{map-get($theme-dark, color-background)};
-  --color-text-primary: #{map-get($theme-dark, color-text-primary)};
-  --color-text-secondary: #{map-get($theme-dark, color-text-secondary)};
-  --color-text-tertiary: #{map-get($theme-dark, color-text-tertiary)};
-  --color-text-inverse: #{map-get($theme-dark, color-text-inverse)};
-  --color-text-contrast: #{map-get($theme-dark, color-text-contrast)};
-  --color-bg-primary: #{map-get($theme-dark, color-bg-primary)};
-  --color-bg-secondary: #{map-get($theme-dark, color-bg-secondary)};
-  --color-bg-tertiary: #{map-get($theme-dark, color-bg-tertiary)};
-  --color-bg-accent: #{map-get($theme-dark, color-bg-accent)};
-  --color-border: #{map-get($theme-dark, color-border)};
-  --color-border-light: #{map-get($theme-dark, color-border-light)};
-  --color-border-dark: #{map-get($theme-dark, color-border-dark)};
-  --color-sidebar-active: #{map-get($theme-dark, color-sidebar-active)};
-  --box-shadow: #{map-get($theme-dark, box-shadow)};
-}
