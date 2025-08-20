@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Search from '../Search.jsx';
-import './Header.css';
+import './Header.scss';
 
 const Header = ({ searchQuery, onSearchChange }) => {
     return (

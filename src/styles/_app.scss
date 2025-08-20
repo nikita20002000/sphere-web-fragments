@@ -179,6 +179,7 @@ pre {
   padding: 15px;
 }
 
+//TODO: УБрать
 /* Button Styles */
 .button {
   padding: 8px 16px;
@@ -190,31 +191,37 @@ pre {
   transition: all 0.2s ease;
 }
 
+//TODO: УБрать
 .button.primary {
   background-color: var(--color-primary);
   color: white;
 }
 
+//TODO: УБрать
 .button.secondary {
   background-color: var(--color-secondary);
   color: white;
 }
 
+//TODO: УБрать
 .button.success {
   background-color: var(--color-success);
   color: white;
 }
 
+//TODO: УБрать
 .button.danger {
   background-color: var(--color-danger);
   color: white;
 }
 
+//TODO: УБрать
 .button.warning {
   background-color: var(--color-warning);
   color: var(--color-text-contrast);
 }
 
+//TODO: УБрать
 .button.info {
   background-color: var(--color-info);
   color: white;
