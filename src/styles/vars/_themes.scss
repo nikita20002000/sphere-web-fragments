@@ -39,12 +39,14 @@ $theme-light: (
     color-text-secondary: #666666,
     color-text-tertiary: #999999,
     color-text-inverse: #ffffff,
+    color-text-contrast: #343a40, /* Replaces --dark-color in light theme */
 
     /* Background colors */
     color-bg-primary: #ffffff,
     color-bg-secondary: #f5f5f5,
     color-bg-tertiary: #e0e0e0,
     color-bg-accent: #f0f7ff,
+    color-background: #f5f7fb,
 
     /* Border colors */
     color-border: #e0e0e0,
@@ -56,6 +58,8 @@ $theme-light: (
     color-warning: #ffc107,
     color-danger: #dc3545,
     color-info: #17a2b8,
+    color-light: #f8f9fa,
+    color-dark: #343a40,
 
     /* Component specific */
     color-header-bg: #ffffff,
@@ -66,7 +70,8 @@ $theme-light: (
     /* Shadow */
     shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05),
     shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1),
-    shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1)
+    shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1),
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1)
 );
 
 /* Dark Theme */
@@ -85,12 +90,14 @@ $theme-dark: (
     color-text-secondary: #cccccc,
     color-text-tertiary: #999999,
     color-text-inverse: #333333,
+    color-text-contrast: #f8f9fa, /* Replaces --dark-color in dark theme */
 
     /* Background colors */
     color-bg-primary: rgb(32, 33, 36),
     color-bg-secondary: #333333,
     color-bg-tertiary: #444444,
     color-bg-accent: #1a2733,
+    color-background: #1a1a1a,
 
     /* Border colors */
     color-border: #444444,
@@ -102,6 +109,8 @@ $theme-dark: (
     color-warning: #ffc107,
     color-danger: #dc3545,
     color-info: #17a2b8,
+    color-light: #222222,
+    color-dark: #f8f9fa,
 
     /* Component specific */
     color-header-bg: #222222,
@@ -112,5 +121,85 @@ $theme-dark: (
     /* Shadow */
     shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.2),
     shadow-md: 0 4px 6px rgba(0, 0, 0, 0.3),
-    shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.3)
+    shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.3),
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3)
 );
+
+/* CSS Variables */
+:root {
+  /* Common variables that don't change with theme */
+  --header-height: 60px;
+  --border-radius: 8px;
+  --transition: all 0.3s ease;
+
+  /* Default theme (light) */
+  --color-primary: #{map-get($theme-light, color-primary)};
+  --color-secondary: #{map-get($theme-light, color-secondary)};
+  --color-success: #{map-get($theme-light, color-success)};
+  --color-danger: #{map-get($theme-light, color-danger)};
+  --color-warning: #{map-get($theme-light, color-warning)};
+  --color-info: #{map-get($theme-light, color-info)};
+  --color-light: #{map-get($theme-light, color-light)};
+  --color-dark: #{map-get($theme-light, color-dark)};
+  --color-background: #{map-get($theme-light, color-background)};
+  --color-text-primary: #{map-get($theme-light, color-text-primary)};
+  --color-text-contrast: #{map-get($theme-light, color-text-contrast)};
+  --color-bg-primary: #{map-get($theme-light, color-bg-primary)};
+  --color-border: #{map-get($theme-light, color-border)};
+  --box-shadow: #{map-get($theme-light, box-shadow)};
+  --color-sidebar-active: #{map-get($theme-light, color-sidebar-active)};
+}
+
+/* Light theme (default) */
+[data-theme="light"] {
+  --color-primary: #{map-get($theme-light, color-primary)};
+  --color-secondary: #{map-get($theme-light, color-secondary)};
+  --color-success: #{map-get($theme-light, color-success)};
+  --color-danger: #{map-get($theme-light, color-danger)};
+  --color-warning: #{map-get($theme-light, color-warning)};
+  --color-info: #{map-get($theme-light, color-info)};
+  --color-light: #{map-get($theme-light, color-light)};
+  --color-dark: #{map-get($theme-light, color-dark)};
+  --color-background: #{map-get($theme-light, color-background)};
+  --color-text-primary: #{map-get($theme-light, color-text-primary)};
+  --color-text-secondary: #{map-get($theme-light, color-text-secondary)};
+  --color-text-tertiary: #{map-get($theme-light, color-text-tertiary)};
+  --color-text-inverse: #{map-get($theme-light, color-text-inverse)};
+  --color-text-contrast: #{map-get($theme-light, color-text-contrast)};
+  --color-bg-primary: #{map-get($theme-light, color-bg-primary)};
+  --color-bg-secondary: #{map-get($theme-light, color-bg-secondary)};
+  --color-bg-tertiary: #{map-get($theme-light, color-bg-tertiary)};
+  --color-bg-accent: #{map-get($theme-light, color-bg-accent)};
+  --color-border: #{map-get($theme-light, color-border)};
+  --color-border-light: #{map-get($theme-light, color-border-light)};
+  --color-border-dark: #{map-get($theme-light, color-border-dark)};
+  --color-sidebar-active: #{map-get($theme-light, color-sidebar-active)};
+  --box-shadow: #{map-get($theme-light, box-shadow)};
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+  --color-primary: #{map-get($theme-dark, color-primary)};
+  --color-secondary: #{map-get($theme-dark, color-secondary)};
+  --color-success: #{map-get($theme-dark, color-success)};
+  --color-danger: #{map-get($theme-dark, color-danger)};
+  --color-warning: #{map-get($theme-dark, color-warning)};
+  --color-info: #{map-get($theme-dark, color-info)};
+  --color-light: #{map-get($theme-dark, color-light)};
+  --color-dark: #{map-get($theme-dark, color-dark)};
+  --color-background: #{map-get($theme-dark, color-background)};
+  --color-text-primary: #{map-get($theme-dark, color-text-primary)};
+  --color-text-secondary: #{map-get($theme-dark, color-text-secondary)};
+  --color-text-tertiary: #{map-get($theme-dark, color-text-tertiary)};
+  --color-text-inverse: #{map-get($theme-dark, color-text-inverse)};
+  --color-text-contrast: #{map-get($theme-dark, color-text-contrast)};
+  --color-bg-primary: #{map-get($theme-dark, color-bg-primary)};
+  --color-bg-secondary: #{map-get($theme-dark, color-bg-secondary)};
+  --color-bg-tertiary: #{map-get($theme-dark, color-bg-tertiary)};
+  --color-bg-accent: #{map-get($theme-dark, color-bg-accent)};
+  --color-border: #{map-get($theme-dark, color-border)};
+  --color-border-light: #{map-get($theme-dark, color-border-light)};
+  --color-border-dark: #{map-get($theme-dark, color-border-dark)};
+  --color-sidebar-active: #{map-get($theme-dark, color-sidebar-active)};
+  --box-shadow: #{map-get($theme-dark, box-shadow)};
+}

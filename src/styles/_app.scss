@@ -1,57 +1,4 @@
 /* Global Styles */
-:root {
-  /* Common variables that don't change with theme */
-  --sidebar-width: 280px;
-  --header-height: 60px;
-  --border-radius: 8px;
-  --transition: all 0.3s ease;
-
-  /* Default theme (light) */
-  --primary-color: #4a6cf7;
-  --secondary-color: #6c757d;
-  --success-color: #28a745;
-  --danger-color: #dc3545;
-  --warning-color: #ffc107;
-  --info-color: #17a2b8;
-  --light-color: #f8f9fa;
-  --dark-color: #343a40;
-  --background-color: #f5f7fb;
-  --text-color: #333333;
-  --box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  --color-sidebar-active: #e0e0e0;
-}
-
-/* Light theme (default) */
-[data-theme="light"] {
-  --primary-color: #4a6cf7;
-  --secondary-color: #6c757d;
-  --success-color: #28a745;
-  --danger-color: #dc3545;
-  --warning-color: #ffc107;
-  --info-color: #17a2b8;
-  --light-color: #f8f9fa;
-  --dark-color: #343a40;
-  --background-color: #f5f7fb;
-  --text-color: #333333;
-  --box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  --color-sidebar-active: #e0e0e0;
-}
-
-/* Dark theme */
-[data-theme="dark"] {
-  --primary-color: #4a6cf7;
-  --secondary-color: #6c757d;
-  --success-color: #28a745;
-  --danger-color: #dc3545;
-  --warning-color: #ffc107;
-  --info-color: #17a2b8;
-  --light-color: #222222;
-  --dark-color: #f8f9fa;
-  --background-color: #1a1a1a;
-  --text-color: #f5f5f5;
-  --box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-  --color-sidebar-active: #444444;
-}
 
 * {
   box-sizing: border-box;
@@ -61,8 +8,8 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: var(--background-color);
-  color: var(--text-color);
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
   line-height: 1.6;
 }
 
@@ -96,11 +43,11 @@ body {
 .category-header h1 {
   font-size: 1.8rem;
   margin-bottom: 5px;
-  color: var(--text-color);
+  color: var(--color-text-primary);
 }
 
 .component-count {
-  color: var(--secondary-color);
+  color: var(--color-secondary);
   font-size: 0.9rem;
 }
 
@@ -135,7 +82,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 120px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--color-border-light);
 }
 
 .element-info {
@@ -144,7 +91,7 @@ body {
 
 .element-name {
   font-weight: 500;
-  color: var(--dark-color);
+  color: var(--color-text-contrast);
 }
 
 /* Modal */
@@ -181,7 +128,7 @@ body {
 
 .modal-header h3 {
   font-size: 1.2rem;
-  color: var(--dark-color);
+  color: var(--color-text-contrast);
 }
 
 .modal-close {
@@ -189,12 +136,12 @@ body {
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
-  color: var(--secondary-color);
+  color: var(--color-secondary);
   transition: var(--transition);
 }
 
 .modal-close:hover {
-  color: var(--danger-color);
+  color: var(--color-danger);
 }
 
 .modal-body {
@@ -206,18 +153,18 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--light-color);
+  background-color: var(--color-light);
   border-radius: var(--border-radius);
   margin-bottom: 20px;
 }
 
 .component-details h4 {
   margin: 15px 0 10px;
-  color: var(--dark-color);
+  color: var(--color-text-contrast);
 }
 
 pre {
-  background-color: #f5f5f5;
+  background-color: var(--color-bg-secondary);
   padding: 15px;
   border-radius: var(--border-radius);
   overflow-x: auto;
@@ -244,42 +191,42 @@ pre {
 }
 
 .button.primary {
-  background-color: var(--primary-color);
+  background-color: var(--color-primary);
   color: white;
 }
 
 .button.secondary {
-  background-color: var(--secondary-color);
+  background-color: var(--color-secondary);
   color: white;
 }
 
 .button.success {
-  background-color: var(--success-color);
+  background-color: var(--color-success);
   color: white;
 }
 
 .button.danger {
-  background-color: var(--danger-color);
+  background-color: var(--color-danger);
   color: white;
 }
 
 .button.warning {
-  background-color: var(--warning-color);
-  color: #212529;
+  background-color: var(--color-warning);
+  color: var(--color-text-contrast);
 }
 
 .button.info {
-  background-color: var(--info-color);
+  background-color: var(--color-info);
   color: white;
 }
 
 .button.light {
-  background-color: var(--light-color);
-  color: #212529;
+  background-color: var(--color-light);
+  color: var(--color-text-contrast);
 }
 
 .button.dark {
-  background-color: var(--dark-color);
+  background-color: var(--color-dark);
   color: white;
 }
 
@@ -295,8 +242,8 @@ pre {
 
 .button.outline {
   background-color: transparent;
-  border: 1px solid var(--primary-color);
-  color: var(--primary-color);
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
 }
 
 .button.rounded {
@@ -316,9 +263,9 @@ pre {
 .table-placeholder,
 .typo-placeholder {
   padding: 10px 15px;
-  background-color: #f0f0f0;
+  background-color: var(--color-bg-tertiary);
   border-radius: 4px;
-  color: #666;
+  color: var(--color-text-secondary);
   text-align: center;
   width: 100%;
 }
