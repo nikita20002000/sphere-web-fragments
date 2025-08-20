@@ -1,5 +1,3 @@
-/* Global Styles */
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -135,45 +133,13 @@ body {
   border-radius: 20px;
 }
 
-/* Placeholder styles for other components */
-.input-placeholder,
-.checkbox-placeholder,
-.radio-placeholder,
-.toggle-placeholder,
-.select-placeholder,
-.card-placeholder,
-.nav-placeholder,
-.modal-placeholder,
-.feedback-placeholder,
-.table-placeholder,
-.typo-placeholder {
-  padding: 10px 15px;
-  background-color: var(--color-bg-tertiary);
-  border-radius: 4px;
-  color: var(--color-text-secondary);
-  text-align: center;
-  width: 100%;
-}
 
-
-//TODO: Переместить в соответствующие компоненты
 /* Responsive Design */
-@media (max-width: 768px) {
-  .sidebar {
-    width: 100%;
-    position: static;
-    height: auto;
-  }
-
+@media (max-width: $adaptive-mobile) {
   .content {
     margin-left: 0;
   }
-
   .main-content {
     flex-direction: column;
-  }
-
-  .elements-grid {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
 }

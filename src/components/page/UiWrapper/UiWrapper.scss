@@ -1,32 +1,32 @@
 @import "@/styles/index";
 
-.elements-container {
-  position: relative;
-}
-
-.elements-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: $spacing-lg;
-}
-
-
-.element-card {
-  background-color: var(--color-bg-primary, white);
-  border-radius: $border-radius-md;
-  box-shadow: var(--box-shadow);
-  overflow: hidden;
-  transition: $all-ease-medium;
-  cursor: pointer;
-
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+.elements {
+  &-container {
+    position: relative;
   }
-}
 
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: $spacing-lg;
+  }
+
+}
 
 .element {
+  &-card {
+    background-color: var(--color-bg-primary, white);
+    border-radius: $border-radius-md;
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    transition: $all-ease-medium;
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+  }
 
   &-preview {
     padding: $spacing-lg;
@@ -134,5 +134,11 @@
       color: #abb2bf;
       padding: $spacing-md;
     }
+  }
+}
+
+@media (max-width: $adaptive-mobile) {
+  .elements-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
 }

@@ -74,3 +74,11 @@
         padding: var(--spacing-md) var(--spacing-lg);
     }
 }
+
+@media (max-width: $adaptive-mobile) {
+    .sidebar {
+        width: 100%;
+        position: static;
+        height: auto;
+    }
+}
