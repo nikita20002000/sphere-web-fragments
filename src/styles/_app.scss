@@ -40,24 +40,23 @@ body {
 /* Content */
 .content {
   flex-grow: 1;
-  padding: 20px;
-  margin-left: 6rem;
+  padding: $spacing-s $spacing-lg ;
   transition: var(--transition);
 }
 
 .category-header {
-  margin-bottom: 20px;
+  margin-bottom: $spacing-lg;
 }
 
 .category-header h1 {
-  font-size: 1.8rem;
-  margin-bottom: 5px;
+  font-size: $font-size-3xl;
+  margin-bottom: $spacing-s;
   color: var(--color-text-primary);
 }
 
 .component-count {
   color: var(--color-secondary);
-  font-size: 0.9rem;
+  font-size: $font-size-md;
 }
 
 //TODO: УБрать
