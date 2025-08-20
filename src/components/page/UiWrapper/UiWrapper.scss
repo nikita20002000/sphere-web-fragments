@@ -1,5 +1,5 @@
-@import '@/styles/vars/themes';
-@import '@/styles/vars/sizes';
+@use '@/styles/vars/themes' as themes;
+@use '@/styles/vars/sizes' as sizes;
 
 .elements {
   &-container {
@@ -9,7 +9,7 @@
   &-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: $spacing-lg;
+    gap: sizes.$spacing-lg;
   }
 
 }
@@ -17,10 +17,10 @@
 .element {
   &-card {
     background-color: var(--color-bg-primary, white);
-    border-radius: $border-radius-md;
+    border-radius: sizes.$border-radius-md;
     box-shadow: var(--box-shadow);
     overflow: hidden;
-    transition: $all-ease-medium;
+    transition: sizes.$all-ease-medium;
     cursor: pointer;
 
     &:hover {
@@ -30,7 +30,7 @@
   }
 
   &-preview {
-    padding: $spacing-lg;
+    padding: sizes.$spacing-lg;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -39,11 +39,11 @@
   }
 
   &-info {
-    padding: $spacing-md;
+    padding: sizes.$spacing-md;
   }
 
   &-name {
-    font-weight: $font-weight-medium;
+    font-weight: sizes.$font-weight-medium;
     color: var(--color-text-contrast);
   }
 }
@@ -56,7 +56,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: $modal-overlay-bg;
+    background-color: themes.$modal-overlay-bg;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -65,7 +65,7 @@
 
   &-content {
     background-color: var(--color-bg-primary, white);
-    border-radius: $border-radius-md;
+    border-radius: sizes.$border-radius-md;
     width: 90%;
     max-width: 800px;
     max-height: 90vh;
@@ -74,14 +74,14 @@
   }
 
   &-header {
-    padding: $spacing-md $spacing-lg;
+    padding: sizes.$spacing-md sizes.$spacing-lg;
     border-bottom: 1px solid var(--color-border, #eee);
     display: flex;
     align-items: center;
     justify-content: space-between;
 
     h3 {
-      font-size: $font-size-xl;
+      font-size: sizes.$font-size-xl;
       color: var(--color-text-contrast);
     }
   }
@@ -89,10 +89,10 @@
   &-close {
     background: none;
     border: none;
-    font-size: 1.5rem;
+    font-size: sizes.$font-size-2xl;
     cursor: pointer;
     color: var(--color-secondary);
-    transition: var(--transition);
+    transition: sizes.$all-ease-medium;
 
     &:hover {
       color: var(--color-danger);
@@ -100,45 +100,45 @@
   }
 
   &-body {
-    padding: $spacing-lg;
+    padding: sizes.$spacing-lg;
   }
 }
 
 .component {
   &-preview {
-    padding: $spacing-xl;
+    padding: sizes.$spacing-xl;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: var(--color-light);
-    border-radius: $border-radius-md;
-    margin-bottom: $spacing-lg;
+    border-radius: sizes.$border-radius-md;
+    margin-bottom: sizes.$spacing-lg;
   }
 
   &-details {
     h4 {
-      margin: $spacing-md 0 $spacing-sm;
+      margin: sizes.$spacing-md 0 sizes.$spacing-sm;
       color: var(--color-text-contrast);
     }
 
     pre {
       background-color: var(--color-bg-secondary);
-      padding: $spacing-md;
-      border-radius: $border-radius-md;
+      padding: sizes.$spacing-md;
+      border-radius: sizes.$border-radius-md;
       overflow-x: auto;
-      font-family: $monospace-font;
-      font-size: $font-size-sm;
-      line-height: $spacing-lg;
+      font-family: themes.$monospace-font;
+      font-size: sizes.$font-size-sm;
+      line-height: sizes.$spacing-lg;
     }
     .code-example {
-      background-color: #282c34;
-      color: #abb2bf;
-      padding: $spacing-md;
+      background-color: themes.$code-block-bg;
+      color: themes.$code-block-text-color;
+      padding: sizes.$spacing-md;
     }
   }
 }
 
-@media (max-width: $adaptive-mobile) {
+@media (max-width: sizes.$adaptive-mobile) {
   .elements-grid {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }

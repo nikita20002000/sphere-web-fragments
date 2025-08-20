@@ -1,3 +1,5 @@
+// Theme variables and color schemes
+
 /* Status colors */
 $success-color: #28a745;
 $danger-color: #dc3545;
@@ -9,6 +11,10 @@ $modal-overlay-bg: rgba(0, 0, 0, 0.5);
 
 /* Fonts */
 $monospace-font: "Fira Code", monospace;
+
+/* Code forms */
+$code-block-bg: #282c34;
+$code-block-text-color: #abb2bf;
 
 [data-theme="light"] {
   --full-white: rgb(255, 255, 255);

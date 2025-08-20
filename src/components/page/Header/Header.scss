@@ -1,27 +1,26 @@
-@import '@/styles/vars/themes';
-@import '@/styles/vars/sizes';
+@use '@/styles/vars/sizes' as sizes;
 
 .header {
     display: flex;
     justify-content: space-between;
-    height: $header-height;
+    height: sizes.$header-height;
     background-color: var(--color-background);
     align-items: center;
-    padding: 0 $spacing-lg;
+    padding: 0 sizes.$spacing-lg;
     border-bottom: 1px solid var(--color-border-light);
 
     &-logo {
         display: flex;
         align-items: center;
-        gap: $spacing-md;
+        gap: sizes.$spacing-md;
 
         svg {
-            width: $icon-xl;
-            height: $icon-xl;
+            width: sizes.$icon-xl;
+            height: sizes.$icon-xl;
         }
 
         h1 {
-            font-size: $font-size-2xl;
+            font-size: sizes.$font-size-2xl;
             color: var(--color-primary);
         }
     }

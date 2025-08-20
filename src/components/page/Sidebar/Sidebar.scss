@@ -1,8 +1,7 @@
-@import '@/styles/vars/themes';
-@import '@/styles/vars/sizes';
+@use '@/styles/vars/sizes' as sizes;
 
 .sidebar {
-    width: $sidebar-width;
+    width: sizes.$sidebar-width;
     background-color: var(--color-background);
     display: flex;
     flex-direction: column;
@@ -12,23 +11,23 @@
     &-nav {
         display: flex;
         flex-direction: column;
-        padding: $spacing-md;
+        padding: sizes.$spacing-md;
         align-items: center;
 
         &__item {
             display: flex;
             justify-content: center;
             align-items: center;
-            border-radius: $border-radius-md;
+            border-radius: sizes.$border-radius-md;
             cursor: pointer;
-            margin-bottom: $spacing-md;
+            margin-bottom: sizes.$spacing-md;
             position: relative;
 
             svg {
                 fill: var(--color-text-contrast);
-                width: $icon-xl;
-                height: $icon-xl;
-                padding: $spacing-s;
+                width: sizes.$icon-xl;
+                height: sizes.$icon-xl;
+                padding: sizes.$spacing-s;
             }
 
             &.active {
@@ -56,15 +55,15 @@
                 position: absolute;
                 background: var(--color-sidebar-active);
                 transform: translate(100%, 0);
-                padding: $spacing-xs $spacing-sm;
-                border-radius: $border-radius-md;
+                padding: sizes.$spacing-xs sizes.$spacing-sm;
+                border-radius: sizes.$border-radius-md;
                 text-wrap: nowrap;
                 right: -1rem;
                 display: none;
-                transition: $all-ease-slow;
+                transition: sizes.$all-ease-slow;
 
                 span {
-                    font-size: $font-size-sm;
+                    font-size: sizes.$font-size-sm;
                     color: var(--color-text-secondary);
                 }
             }
@@ -72,11 +71,11 @@
     }
 
     &-footer {
-        padding: var(--spacing-md) var(--spacing-lg);
+        padding: sizes.$spacing-md sizes.$spacing-lg;
     }
 }
 
-@media (max-width: $adaptive-mobile) {
+@media (max-width: sizes.$adaptive-mobile) {
     .sidebar {
         width: 100%;
         position: static;

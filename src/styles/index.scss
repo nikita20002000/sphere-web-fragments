@@ -1,11 +1,11 @@
 /* Import scss mixins */
-@import 'mixins';
+@forward 'mixins';
 
 /* Import size variables */
-@import 'vars/sizes';
+@forward 'vars/sizes';
 
 /* Import color scheme */
-@import 'vars/themes';
+@forward 'vars/themes';
 
 /* Import common web styles */
-@import 'app';
+@forward 'app';
