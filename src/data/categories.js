@@ -15,53 +15,29 @@ export default {
     buttons: {
         name: 'Кнопки',
         elements: [
-            createComponent(Button, 'btn-1', 'Primary Button', {
-                className: 'primary',
-                children: 'Primary Button'
+            createComponent(Button, 'btn-0', 'Text button primary', {
+                className: 'bt-text primary',
+                children: 'Button text primary'
             }),
-            createComponent(Button, 'btn-2', 'Secondary Button', {
-                className: 'secondary',
-                children: 'Secondary Button'
+            createComponent(Button, 'btn-0', 'Text button secondary', {
+                className: 'bt-text secondary',
+                children: 'Hover me'
             }),
-            createComponent(Button, 'btn-3', 'Success Button', {
-                className: 'success',
-                children: 'Success Button'
+            createComponent(Button, 'btn-0', 'Text button success', {
+                className: 'bt-text success',
+                children: 'Hover me'
             }),
-            createComponent(Button, 'btn-4', 'Danger Button', {
-                className: 'danger',
-                children: 'Danger Button'
+            createComponent(Button, 'btn-0', 'Text button warning', {
+                className: 'bt-text warning',
+                children: 'Hover me'
             }),
-            createComponent(Button, 'btn-5', 'Warning Button', {
-                className: 'warning',
-                children: 'Warning Button'
+            createComponent(Button, 'btn-0', 'Text button danger', {
+                className: 'bt-text danger',
+                children: 'Hover me'
             }),
-            createComponent(Button, 'btn-6', 'Info Button', {
-                className: 'info',
-                children: 'Info Button'
-            }),
-            createComponent(Button, 'btn-7', 'Light Button', {
-                className: 'light',
-                children: 'Light Button'
-            }),
-            createComponent(Button, 'btn-8', 'Dark Button', {
-                className: 'dark',
-                children: 'Dark Button'
-            }),
-            createComponent(Button, 'btn-9', 'Small Button', {
-                className: 'primary small',
-                children: 'Small Button'
-            }),
-            createComponent(Button, 'btn-10', 'Large Button', {
-                className: 'primary large',
-                children: 'Large Button'
-            }),
-            createComponent(Button, 'btn-11', 'Outline Button', {
-                className: 'outline',
-                children: 'Outline Button'
-            }),
-            createComponent(Button, 'btn-12', 'Rounded Button', {
-                className: 'primary rounded',
-                children: 'Rounded Button'
+            createComponent(Button, 'btn-0', 'Text button info', {
+                className: 'bt-text info',
+                children: 'Hover me'
             })
         ]
     },
