@@ -1,9 +1,9 @@
 import React from 'react';
-import './buttons.css'; // Подключаем стили
+import './Buttons.scss';
 
 export const Button = ({ className, children, onClick }) => {
     return (
-        <button className={`button ${className}`} onClick={onClick}>
+        <button className={`bt ${className}`} onClick={onClick}>
             {children}
         </button>
     );

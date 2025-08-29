@@ -1,0 +1,64 @@
+{
+  "name": "Buttons",
+
+  "elements": [
+    {
+      "id": "btn-0",
+      "name": "Text button primary",
+      "component": "Button",
+      "props": {
+        "className": "bt-text primary",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-1",
+      "name": "Text button secondary",
+      "component": "Button",
+      "props": {
+        "className": "bt-text secondary",
+        "children": "Hover Me"
+      }
+    },
+    {
+      "id": "btn-2",
+      "name": "Text button success",
+      "component": "Button",
+      "props": {
+        "className": "bt-text success",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-3",
+      "name": "Text button warning",
+      "component": "Button",
+      "props": {
+        "className": "bt-text warning",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-4",
+      "name": "Text button danger",
+      "component": "Button",
+      "props": {
+        "className": "bt-text danger",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-5",
+      "name": "Text button info",
+      "component": "Button",
+      "props": {
+        "className": "bt-text info",
+        "children": "Hover Me"
+      }
+    }
+  ]
+}

@@ -1,23 +1,70 @@
-/*---------------------------
-    GLOBAL: Disabled кнопки
- ---------------------------*/
+/* Buttons */
+@use '../styles/colors' as colors;
+@use '../styles/fonts' as fonts;
+@use '../styles/sizes' as sizes;
 
-.bt-text {
-    z-index: 1;
-    height: var(--btn-text-height);
-    cursor: pointer;
-    border: var(--btn-text-border);
-    border-radius: var(--btn-text-border-radius);
-    font-weight: var(--btn-text-font-weight);
-    padding: var(--vertical-btn-text-padding) var(--horizontal-btn-text-padding);
+.bt {
+    font-family: fonts.$bt-default-font;
+    font-weight: fonts.$bt-default-font-weight;
+    color: colors.$main-text-color;
+    font-size: fonts.$font-size-sm;
+
+    &:hover {
+       outline: none;
+    }
+
+    &-text {
+        z-index: 1;
+        height: sizes.$btn-text-height;
+        cursor: pointer;
+        border: none;
+        background: none;
+
+        &.primary {
+            &:hover {
+                border-bottom: 2px solid colors.$color-primary;
+            }
+        }
+
+        &.secondary {
+            &:hover {
+                border-bottom: 2px solid colors.$color-secondary;
+            }
+        }
+
+        &.success {
+            &:hover {
+                border-bottom: 2px solid colors.$success-color;
+            }
+        }
+
+        &.warning {
+            &:hover {
+                border-bottom: 2px solid colors.$warning-color;
+            }
+        }
+
+        &.danger {
+            &:hover {
+                border-bottom: 2px solid colors.$danger-color;
+            }
+        }
+
+        &.info {
+            &:hover {
+                border-bottom: 2px solid colors.$info-color;
+            }
+        }
+    }
+
+    &-text-bordered {
+        z-index: 1;
+        height: sizes.$btn-text-height;
+    }
 }
 
 .bt-text.bordered {
     border: var(--btn-text-bordered-border) ;
-}
-
-.bt:hover {
-    outline: none;
 }
 
 .bt-text.sm {
@@ -59,20 +106,20 @@
 /*---------------------------------------------
     SUBSECTION: Второстепенная кнопка-текста
 ---------------------------------------------*/
-.bt-text.secondary {
-    background-color: var(--c-brand-gray-600);
-    color: var(--c-brand-gray-200);
-}
-
-.bt-text.secondary:hover {
-    background: var(--c-brand-gray-700);
-}
-
-.bt-text.secondary:disabled {
-    background-color: var(--secondary-disabled-bg) !important;
-    color: var(--c-brand-gray) !important;
-    cursor: not-allowed!important;
-}
+//.bt-text.secondary {
+//    background-color: var(--c-brand-gray-600);
+//    color: var(--c-brand-gray-200);
+//}
+//
+//.bt-text.secondary:hover {
+//    background: var(--c-brand-gray-700);
+//}
+//
+//.bt-text.secondary:disabled {
+//    background-color: var(--secondary-disabled-bg) !important;
+//    color: var(--c-brand-gray) !important;
+//    cursor: not-allowed!important;
+//}
 
 
 /*---------------------------------------------
