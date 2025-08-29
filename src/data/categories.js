@@ -21,7 +21,7 @@ const createComponentFromJSON = (config) => {
     };
 }
 
-//TODO: Поменять иконки бокового меню в соответствии с новыми пунктами
+// TODO: Поменять иконки бокового меню в соответствии с новыми пунктами
 export default {
     buttons: {
         name: buttonsConfig.name,
