@@ -72,10 +72,10 @@
 
     {
       "id": "btn-5",
-      "name": "Primary gradient button",
+      "name": "Secondary gradient button",
       "component": "Button",
       "props": {
-        "className": "bt bt-gradient md secondary",
+        "className": "bt bt-gradient sm secondary",
         "children": "Hover Me"
       }
     }
