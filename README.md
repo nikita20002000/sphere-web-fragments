@@ -44,6 +44,14 @@ function App() {
 export default App;
 ```
 
+## Components Class Structure
+
+---
+``` html
+<button class='[basic btn class] [btn type class] [btn size class] [btn color class] [additional settings]'>
+```
+
+
 ## Available Components
 
 - **Buttons**: Primary, secondary, success, danger, warning, info, light, dark, outline, and more
