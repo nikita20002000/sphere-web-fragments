@@ -62,40 +62,10 @@
     },
     {
       "id": "btn-5",
-      "name": "Text button info",
+      "name": "Primary gradient button",
       "component": "Button",
       "props": {
-        "className": "size-test xs",
-        "children": "Hover Me"
-      }
-    },
-
-    {
-      "id": "btn-5",
-      "name": "Text button info",
-      "component": "Button",
-      "props": {
-        "className": "size-test sm",
-        "children": "Hover Me"
-      }
-    },
-
-    {
-      "id": "btn-5",
-      "name": "Text button info",
-      "component": "Button",
-      "props": {
-        "className": "size-test md",
-        "children": "Hover Me"
-      }
-    },
-
-    {
-      "id": "btn-5",
-      "name": "Text button info",
-      "component": "Button",
-      "props": {
-        "className": "size-test lg",
+        "className": "bt bt-gradient md primary",
         "children": "Hover Me"
       }
     }

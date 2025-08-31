@@ -1,9 +1,23 @@
 /* Colors */
 $main-text-color: #2F2F2F;
-$color-primary: #0F5ABD;
 $color-secondary: #999999;
 
 $success-color: #28a745;
 $danger-color: #dc3545;
 $warning-color: #ffc107;
 $info-color: #17a2b8;
+
+$full-white: #ffffff;
+$purple: #8645d0;
+
+//Brand primary palette
+$primary-900: hsl(211, 92%, 10%);
+$primary-800: hsl(212, 92%, 20%);
+$primary-700: hsl(214, 90%, 23%);
+$primary-600: hsl(214, 90%, 31%);
+$color-primary: hsl(214, 85%, 40%);
+$primary-400: hsl(214, 57%, 64%);
+$primary-300: hsl(212, 69%, 78%);
+$primary-200: hsl(212, 62%, 88%);
+$primary-100: hsl(215, 83%, 95%);
+$primary-200-40-p: hsla(212, 62%, 88%, 0.4)
