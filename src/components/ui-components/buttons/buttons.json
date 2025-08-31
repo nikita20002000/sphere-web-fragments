@@ -68,6 +68,16 @@
         "className": "bt bt-gradient md primary",
         "children": "Hover Me"
       }
+    },
+
+    {
+      "id": "btn-5",
+      "name": "Primary gradient button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-gradient md secondary",
+        "children": "Hover Me"
+      }
     }
   ]
 }
