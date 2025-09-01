@@ -44,6 +44,7 @@ body {
   flex-grow: 1;
   padding: $spacing-s $spacing-lg ;
   transition: var(--transition);
+  overflow-y: auto;
 }
 
 .category-header {
