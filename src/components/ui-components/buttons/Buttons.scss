@@ -3,7 +3,7 @@
 @use '../styles/fonts' as fonts;
 @use '../styles/sizes' as sizes;
 
-// Common button styles
+/* Common button styles */
 .bt {
     cursor: pointer;
 
@@ -12,7 +12,7 @@
     }
 }
 
-// Button Size classes
+/* Button Size classes */
 .bt {
     font-family: fonts.$bt-default-font;
 
@@ -65,7 +65,7 @@
     }
 }
 
-// Gradient default buttons
+/* Gradient default buttons */
 .bt-gradient {
         border: none;
         cursor: pointer;
@@ -235,7 +235,7 @@
 // FIXME: Исправить цвета текста кнопок при изменении с light на dark mode
 // FIXME: Исправить стили подъема некоторых кнопок
 
-// Text buttons
+/* Text buttons */
 .bt-text {
     z-index: 1;
     border: 2px solid transparent;
@@ -291,7 +291,7 @@
     }
 }
 
-// Outline buttons
+/* Outline buttons */
 .bt-outline {
     background: transparent;
     border: 2px solid;
@@ -381,7 +381,7 @@
 
 }
 
-// Ghost buttons
+/* Ghost buttons */
 .bt-ghost {
     background: transparent;
     border: 1px solid transparent;
@@ -401,7 +401,7 @@
 
 }
 
-// Neumorphic buttons
+/* Neumorphic buttons */
 .bt-neumorphic {
     color: colors.$gray-800;
     border: none;
@@ -586,6 +586,101 @@
 
         &:hover {
             background: colors.$gray-200;
+        }
+    }
+}
+
+/* Glass morphizm button */
+//TODO: Придумать как выделить из всех (добавить фон)
+.bt-glass {
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+
+    &.classic {
+        color: colors.$main-text-color;
+        background: colors.$light-glass;
+        border: 1px solid colors.$medium-glass;
+
+        &:hover {
+            background: colors.$medium-glass;
+            border-color: colors.$dark-glass;
+        }
+    }
+
+    &.primary {
+        color: colors.$full-white;
+        background: rgba(colors.$primary-400, 0.2);
+        border: 1px solid rgba(colors.$primary-400, 0.3);
+
+        &:hover {
+            background: rgba(colors.$primary-400, 0.3);;
+            border-color: rgba(colors.$primary-400, 0.4);;
+        }
+    }
+
+    &.secondary {
+        color: colors.$gray-800;
+        background: rgba(colors.$gray-600, 0.2);
+        border: 1px solid rgba(colors.$gray-600, 0.3);
+
+        &:hover {
+            background: rgba(colors.$gray-600, 0.3);;
+            border-color: rgba(colors.$gray-600, 0.4);;
+        }
+    }
+
+    &.success {
+        color: colors.$full-white;
+        background: rgba(colors.$color-success, 0.2);
+        border: 1px solid rgba(colors.$color-success, 0.3);
+
+        &:hover {
+            background: rgba(colors.$color-success, 0.3);;
+            border-color: rgba(colors.$color-success, 0.4);;
+        }
+    }
+
+    &.danger {
+        color: colors.$full-white;
+        background: rgba(colors.$color-danger, 0.2);
+        border: 1px solid rgba(colors.$color-danger, 0.3);
+
+        &:hover {
+            background: rgba(colors.$color-danger, 0.3);;
+            border-color: rgba(colors.$color-danger, 0.4);;
+        }
+    }
+
+    &.warning {
+        color: colors.$gray-700;
+        background: rgba(colors.$color-warning, 0.2);
+        border: 1px solid rgba(colors.$color-warning, 0.3);
+
+        &:hover {
+            background: rgba(colors.$color-warning, 0.3);;
+            border-color: rgba(colors.$color-warning, 0.4);;
+        }
+    }
+
+    &.info {
+        color: colors.$full-white;
+        background: rgba(colors.$color-info, 0.2);
+        border: 1px solid rgba(colors.$color-info, 0.3);
+
+        &:hover {
+            background: rgba(colors.$color-info, 0.3);;
+            border-color: rgba(colors.$color-info, 0.4);;
+        }
+    }
+
+    &.disabled {
+        color: colors.$gray-500;
+        background: rgba(colors.$gray-400, 0.2);
+        border: 1px solid rgba(colors.$gray-400, 0.3);
+
+        &:hover {
+            background: rgba(colors.$gray-400, 0.3);;
+            border-color: rgba(colors.$gray-400, 0.4);;
         }
     }
 }

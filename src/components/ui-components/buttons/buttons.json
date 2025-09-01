@@ -411,11 +411,92 @@
     },
 
     {
-      "id": "btn-27",
+      "id": "btn-41",
       "name": "Disabled common button",
       "component": "Button",
       "props": {
         "className": "bt bt-common sm primary disabled",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-42",
+      "name": "Classic glass button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-glass sm classic",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-43",
+      "name": "Primary glass button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-glass sm primary",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-44",
+      "name": "Secondary glass button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-glass sm secondary",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-45",
+      "name": "Success glass button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-glass sm success",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-46",
+      "name": "Danger glass button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-glass sm danger",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-47",
+      "name": "Warning glass button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-glass sm warning",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-48",
+      "name": "Info glass button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-glass sm info",
+        "children": "Hover Me"
+      }
+    },
+
+
+    {
+      "id": "btn-49",
+      "name": "Disabled glass button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-glass sm primary disabled",
         "children": "Hover Me"
       }
     }
