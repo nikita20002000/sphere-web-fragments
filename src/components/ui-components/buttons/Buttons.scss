@@ -399,3 +399,123 @@
     &.disabled:hover { background: colors.$gray-200!important;}
 
 }
+
+// Neumorphic buttons
+.bt-neumorphic {
+    color: colors.$gray-800;
+    border: none;
+    transition: all 0.3s ease;
+
+    &.primary {
+        background: colors.$primary-200;
+        box-shadow: 5px 5px 10px colors.$primary-200,
+        -5px -5px 10px colors.$primary-100;
+
+        &:hover {
+            box-shadow: 3px 3px 6px colors.$primary-400,
+            -3px -3px 6px colors.$primary-100;
+        }
+
+        &:active {
+            box-shadow: inset 3px 3px 6px colors.$primary-400,
+            inset -3px -3px 6px colors.$primary-100;
+        }
+    }
+
+    &.secondary {
+        background: colors.$gray-200;
+        box-shadow: 5px 5px 10px colors.$gray-400,
+        -5px -5px 10px colors.$gray-100;
+
+        &:hover {
+            box-shadow: 3px 3px 6px colors.$gray-400,
+            -3px -3px 6px colors.$gray-100;
+        }
+
+        &:active {
+            box-shadow: inset 3px 3px 6px colors.$gray-400,
+            inset -3px -3px 6px colors.$gray-100;
+        }
+    }
+
+    &.success {
+        background: colors.$success-200;
+        box-shadow: 5px 5px 10px colors.$success-200,
+        -5px -5px 10px colors.$success-100;
+
+        &:hover {
+            box-shadow: 3px 3px 6px colors.$success-400,
+            -3px -3px 6px colors.$success-100;
+        }
+
+        &:active {
+            box-shadow: inset 3px 3px 6px colors.$success-400,
+            inset -3px -3px 6px colors.$success-100;
+        }
+    }
+
+    &.danger {
+        background: colors.$danger-200;
+        box-shadow: 5px 5px 10px colors.$danger-200,
+        -5px -5px 10px colors.$danger-100;
+
+        &:hover {
+            box-shadow: 3px 3px 6px colors.$danger-400,
+            -3px -3px 6px colors.$danger-100;
+        }
+
+        &:active {
+            box-shadow: inset 3px 3px 6px colors.$danger-400,
+            inset -3px -3px 6px colors.$danger-100;
+        }
+    }
+
+    &.warning {
+        background: colors.$warning-200;
+        box-shadow: 5px 5px 10px colors.$warning-200,
+        -5px -5px 10px colors.$warning-100;
+
+        &:hover {
+            box-shadow: 3px 3px 6px colors.$warning-400,
+            -3px -3px 6px colors.$warning-100;
+        }
+
+        &:active {
+            box-shadow: inset 3px 3px 6px colors.$warning-400,
+            inset -3px -3px 6px colors.$warning-100;
+        }
+    }
+
+    &.info {
+        background: colors.$info-200;
+        box-shadow: 5px 5px 10px colors.$info-200,
+        -5px -5px 10px colors.$info-100;
+
+        &:hover {
+            box-shadow: 3px 3px 6px colors.$info-400,
+            -3px -3px 6px colors.$info-100;
+        }
+
+        &:active {
+            box-shadow: inset 3px 3px 6px colors.$info-400,
+            inset -3px -3px 6px colors.$info-100;
+        }
+    }
+
+    &.disabled {
+        background: colors.$gray-200;
+        box-shadow: 5px 5px 10px colors.$color-gray,
+        -5px -5px 10px colors.$gray-100;
+
+        &:hover {
+            box-shadow: 3px 3px 6px colors.$gray-100,
+            -3px -3px 6px colors.$gray-100;
+        }
+
+        &:active {
+            box-shadow: inset 3px 3px 6px colors.$color-gray,
+            inset -3px -3px 6px colors.$gray-100;
+        }
+    }
+
+}
