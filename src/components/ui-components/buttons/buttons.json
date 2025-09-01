@@ -341,11 +341,81 @@
     },
 
     {
-      "id": "btn-27",
+      "id": "btn-34",
       "name": "Disabled neumorphic button",
       "component": "Button",
       "props": {
         "className": "bt bt-neumorphic sm primary disabled",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-35",
+      "name": "Primary common button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-common sm primary",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-36",
+      "name": "Secondary common button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-common sm secondary",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-37",
+      "name": "Success common button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-common sm success",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-38",
+      "name": "Danger common button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-common sm danger",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-39",
+      "name": "Warning common button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-common sm warning",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-40",
+      "name": "Info common button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-common sm info",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-27",
+      "name": "Disabled common button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-common sm primary disabled",
         "children": "Hover Me"
       }
     }

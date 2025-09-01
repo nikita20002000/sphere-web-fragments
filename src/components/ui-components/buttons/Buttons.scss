@@ -233,6 +233,7 @@
     }
 
 // FIXME: Исправить цвета текста кнопок при изменении с light на dark mode
+// FIXME: Исправить стили подъема некоторых кнопок
 
 // Text buttons
 .bt-text {
@@ -518,4 +519,73 @@
         }
     }
 
+}
+
+/* Elevated buttons */
+.bt-common {
+    border: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px colors.$soft-dark-shadow;
+    color: colors.$full-white;
+
+    &:hover {
+        box-shadow: 0 6px 12px colors.$middle-dark-shadow;
+    }
+
+    &.primary {
+        background: colors.$color-primary;
+
+        &:hover {
+            background: colors.$primary-600;
+        }
+    }
+
+    &.secondary {
+        background: colors.$color-gray;
+        color: colors.$gray-800;
+
+        &:hover {
+            background: colors.$gray-400;
+        }
+    }
+
+    &.success {
+        background: colors.$color-success;
+
+        &:hover {
+            background: colors.$success-700;
+        }
+    }
+
+    &.danger {
+        background: colors.$color-danger;
+
+        &:hover {
+            background: colors.$danger-700;
+        }
+    }
+
+    &.warning {
+        background: colors.$color-warning;
+        &:hover {
+            background: colors.$warning-700;
+        }
+    }
+
+    &.info {
+        background: colors.$color-info;
+
+        &:hover {
+            background: colors.$info-600;
+        }
+    }
+
+    &.disabled {
+        background: colors.$gray-200;
+        color: colors.$gray-600;
+
+        &:hover {
+            background: colors.$gray-200;
+        }
+    }
 }
