@@ -1,14 +1,13 @@
 /* Colors */
-$main-text-color: #2F2F2F;
-$color-secondary: #999999;
+$main-text-color: hsl(0, 0%, 18%);
 
-$success-color: #28a745;
-$danger-color: #dc3545;
-$warning-color: #ffc107;
-$info-color: #17a2b8;
+$success-color: hsl(134, 61%, 41%);
+$danger-color: hsl(354, 70%, 54%);
+$warning-color: hsl(45, 100%, 51%);
+$info-color: hsl(188, 78%, 41%);
 
-$full-white: #ffffff;
-$purple: #8645d0;
+$full-white: hsl(0, 0%, 100%);
+$purple: hsl(268, 60%, 54%);
 
 //Brand primary palette
 $primary-900: hsl(211, 92%, 10%);
