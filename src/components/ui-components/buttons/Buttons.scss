@@ -3,221 +3,246 @@
 @use '../styles/fonts' as fonts;
 @use '../styles/sizes' as sizes;
 
-// TODO: Добавить disabled класс
-
-// Button Size classes
+// Common button styles
 .bt {
-    font-family: fonts.$bt-default-font;
+    cursor: pointer;
 
-    &.xxs {
-        padding: sizes.$xxs-button-vertical-padding sizes.$xxs-button-horizontal-padding;
-        font-size: sizes.$xxs-button-font-size;
-        font-weight: fonts.$bt-light-font-weight;
-        letter-spacing: sizes.$xxs-button-letter-spacing;
-        border-radius: sizes.$xxs-button-border-radius;
-    }
-
-    &.xs {
-        padding: sizes.$xs-button-vertical-padding sizes.$xs-button-horizontal-padding;
-        font-size: sizes.$xs-button-font-size;
-        font-weight: fonts.$bt-light-font-weight;
-        letter-spacing: sizes.$xs-button-letter-spacing;
-        border-radius: sizes.$xs-button-border-radius;
-    }
-
-    &.sm {
-        padding: sizes.$sm-button-vertical-padding sizes.$sm-button-horizontal-padding;
-        font-size: sizes.$sm-button-font-size;
-        font-weight: fonts.$bt-light-font-weight;
-        letter-spacing: sizes.$sm-button-letter-spacing;
-        border-radius: sizes.$sm-button-border-radius;
-    }
-
-    &.md {
-        padding: sizes.$md-button-vertical-padding sizes.$md-button-horizontal-padding;
-        font-size: sizes.$md-button-font-size;
-        font-weight: fonts.$bt-light-font-weight;
-        letter-spacing: sizes.$md-button-letter-spacing;
-        border-radius: sizes.$md-button-border-radius;
-    }
-
-    &.lg {
-        padding: sizes.$lg-button-vertical-padding sizes.$lg-button-horizontal-padding;
-        font-size: sizes.$lg-button-font-size;
-        font-weight: fonts.$bt-light-font-weight;
-        letter-spacing: sizes.$lg-button-letter-spacing;
-        border-radius: sizes.$lg-button-border-radius;
-    }
-
-    &.xl {
-        padding: sizes.$xl-button-vertical-padding sizes.$xl-button-horizontal-padding;
-        font-size: sizes.$xl-button-font-size;
-        font-weight: fonts.$bt-light-font-weight;
-        letter-spacing: sizes.$xl-button-letter-spacing;
-        border-radius: sizes.$xl-button-border-radius;
+    &.disabled {
+        cursor: not-allowed !important;
     }
 }
+
+    // Button Size classes
+.bt {
+        font-family: fonts.$bt-default-font;
+
+        &.xxs {
+            padding: sizes.$xxs-button-vertical-padding sizes.$xxs-button-horizontal-padding;
+            font-size: sizes.$xxs-button-font-size;
+            font-weight: fonts.$bt-light-font-weight;
+            letter-spacing: sizes.$xxs-button-letter-spacing;
+            border-radius: sizes.$xxs-button-border-radius;
+        }
+
+        &.xs {
+            padding: sizes.$xs-button-vertical-padding sizes.$xs-button-horizontal-padding;
+            font-size: sizes.$xs-button-font-size;
+            font-weight: fonts.$bt-light-font-weight;
+            letter-spacing: sizes.$xs-button-letter-spacing;
+            border-radius: sizes.$xs-button-border-radius;
+        }
+
+        &.sm {
+            padding: sizes.$sm-button-vertical-padding sizes.$sm-button-horizontal-padding;
+            font-size: sizes.$sm-button-font-size;
+            font-weight: fonts.$bt-light-font-weight;
+            letter-spacing: sizes.$sm-button-letter-spacing;
+            border-radius: sizes.$sm-button-border-radius;
+        }
+
+        &.md {
+            padding: sizes.$md-button-vertical-padding sizes.$md-button-horizontal-padding;
+            font-size: sizes.$md-button-font-size;
+            font-weight: fonts.$bt-light-font-weight;
+            letter-spacing: sizes.$md-button-letter-spacing;
+            border-radius: sizes.$md-button-border-radius;
+        }
+
+        &.lg {
+            padding: sizes.$lg-button-vertical-padding sizes.$lg-button-horizontal-padding;
+            font-size: sizes.$lg-button-font-size;
+            font-weight: fonts.$bt-light-font-weight;
+            letter-spacing: sizes.$lg-button-letter-spacing;
+            border-radius: sizes.$lg-button-border-radius;
+        }
+
+        &.xl {
+            padding: sizes.$xl-button-vertical-padding sizes.$xl-button-horizontal-padding;
+            font-size: sizes.$xl-button-font-size;
+            font-weight: fonts.$bt-light-font-weight;
+            letter-spacing: sizes.$xl-button-letter-spacing;
+            border-radius: sizes.$xl-button-border-radius;
+        }
+    }
 
 // Gradient default buttons
 .bt-gradient {
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-    outline: none;
-
-    &:hover {
-        transform: translateY(-3px);
-    }
-
-
-    &:active {
-        transform: translateY(1px);
-    }
-
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        transition: left 0.5s;
-        z-index: -1;
-    }
-
-    &:hover::before {
-        left: 0;
-    }
-
-    // Primary gradient button
-    &.primary {
-        color: colors.$full-white;
-        background: linear-gradient(135deg, colors.$primary-400 0%, colors.$color-primary 100%);
-        box-shadow: 0 6px 18px colors.$primary-600;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        outline: none;
 
         &:hover {
-            box-shadow: 0 10px 25px colors.$primary-700;
+            transform: translateY(-3px);
         }
 
+
         &:active {
-            box-shadow: 0 4px 12px colors.$primary-700;
+            transform: translateY(1px);
         }
 
         &::before {
-            background: linear-gradient(135deg, colors.$color-primary 0%, colors.$primary-400 100%);
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            transition: left 0.5s;
+            z-index: -1;
+        }
+
+        &:hover::before {
+            left: 0;
+        }
+
+        // Primary gradient button
+        &.primary {
+            color: colors.$full-white;
+            background: linear-gradient(135deg, colors.$primary-400 0%, colors.$color-primary 100%);
+            box-shadow: 0 6px 18px colors.$primary-600;
+
+            &:hover {
+                box-shadow: 0 10px 25px colors.$primary-700;
+            }
+
+            &:active {
+                box-shadow: 0 4px 12px colors.$primary-700;
+            }
+
+            &::before {
+                background: linear-gradient(135deg, colors.$color-primary 0%, colors.$primary-400 100%);
+            }
+        }
+
+        // Secondary gradient button
+        &.secondary {
+            color: colors.$gray-800;
+            background: linear-gradient(135deg, colors.$gray-200 0%, colors.$gray-600 100%);
+            box-shadow: 0 6px 18px colors.$gray-600;
+
+            &:hover {
+                box-shadow: 0 10px 25px colors.$gray-700;
+            }
+
+            &:active {
+                box-shadow: 0 4px 12px colors.$gray-700;
+            }
+
+            &::before {
+                background: linear-gradient(135deg, colors.$gray-600 0%, colors.$gray-200 100%);
+            }
+        }
+
+        // Success gradient buttons
+        &.success {
+            color: colors.$full-white;
+            background: linear-gradient(135deg, colors.$success-300 0%, colors.$color-success);
+            box-shadow: 0 6px 18px colors.$color-success;
+
+            &:hover {
+                box-shadow: 0 10px 25px colors.$success-700;
+            }
+
+            &:active {
+                box-shadow: 0 4px 12px colors.$success-700;
+            }
+
+            &::before {
+                background: linear-gradient(135deg, colors.$color-success 0%, colors.$success-200 100%);
+            }
+        }
+
+        // Danger gradient buttons
+        &.danger{
+            color: colors.$full-white;
+            background: linear-gradient(135deg, colors.$danger-400 0%, colors.$color-danger);
+            box-shadow: 0 6px 18px colors.$color-danger;
+
+            &:hover {
+                box-shadow: 0 10px 25px colors.$danger-700;
+            }
+
+            &:active {
+                box-shadow: 0 4px 12px colors.$danger-700;
+            }
+
+            &::before {
+                background: linear-gradient(135deg, colors.$color-danger 0%, colors.$danger-200 100%);
+            }
+        }
+
+        // Warning gradient buttons
+        &.warning{
+            color: colors.$gray-200;
+            background: linear-gradient(135deg, colors.$warning-400 0%, colors.$color-warning);
+            box-shadow: 0 6px 18px colors.$color-warning;
+
+            &:hover {
+                box-shadow: 0 10px 25px colors.$warning-700;
+            }
+
+            &:active {
+                box-shadow: 0 4px 12px colors.$warning-700;
+            }
+
+            &::before {
+                background: linear-gradient(135deg, colors.$color-warning 0%, colors.$warning-200 100%);
+            }
+        }
+
+        // Info gradient buttons
+        &.info{
+            color: colors.$full-white;
+            background: linear-gradient(135deg, colors.$info-400 0%, colors.$color-info);
+            box-shadow: 0 6px 18px colors.$color-info;
+
+            &:hover {
+                box-shadow: 0 10px 25px colors.$info-700;
+            }
+
+            &:active {
+                box-shadow: 0 4px 12px colors.$info-700;
+            }
+
+            &::before {
+                background: linear-gradient(135deg, colors.$color-info 0%, colors.$info-200 100%);
+            }
+        }
+
+        // Disabled gradient buttons
+        &.disabled {
+            background: colors.$color-gray!important;
+            color: colors.$gray-600!important;
+            box-shadow: none!important;
+
+            &:hover {
+                box-shadow: none!important;
+            }
+
+            &:active {
+                box-shadow: none!important;
+            }
+
+            &::before {
+                background: none!important;
+            }
         }
     }
-
-    // Secondary gradient button
-    &.secondary {
-        color: colors.$gray-800;
-        background: linear-gradient(135deg, colors.$gray-200 0%, colors.$gray-600 100%);
-        box-shadow: 0 6px 18px colors.$gray-600;
-
-        &:hover {
-            box-shadow: 0 10px 25px colors.$gray-700;
-        }
-
-        &:active {
-            box-shadow: 0 4px 12px colors.$gray-700;
-        }
-
-        &::before {
-            background: linear-gradient(135deg, colors.$gray-600 0%, colors.$gray-200 100%);
-        }
-    }
-
-    // Success gradient buttons
-    &.success {
-        color: colors.$full-white;
-        background: linear-gradient(135deg, colors.$success-300 0%, colors.$color-success);
-        box-shadow: 0 6px 18px colors.$color-success;
-
-        &:hover {
-            box-shadow: 0 10px 25px colors.$success-700;
-        }
-
-        &:active {
-            box-shadow: 0 4px 12px colors.$success-700;
-        }
-
-        &::before {
-            background: linear-gradient(135deg, colors.$color-success 0%, colors.$success-200 100%);
-        }
-    }
-
-    // Danger gradient buttons
-    &.danger{
-        color: colors.$full-white;
-        background: linear-gradient(135deg, colors.$danger-400 0%, colors.$color-danger);
-        box-shadow: 0 6px 18px colors.$color-danger;
-
-        &:hover {
-            box-shadow: 0 10px 25px colors.$danger-700;
-        }
-
-        &:active {
-            box-shadow: 0 4px 12px colors.$danger-700;
-        }
-
-        &::before {
-            background: linear-gradient(135deg, colors.$color-danger 0%, colors.$danger-200 100%);
-        }
-    }
-
-    // Warning gradient buttons
-    &.warning{
-        color: colors.$gray-200;
-        background: linear-gradient(135deg, colors.$warning-400 0%, colors.$color-warning);
-        box-shadow: 0 6px 18px colors.$color-warning;
-
-        &:hover {
-            box-shadow: 0 10px 25px colors.$warning-700;
-        }
-
-        &:active {
-            box-shadow: 0 4px 12px colors.$warning-700;
-        }
-
-        &::before {
-            background: linear-gradient(135deg, colors.$color-warning 0%, colors.$warning-200 100%);
-        }
-    }
-
-    // Info gradient buttons
-    &.info{
-        color: colors.$full-white;
-        background: linear-gradient(135deg, colors.$info-400 0%, colors.$color-info);
-        box-shadow: 0 6px 18px colors.$color-info;
-
-        &:hover {
-            box-shadow: 0 10px 25px colors.$info-700;
-        }
-
-        &:active {
-            box-shadow: 0 4px 12px colors.$info-700;
-        }
-
-        &::before {
-            background: linear-gradient(135deg, colors.$color-info 0%, colors.$info-200 100%);
-        }
-    }
-}
 
 // FIXME: Исправить цвета текста кнопок при изменении с light на dark mode
 
 // Text buttons
 .bt-text {
     z-index: 1;
-    cursor: pointer;
     border: 2px solid transparent;
     background: none;
     border-radius: 0!important;
 
     &:hover {
-       outline: none;
+        outline: none;
     }
 
     &.primary {
@@ -255,4 +280,13 @@
             border-bottom: 2px solid colors.$color-info;
         }
     }
+
+    &.disabled {
+        color: colors.$gray-400;
+
+        &:hover {
+            border-bottom: 2px solid colors.$gray-400;
+        }
+    }
+
 }

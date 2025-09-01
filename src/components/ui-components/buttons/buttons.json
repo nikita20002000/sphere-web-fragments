@@ -60,8 +60,19 @@
         "children": "Hover Me"
       }
     },
+
     {
       "id": "btn-6",
+      "name": "Disabled text button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-text sm info disabled",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-7",
       "name": "Primary gradient button",
       "component": "Button",
       "props": {
@@ -71,7 +82,7 @@
     },
 
     {
-      "id": "btn-7",
+      "id": "btn-8",
       "name": "Secondary gradient button",
       "component": "Button",
       "props": {
@@ -81,7 +92,7 @@
     },
 
     {
-      "id": "btn-8",
+      "id": "btn-9",
       "name": "Success gradient button",
       "component": "Button",
       "props": {
@@ -91,7 +102,7 @@
     },
 
     {
-      "id": "btn-9",
+      "id": "btn-10",
       "name": "Danger gradient button",
       "component": "Button",
       "props": {
@@ -101,7 +112,7 @@
     },
 
     {
-      "id": "btn-10",
+      "id": "btn-11",
       "name": "Warning gradient button",
       "component": "Button",
       "props": {
@@ -111,11 +122,21 @@
     },
 
     {
-      "id": "btn-11",
+      "id": "btn-12",
       "name": "Info gradient button",
       "component": "Button",
       "props": {
         "className": "bt bt-gradient sm info",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-13",
+      "name": "Disabled gradient button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-gradient sm info disabled",
         "children": "Hover Me"
       }
     }
