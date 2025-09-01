@@ -379,3 +379,23 @@
     }
 
 }
+
+// Ghost buttons
+.bt-ghost {
+    background: transparent;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background: colors.$ghost-bg;
+    }
+
+    &.primary:hover { background: colors.$primary-100; }
+    &.secondary:hover { background: colors.$color-gray; }
+    &.success:hover { background: colors.$success-100; }
+    &.danger:hover { background: colors.$danger-100; }
+    &.warning:hover { background: colors.$warning-100; }
+    &.info:hover { background: colors.$info-100; }
+    &.disabled:hover { background: colors.$gray-200!important;}
+
+}

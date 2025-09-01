@@ -202,11 +202,81 @@
     },
 
     {
-      "id": "btn-19",
+      "id": "btn-20",
       "name": "Disabled outline button",
       "component": "Button",
       "props": {
         "className": "bt bt-outline sm info disabled",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-21",
+      "name": "Primary ghost button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-ghost sm primary",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-22",
+      "name": "Secondary ghost button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-ghost sm secondary",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-23",
+      "name": "Success ghost button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-ghost sm success",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-24",
+      "name": "Danger ghost button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-ghost sm danger",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-25",
+      "name": "Warning ghost button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-ghost sm warning",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-26",
+      "name": "Info ghost button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-ghost sm info",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-27",
+      "name": "Disabled ghost button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-ghost sm primary disabled",
         "children": "Hover Me"
       }
     }
