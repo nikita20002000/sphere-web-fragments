@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "btn-5",
+      "id": "btn-6",
       "name": "Primary gradient button",
       "component": "Button",
       "props": {
@@ -71,11 +71,51 @@
     },
 
     {
-      "id": "btn-5",
+      "id": "btn-7",
       "name": "Secondary gradient button",
       "component": "Button",
       "props": {
         "className": "bt bt-gradient sm secondary",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-8",
+      "name": "Success gradient button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-gradient sm success",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-9",
+      "name": "Danger gradient button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-gradient sm danger",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-10",
+      "name": "Warning gradient button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-gradient sm warning",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-11",
+      "name": "Info gradient button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-gradient sm info",
         "children": "Hover Me"
       }
     }

@@ -94,7 +94,7 @@
     // Primary gradient button
     &.primary {
         color: colors.$full-white;
-        background: linear-gradient(135deg, colors.$purple 0%, colors.$color-primary 100%);
+        background: linear-gradient(135deg, colors.$primary-400 0%, colors.$color-primary 100%);
         box-shadow: 0 6px 18px colors.$primary-600;
 
         &:hover {
@@ -106,7 +106,7 @@
         }
 
         &::before {
-            background: linear-gradient(135deg, colors.$color-primary 0%, colors.$purple 100%);
+            background: linear-gradient(135deg, colors.$color-primary 0%, colors.$primary-400 100%);
         }
     }
 
@@ -128,7 +128,85 @@
             background: linear-gradient(135deg, colors.$gray-600 0%, colors.$gray-200 100%);
         }
     }
+
+    // Success gradient buttons
+    &.success {
+        color: colors.$full-white;
+        background: linear-gradient(135deg, colors.$success-300 0%, colors.$color-success);
+        box-shadow: 0 6px 18px colors.$color-success;
+
+        &:hover {
+            box-shadow: 0 10px 25px colors.$success-700;
+        }
+
+        &:active {
+            box-shadow: 0 4px 12px colors.$success-700;
+        }
+
+        &::before {
+            background: linear-gradient(135deg, colors.$color-success 0%, colors.$success-200 100%);
+        }
+    }
+
+    // Danger gradient buttons
+    &.danger{
+        color: colors.$full-white;
+        background: linear-gradient(135deg, colors.$danger-400 0%, colors.$color-danger);
+        box-shadow: 0 6px 18px colors.$color-danger;
+
+        &:hover {
+            box-shadow: 0 10px 25px colors.$danger-700;
+        }
+
+        &:active {
+            box-shadow: 0 4px 12px colors.$danger-700;
+        }
+
+        &::before {
+            background: linear-gradient(135deg, colors.$color-danger 0%, colors.$danger-200 100%);
+        }
+    }
+
+    // Warning gradient buttons
+    &.warning{
+        color: colors.$gray-200;
+        background: linear-gradient(135deg, colors.$warning-400 0%, colors.$color-warning);
+        box-shadow: 0 6px 18px colors.$color-warning;
+
+        &:hover {
+            box-shadow: 0 10px 25px colors.$warning-700;
+        }
+
+        &:active {
+            box-shadow: 0 4px 12px colors.$warning-700;
+        }
+
+        &::before {
+            background: linear-gradient(135deg, colors.$color-warning 0%, colors.$warning-200 100%);
+        }
+    }
+
+    // Info gradient buttons
+    &.info{
+        color: colors.$full-white;
+        background: linear-gradient(135deg, colors.$info-400 0%, colors.$color-info);
+        box-shadow: 0 6px 18px colors.$color-info;
+
+        &:hover {
+            box-shadow: 0 10px 25px colors.$info-700;
+        }
+
+        &:active {
+            box-shadow: 0 4px 12px colors.$info-700;
+        }
+
+        &::before {
+            background: linear-gradient(135deg, colors.$color-info 0%, colors.$info-200 100%);
+        }
+    }
 }
+
+// FIXME: Исправить цвета текста кнопок при изменении с light на dark mode
 
 // Text buttons
 .bt-text {
