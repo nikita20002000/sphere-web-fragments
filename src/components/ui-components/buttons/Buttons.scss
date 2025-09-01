@@ -156,25 +156,25 @@
 
     &.success {
         &:hover {
-            border-bottom: 2px solid colors.$success-color;
+            border-bottom: 2px solid colors.$color-success;
         }
     }
 
     &.warning {
         &:hover {
-            border-bottom: 2px solid colors.$warning-color;
+            border-bottom: 2px solid colors.$color-warning;
         }
     }
 
     &.danger {
         &:hover {
-            border-bottom: 2px solid colors.$danger-color;
+            border-bottom: 2px solid colors.$color-danger;
         }
     }
 
     &.info {
         &:hover {
-            border-bottom: 2px solid colors.$info-color;
+            border-bottom: 2px solid colors.$color-info;
         }
     }
 }
