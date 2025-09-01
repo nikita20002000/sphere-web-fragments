@@ -12,58 +12,58 @@
     }
 }
 
-    // Button Size classes
+// Button Size classes
 .bt {
-        font-family: fonts.$bt-default-font;
+    font-family: fonts.$bt-default-font;
 
-        &.xxs {
-            padding: sizes.$xxs-button-vertical-padding sizes.$xxs-button-horizontal-padding;
-            font-size: sizes.$xxs-button-font-size;
-            font-weight: fonts.$bt-light-font-weight;
-            letter-spacing: sizes.$xxs-button-letter-spacing;
-            border-radius: sizes.$xxs-button-border-radius;
-        }
-
-        &.xs {
-            padding: sizes.$xs-button-vertical-padding sizes.$xs-button-horizontal-padding;
-            font-size: sizes.$xs-button-font-size;
-            font-weight: fonts.$bt-light-font-weight;
-            letter-spacing: sizes.$xs-button-letter-spacing;
-            border-radius: sizes.$xs-button-border-radius;
-        }
-
-        &.sm {
-            padding: sizes.$sm-button-vertical-padding sizes.$sm-button-horizontal-padding;
-            font-size: sizes.$sm-button-font-size;
-            font-weight: fonts.$bt-light-font-weight;
-            letter-spacing: sizes.$sm-button-letter-spacing;
-            border-radius: sizes.$sm-button-border-radius;
-        }
-
-        &.md {
-            padding: sizes.$md-button-vertical-padding sizes.$md-button-horizontal-padding;
-            font-size: sizes.$md-button-font-size;
-            font-weight: fonts.$bt-light-font-weight;
-            letter-spacing: sizes.$md-button-letter-spacing;
-            border-radius: sizes.$md-button-border-radius;
-        }
-
-        &.lg {
-            padding: sizes.$lg-button-vertical-padding sizes.$lg-button-horizontal-padding;
-            font-size: sizes.$lg-button-font-size;
-            font-weight: fonts.$bt-light-font-weight;
-            letter-spacing: sizes.$lg-button-letter-spacing;
-            border-radius: sizes.$lg-button-border-radius;
-        }
-
-        &.xl {
-            padding: sizes.$xl-button-vertical-padding sizes.$xl-button-horizontal-padding;
-            font-size: sizes.$xl-button-font-size;
-            font-weight: fonts.$bt-light-font-weight;
-            letter-spacing: sizes.$xl-button-letter-spacing;
-            border-radius: sizes.$xl-button-border-radius;
-        }
+    &.xxs {
+        padding: sizes.$xxs-button-vertical-padding sizes.$xxs-button-horizontal-padding;
+        font-size: sizes.$xxs-button-font-size;
+        font-weight: fonts.$bt-light-font-weight;
+        letter-spacing: sizes.$xxs-button-letter-spacing;
+        border-radius: sizes.$xxs-button-border-radius;
     }
+
+    &.xs {
+        padding: sizes.$xs-button-vertical-padding sizes.$xs-button-horizontal-padding;
+        font-size: sizes.$xs-button-font-size;
+        font-weight: fonts.$bt-light-font-weight;
+        letter-spacing: sizes.$xs-button-letter-spacing;
+        border-radius: sizes.$xs-button-border-radius;
+    }
+
+    &.sm {
+        padding: sizes.$sm-button-vertical-padding sizes.$sm-button-horizontal-padding;
+        font-size: sizes.$sm-button-font-size;
+        font-weight: fonts.$bt-light-font-weight;
+        letter-spacing: sizes.$sm-button-letter-spacing;
+        border-radius: sizes.$sm-button-border-radius;
+    }
+
+    &.md {
+        padding: sizes.$md-button-vertical-padding sizes.$md-button-horizontal-padding;
+        font-size: sizes.$md-button-font-size;
+        font-weight: fonts.$bt-light-font-weight;
+        letter-spacing: sizes.$md-button-letter-spacing;
+        border-radius: sizes.$md-button-border-radius;
+    }
+
+    &.lg {
+        padding: sizes.$lg-button-vertical-padding sizes.$lg-button-horizontal-padding;
+        font-size: sizes.$lg-button-font-size;
+        font-weight: fonts.$bt-light-font-weight;
+        letter-spacing: sizes.$lg-button-letter-spacing;
+        border-radius: sizes.$lg-button-border-radius;
+    }
+
+    &.xl {
+        padding: sizes.$xl-button-vertical-padding sizes.$xl-button-horizontal-padding;
+        font-size: sizes.$xl-button-font-size;
+        font-weight: fonts.$bt-light-font-weight;
+        letter-spacing: sizes.$xl-button-letter-spacing;
+        border-radius: sizes.$xl-button-border-radius;
+    }
+}
 
 // Gradient default buttons
 .bt-gradient {
@@ -286,6 +286,95 @@
 
         &:hover {
             border-bottom: 2px solid colors.$gray-400;
+        }
+    }
+}
+
+// Outline buttons
+.bt-outline {
+    background: transparent;
+    border: 2px solid;
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: translateY(-2px);
+    }
+
+    &.primary {
+        border-color: colors.$color-primary;
+        color: colors.$color-primary;
+
+        &:hover {
+            background: colors.$color-primary;
+            color: colors.$full-white;
+            box-shadow: 0 4px 12px colors.$primary-200-40-p;
+        }
+    }
+
+    &.secondary {
+        border-color: colors.$gray-400;
+        color: colors.$gray-600;
+
+        &:hover {
+            background: colors.$gray-400;
+            color: colors.$gray-700;
+            box-shadow: 0 4px 12px rgba(colors.$gray-400, 0.3);
+        }
+    }
+
+    &.success {
+        border-color: colors.$color-success;
+        color: colors.$color-success;
+
+        &:hover {
+            background: colors.$color-success;
+            color: colors.$full-white;
+            box-shadow: 0 4px 12px rgba(colors.$color-success, 0.3);
+        }
+    }
+
+    &.danger {
+        border-color: colors.$color-danger;
+        color: colors.$color-danger;
+
+        &:hover {
+            background: colors.$color-danger;
+            color: colors.$full-white;
+            box-shadow: 0 4px 12px rgba(colors.$color-danger, 0.3);
+        }
+    }
+
+    &.warning {
+        border-color: colors.$color-warning;
+        color: colors.$color-warning;
+
+        &:hover {
+            background: colors.$color-warning;
+            color: colors.$full-white;
+            box-shadow: 0 4px 12px rgba(colors.$color-warning, 0.3);
+        }
+    }
+
+    &.info {
+        border-color: colors.$color-info;
+        color: colors.$color-info;
+
+        &:hover {
+            background: colors.$color-info;
+            color: colors.$full-white;
+            box-shadow: 0 4px 12px rgba(colors.$color-info, 0.3);
+        }
+    }
+
+    &.disabled {
+        border-color: colors.$gray-400;
+        color: colors.$gray-600;
+
+        &:hover {
+            background: none!important;
+            color: colors.$gray-600!important;
+            border-bottom: 2px solid colors.$gray-400!important;
+            box-shadow: none!important;
         }
     }
 

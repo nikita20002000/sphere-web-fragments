@@ -139,6 +139,76 @@
         "className": "bt bt-gradient sm info disabled",
         "children": "Hover Me"
       }
+    },
+
+    {
+      "id": "btn-14",
+      "name": "Primary outline button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-outline sm primary",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-15",
+      "name": "Secondary outline button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-outline sm secondary",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-16",
+      "name": "Success outline button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-outline sm success",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-17",
+      "name": "Danger outline button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-outline sm danger",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-18",
+      "name": "Warning outline button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-outline sm warning",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-19",
+      "name": "Info outline button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-outline sm info",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-19",
+      "name": "Disabled outline button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-outline sm info disabled",
+        "children": "Hover Me"
+      }
     }
   ]
 }
