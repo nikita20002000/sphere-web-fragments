@@ -7,6 +7,8 @@
 
 // Button Size classes
 .bt {
+    font-family: fonts.$bt-default-font;
+
     &.xxs {
         padding: sizes.$xxs-button-vertical-padding sizes.$xxs-button-horizontal-padding;
         font-size: sizes.$xxs-button-font-size;
@@ -89,6 +91,7 @@
         left: 0;
     }
 
+    // Primary gradient button
     &.primary {
         color: colors.$full-white;
         background: linear-gradient(135deg, colors.$purple 0%, colors.$color-primary 100%);
@@ -107,6 +110,7 @@
         }
     }
 
+    // Secondary gradient button
     &.secondary {
         color: colors.$gray-800;
         background: linear-gradient(135deg, colors.$gray-200 0%, colors.$gray-600 100%);
@@ -126,74 +130,51 @@
     }
 }
 
-.bt {
-    font-family: fonts.$bt-default-font;
-    font-weight: fonts.$bt-default-font-weight;
-    font-size: fonts.$font-size-sm;
+// Text buttons
+.bt-text {
+    z-index: 1;
+    cursor: pointer;
+    border: 2px solid transparent;
+    background: none;
+    border-radius: 0!important;
 
     &:hover {
        outline: none;
     }
 
-    &-text {
-        z-index: 1;
-        height: sizes.$btn-text-height;
-        cursor: pointer;
-        border: none;
-        background: none;
-
-        &.primary {
-            &:hover {
-                border-bottom: 2px solid colors.$color-primary;
-            }
-        }
-
-        &.secondary {
-            &:hover {
-                border-bottom: 2px solid colors.$color-secondary;
-            }
-        }
-
-        &.success {
-            &:hover {
-                border-bottom: 2px solid colors.$success-color;
-            }
-        }
-
-        &.warning {
-            &:hover {
-                border-bottom: 2px solid colors.$warning-color;
-            }
-        }
-
-        &.danger {
-            &:hover {
-                border-bottom: 2px solid colors.$danger-color;
-            }
-        }
-
-        &.info {
-            &:hover {
-                border-bottom: 2px solid colors.$info-color;
-            }
+    &.primary {
+        &:hover {
+            border-bottom: 2px solid colors.$color-primary;
         }
     }
 
-    &-text-bordered {
-        z-index: 1;
-        height: sizes.$btn-text-height;
+    &.secondary {
+        &:hover {
+            border-bottom: 2px solid colors.$color-secondary;
+        }
     }
-}
 
+    &.success {
+        &:hover {
+            border-bottom: 2px solid colors.$success-color;
+        }
+    }
 
-.bt-text.sm {
-    font-size: var(--sm-btn-text-font-size);
-}
+    &.warning {
+        &:hover {
+            border-bottom: 2px solid colors.$warning-color;
+        }
+    }
 
-.bt-text.md {
-    font-size: var(--md-btn-text-font-size);
-}
+    &.danger {
+        &:hover {
+            border-bottom: 2px solid colors.$danger-color;
+        }
+    }
 
-.bt-text.lg {
-    font-size: var(--lg-btn-text-font-size);
+    &.info {
+        &:hover {
+            border-bottom: 2px solid colors.$info-color;
+        }
+    }
 }

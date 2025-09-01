@@ -7,7 +7,7 @@
       "name": "Text button primary",
       "component": "Button",
       "props": {
-        "className": "bt-text primary",
+        "className": "bt bt-text sm primary",
         "children": "Hover Me"
       }
     },
@@ -17,7 +17,7 @@
       "name": "Text button secondary",
       "component": "Button",
       "props": {
-        "className": "bt-text secondary",
+        "className": "bt bt-text sm secondary",
         "children": "Hover Me"
       }
     },
@@ -26,7 +26,7 @@
       "name": "Text button success",
       "component": "Button",
       "props": {
-        "className": "bt-text success",
+        "className": "bt bt-text sm success",
         "children": "Hover Me"
       }
     },
@@ -36,7 +36,7 @@
       "name": "Text button warning",
       "component": "Button",
       "props": {
-        "className": "bt-text warning",
+        "className": "bt bt-text sm warning",
         "children": "Hover Me"
       }
     },
@@ -46,7 +46,7 @@
       "name": "Text button danger",
       "component": "Button",
       "props": {
-        "className": "bt-text danger",
+        "className": "bt bt-text sm danger",
         "children": "Hover Me"
       }
     },
@@ -56,7 +56,7 @@
       "name": "Text button info",
       "component": "Button",
       "props": {
-        "className": "bt-text info",
+        "className": "bt bt-text sm info",
         "children": "Hover Me"
       }
     },
@@ -65,7 +65,7 @@
       "name": "Primary gradient button",
       "component": "Button",
       "props": {
-        "className": "bt bt-gradient md primary",
+        "className": "bt bt-gradient sm primary",
         "children": "Hover Me"
       }
     },
