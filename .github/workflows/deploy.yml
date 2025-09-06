@@ -10,24 +10,32 @@ on:
     branches:
       - main
 
-jobs:
-  deploy:
-    if: github.event.pull_request.merged == true || github.event_name == 'push'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+    jobs:
+      deploy:
+        if: github.event.pull_request.merged == true || github.event_name == 'push'
+        runs-on: ubuntu-latest
+        steps:
+          - name: Checkout code
+            uses: actions/checkout@v3
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '22'
+          - name: Setup Node.js
+            uses: actions/setup-node@v3
+            with:
+              node-version: '22'
 
-      - name: Install dependencies
-        run: npm install
+          - name: Install dependencies
+            run: npm install
 
-      - name: Deploy
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          npx gh-pages -d dist --branch deploy-pages --repo "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
+          - name: Build the project
+            run: npm run build
+
+          - name: Debug dist presence
+            run: ls -la dist
+            continue-on-error: true
+
+          - name: Deploy
+            if: success()
+            env:
+              GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            run: |
+              npx gh-pages -d dist --branch deploy-pages --repo "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
