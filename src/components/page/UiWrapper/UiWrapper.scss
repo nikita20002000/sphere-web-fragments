@@ -4,7 +4,7 @@
 .elements {
   &-container {
     position: relative;
-    height: 100%;
+    height: calc(100vh - var(--header-height) - var(--category-header-height) - var(--spacing-lg) - var(--spacing-md) - (var(--spacing-s) * 2) - 1rem);
     overflow-y: auto;
     margin-bottom: sizes.$spacing-md;
   }

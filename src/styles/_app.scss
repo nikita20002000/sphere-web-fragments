@@ -1,5 +1,6 @@
 // Main application styles
-@use 'vars/sizes' as *;
+@use 'vars/sizes' as sizes;
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -41,114 +42,31 @@ body {
 
 /* Content */
 .content {
+  height: 100%;
   flex-grow: 1;
-  padding: $spacing-s $spacing-lg ;
+  padding: sizes.$spacing-s sizes.$spacing-lg ;
   transition: var(--transition);
-  overflow-y: auto;
 }
 
 .category-header {
-  margin-bottom: $spacing-lg;
+  height: sizes.$category-header-height;
+  margin-bottom: sizes.$spacing-lg;
 }
 
 .category-header h1 {
-  font-size: $font-size-3xl;
-  margin-bottom: $spacing-s;
+  font-size: sizes.$font-size-3xl;
+  margin-bottom: sizes.$spacing-s;
   color: var(--color-text-primary);
 }
 
 .component-count {
   color: var(--color-secondary);
-  font-size: $font-size-md;
-}
-
-//TODO: УБрать
-/* Button Styles */
-.button {
-  padding: 8px 16px;
-  border-radius: 4px;
-  border: none;
-  font-size: 14px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-//TODO: УБрать
-.button.primary {
-  background-color: var(--color-primary);
-  color: white;
-}
-
-//TODO: УБрать
-.button.secondary {
-  background-color: var(--color-secondary);
-  color: white;
-}
-
-//TODO: УБрать
-.button.success {
-  background-color: var(--color-success);
-  color: white;
-}
-
-//TODO: УБрать
-.button.danger {
-  background-color: var(--color-danger);
-  color: white;
-}
-
-//TODO: УБрать
-.button.warning {
-  background-color: var(--color-warning);
-  color: var(--color-text-contrast);
-}
-
-//TODO: УБрать
-.button.info {
-  background-color: var(--color-info);
-  color: white;
-}
-
-//TODO: УБрать
-.button.light {
-  background-color: var(--color-light);
-  color: var(--color-text-contrast);
-}
-
-//TODO: УБрать
-.button.dark {
-  background-color: var(--color-dark);
-  color: white;
-}
-
-//TODO: УБрать
-.button.small {
-  padding: 4px 8px;
-  font-size: 12px;
-}
-
-//TODO: УБрать
-.button.large {
-  padding: 12px 24px;
-  font-size: 16px;
-}
-
-//TODO: УБрать
-.button.outline {
-  background-color: transparent;
-  border: 1px solid var(--color-primary);
-  color: var(--color-primary);
-}
-
-//TODO: УБрать
-.button.rounded {
-  border-radius: 20px;
+  font-size: sizes.$font-size-md;
 }
 
 
 /* Responsive Design */
-@media (max-width: $adaptive-mobile) {
+@media (max-width: var(--adaptive-mobile)) {
   .content {
     margin-left: 0;
   }
