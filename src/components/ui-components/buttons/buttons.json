@@ -7,7 +7,7 @@
       "name": "Text button primary",
       "component": "Button",
       "props": {
-        "className": "bt-text primary",
+        "className": "bt bt-text sm primary",
         "children": "Hover Me"
       }
     },
@@ -17,7 +17,7 @@
       "name": "Text button secondary",
       "component": "Button",
       "props": {
-        "className": "bt-text secondary",
+        "className": "bt bt-text sm secondary",
         "children": "Hover Me"
       }
     },
@@ -26,7 +26,7 @@
       "name": "Text button success",
       "component": "Button",
       "props": {
-        "className": "bt-text success",
+        "className": "bt bt-text sm success",
         "children": "Hover Me"
       }
     },
@@ -36,7 +36,7 @@
       "name": "Text button warning",
       "component": "Button",
       "props": {
-        "className": "bt-text warning",
+        "className": "bt bt-text sm warning",
         "children": "Hover Me"
       }
     },
@@ -46,7 +46,7 @@
       "name": "Text button danger",
       "component": "Button",
       "props": {
-        "className": "bt-text danger",
+        "className": "bt bt-text sm danger",
         "children": "Hover Me"
       }
     },
@@ -56,7 +56,447 @@
       "name": "Text button info",
       "component": "Button",
       "props": {
-        "className": "bt-text info",
+        "className": "bt bt-text sm info",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-6",
+      "name": "Disabled text button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-text sm info disabled",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-7",
+      "name": "Primary gradient button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-gradient sm primary",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-8",
+      "name": "Secondary gradient button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-gradient sm secondary",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-9",
+      "name": "Success gradient button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-gradient sm success",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-10",
+      "name": "Danger gradient button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-gradient sm danger",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-11",
+      "name": "Warning gradient button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-gradient sm warning",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-12",
+      "name": "Info gradient button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-gradient sm info",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-13",
+      "name": "Disabled gradient button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-gradient sm info disabled",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-14",
+      "name": "Primary outline button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-outline sm primary",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-15",
+      "name": "Secondary outline button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-outline sm secondary",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-16",
+      "name": "Success outline button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-outline sm success",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-17",
+      "name": "Danger outline button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-outline sm danger",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-18",
+      "name": "Warning outline button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-outline sm warning",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-19",
+      "name": "Info outline button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-outline sm info",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-20",
+      "name": "Disabled outline button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-outline sm info disabled",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-21",
+      "name": "Primary ghost button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-ghost sm primary",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-22",
+      "name": "Secondary ghost button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-ghost sm secondary",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-23",
+      "name": "Success ghost button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-ghost sm success",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-24",
+      "name": "Danger ghost button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-ghost sm danger",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-25",
+      "name": "Warning ghost button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-ghost sm warning",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-26",
+      "name": "Info ghost button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-ghost sm info",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-27",
+      "name": "Disabled ghost button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-ghost sm primary disabled",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-28",
+      "name": "Primary neumorphic button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-neumorphic sm primary",
+        "children": "Hover Me"
+      }
+    },
+    {
+      "id": "btn-29",
+      "name": "Secondary neumorphic button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-neumorphic sm secondary",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-30",
+      "name": "Success neumorphic button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-neumorphic sm success",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-31",
+      "name": "Danger neumorphic button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-neumorphic sm danger",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-32",
+      "name": "Warning neumorphic button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-neumorphic sm warning",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-33",
+      "name": "Info neumorphic button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-neumorphic sm info",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-34",
+      "name": "Disabled neumorphic button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-neumorphic sm primary disabled",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-35",
+      "name": "Primary common button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-common sm primary",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-36",
+      "name": "Secondary common button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-common sm secondary",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-37",
+      "name": "Success common button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-common sm success",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-38",
+      "name": "Danger common button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-common sm danger",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-39",
+      "name": "Warning common button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-common sm warning",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-40",
+      "name": "Info common button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-common sm info",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-41",
+      "name": "Disabled common button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-common sm primary disabled",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-42",
+      "name": "Classic glass button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-glass sm classic",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-43",
+      "name": "Primary glass button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-glass sm primary",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-44",
+      "name": "Secondary glass button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-glass sm secondary",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-45",
+      "name": "Success glass button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-glass sm success",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-46",
+      "name": "Danger glass button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-glass sm danger",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-47",
+      "name": "Warning glass button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-glass sm warning",
+        "children": "Hover Me"
+      }
+    },
+
+    {
+      "id": "btn-48",
+      "name": "Info glass button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-glass sm info",
+        "children": "Hover Me"
+      }
+    },
+
+
+    {
+      "id": "btn-49",
+      "name": "Disabled glass button",
+      "component": "Button",
+      "props": {
+        "className": "bt bt-glass sm primary disabled",
         "children": "Hover Me"
       }
     }

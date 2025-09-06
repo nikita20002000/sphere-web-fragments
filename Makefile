@@ -25,7 +25,8 @@ clean:
 # Деплой на GitHub Pages
 deploy: clean build
 	@echo "Deploying to GitHub Pages..."
-	npx gh-pages -d dist --branch $(BRANCH)
+	   deploy:
+       	npx gh-pages -d dist --branch deploy-pages --repo "https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
 
 # Полный процесс: установка, линтинг, сборка и деплой
 all: install lint deploy

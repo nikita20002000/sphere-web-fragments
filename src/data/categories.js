@@ -35,11 +35,8 @@ export default {
     checkboxes: {
         name: 'Checkboxes',
     },
-    switchers: {
-        name: 'Switchers',
-    },
-    selects: {
-        name: 'Selects',
+    toggles: {
+        name: 'Toggles',
     },
     tables: {
         name: 'Tables',

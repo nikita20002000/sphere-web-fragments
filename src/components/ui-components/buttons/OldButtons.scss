@@ -1,0 +1,634 @@
+@use '../styles/colors' as colors;
+@use '../styles/fonts' as fonts;
+@use '../styles/sizes' as sizes;
+
+/*-------------------------------
+    SECTION: Системные кнопки
+-------------------------------*/
+/* -------------------------------------
+    SUBSECTION: Главная кнопка-текст
+--------------------------------------*/
+.bt-text.brand {
+    background-color: (--accent-primary);
+    color: var(--c-brand-gray-100);
+}
+
+.bt-text.brand:hover {
+    background: var(--accent-600);
+    outline: none;
+}
+
+.bt-text.brand:disabled {
+    background-color: var(--brand-disabled-bg) !important;
+    color: var(--c-brand-gray) !important;
+    cursor: not-allowed!important;
+}
+
+/*---------------------------------------------
+    SUBSECTION: Второстепенная кнопка-текста
+---------------------------------------------*/
+//.bt-text.secondary {
+  //    background-color: var(--c-brand-gray-600);
+  //    color: var(--c-brand-gray-200);
+  //}
+//
+//.bt-text.secondary:hover {
+  //    background: var(--c-brand-gray-700);
+  //}
+//
+//.bt-text.secondary:disabled {
+  //    background-color: var(--secondary-disabled-bg) !important;
+  //    color: var(--c-brand-gray) !important;
+  //    cursor: not-allowed!important;
+  //}
+
+
+/*---------------------------------------------
+    SUBSECTION: Кнопка текст success
+---------------------------------------------*/
+.bt-text.success {
+    background-color: var(--success-primary);
+    color: var(--c-brand-gray-200);
+}
+
+.bt-text.success:hover {
+    background: var(--success-600);
+}
+
+.bt-text.success:disabled {
+    background-color: var(--success-disabled-bg) !important;
+    color: var(--c-brand-gray) !important;
+    cursor: not-allowed!important;
+}
+
+
+/*---------------------------------------------
+    SUBSECTION: Кнопка текст danger
+---------------------------------------------*/
+.bt-text.danger {
+    background-color: var(--danger-btn-bg);
+    color: var(--c-brand-gray-200);
+}
+
+.bt-text.danger:hover {
+    background: var(--danger-btn-hover-bg);
+}
+
+.bt-text.danger:disabled {
+    background-color: var(--danger-disabled-bg) !important;
+    color: var(--c-brand-gray) !important;
+    cursor: not-allowed!important;
+}
+
+
+
+/*---------------------------------------------
+    SUBSECTION: Кнопка текст warning
+---------------------------------------------*/
+.bt-text.warning {
+    background-color: var(--warning-btn-bg);
+    color: var(--c-brand-gray-200);
+}
+
+.bt-text.warning:hover {
+    background: var(--warning-btn-hover-bg);
+}
+
+.bt-text.warning:disabled {
+    background-color: var(--warning-disabled-bg) !important;
+    color: var(--c-brand-gray) !important;
+    cursor: not-allowed!important;
+}
+
+/*---------------------------------------------
+    SUBSECTION: Кнопка текст light
+---------------------------------------------*/
+.bt-text.light {
+    background-color: var(--c-brand-gray);
+    color: var(--c-brand-gray-700);
+}
+
+.bt-text.light:hover {
+    background: var(--c-brand-gray-400);
+}
+
+.bt-text.light:disabled {
+    background-color: var(--light-disabled-bg) !important;
+    color: var(--c-brand-gray) !important;
+    cursor: not-allowed!important;
+}
+
+
+/*---------------------------------------------
+    SUBSECTION: Кнопка текст dark
+---------------------------------------------*/
+.bt-text.dark {
+    background-color: var(--c-brand-gray-800);
+    color: var(--c-brand-gray-200);
+}
+.bt-text.dark:hover {
+    background: var(--c-brand-gray-900);
+}
+
+.bt-text.dark:disabled {
+    background-color: var(--c-brand-gray-700) !important;
+    color: var(--c-brand-gray) !important;
+    cursor: not-allowed!important;
+}
+
+
+/*------------------------------------------
+    SECTION: Системные кнопки с бордюром
+------------------------------------------*/
+/* -----------------------------------------------
+    SUBSECTION: Главная кнопка-текст c бордюром
+------------------------------------------------*/
+.bt-text.brand.bordered {
+    border: var(--btn-text-bordered-border) solid var(--accent-primary);
+    background-color: transparent;
+    color: var(--accent-primary);
+}
+
+.bt-text.brand.bordered:hover {
+    background-color: var(--accent-primary);
+    color: var(--c-brand-gray-200);
+}
+
+.bt-text.brand.bordered:disabled {
+    border: var(--btn-text-bordered-border) solid var(--brand-disabled-bg);
+    background-color: transparent!important;
+    color: var(--brand-disabled-bg)!important;
+    cursor: not-allowed;
+}
+
+/* -----------------------------------------------
+    SUBSECTION: Secondary кнопка-текст c бордюром
+------------------------------------------------*/
+.bt-text.secondary.bordered {
+    border: var(--btn-text-bordered-border) solid var(--c-brand-gray-600);
+    background-color: transparent;
+    color: var(--c-brand-gray-600);
+}
+
+.bt-text.secondary.bordered:hover {
+    background-color: var(--c-brand-gray-600);
+    color: var(--c-brand-gray-200);
+}
+
+.bt-text.secondary.bordered:disabled {
+    border: var(--btn-text-bordered-border) solid var(--secondary-disabled-bg);
+    background-color: transparent!important;
+    color: var(--secondary-disabled-bg)!important;
+    cursor: not-allowed;
+}
+
+/* -----------------------------------------------
+    SUBSECTION: Success кнопка-текст c бордюром
+------------------------------------------------*/
+.bt-text.success.bordered {
+    border: var(--btn-text-bordered-border) solid var(--success-primary);
+    background-color: transparent;
+    color: var(--success-primary);
+}
+
+.bt-text.success.bordered:hover {
+    background-color: var(--success-primary);
+    color: var(--c-brand-gray-200);
+}
+
+.bt-text.success.bordered:disabled {
+    border: var(--btn-text-bordered-border) solid var(--success-disabled-bg);
+    background-color: transparent!important;
+    color: var(--success-disabled-bg)!important;
+    cursor: not-allowed;
+}
+
+/* -----------------------------------------------
+    SUBSECTION: Danger кнопка-текст c бордюром
+------------------------------------------------*/
+.bt-text.danger.bordered {
+    border: var(--btn-text-bordered-border) solid var(--danger-btn-bg);
+    background-color: transparent;
+    color: var(--danger-btn-bg);
+}
+
+.bt-text.danger.bordered:hover {
+    background-color: var(--danger-btn-bg);
+    color: var(--c-brand-gray-200);
+}
+
+.bt-text.danger.bordered:disabled {
+    border: var(--btn-text-bordered-border) solid var(--danger-disabled-bg);
+    background-color: transparent!important;
+    color: var(--danger-disabled-bg)!important;
+    cursor: not-allowed;
+}
+
+/* -----------------------------------------------
+    SUBSECTION: Warning кнопка-текст c бордюром
+------------------------------------------------*/
+.bt-text.warning.bordered {
+    border: var(--btn-text-bordered-border) solid var(--warning-btn-bg);
+    background-color: transparent;
+    color: var(--warning-btn-bg);
+}
+
+.bt-text.warning.bordered:hover {
+    background-color: var(--warning-btn-bg);
+    color: var(--c-brand-gray-200);
+}
+
+.bt-text.warning.bordered:disabled {
+    border: var(--btn-text-bordered-border) solid var(--warning-disabled-bg);
+    background-color: transparent!important;
+    color: var(--warning-disabled-bg)!important;
+    cursor: not-allowed;
+}
+
+/* -----------------------------------------------
+    SUBSECTION: Light кнопка-текст c бордюром
+------------------------------------------------*/
+.bt-text.light.bordered {
+    border: var(--btn-text-bordered-border) solid var(--c-brand-gray);
+    background-color: transparent;
+    color: var(--c-brand-gray);
+}
+
+.bt-text.light.bordered:hover {
+    background-color: var(--c-brand-gray);
+    color: var(--c-brand-gray-200);
+}
+
+.bt-text.light.bordered:disabled {
+    border: var(--btn-text-bordered-border) solid var(--light-disabled-bg);
+    background-color: transparent!important;
+    color: var(--light-disabled-bg)!important;
+    cursor: not-allowed;
+}
+
+/* -----------------------------------------------
+    SUBSECTION: Dark кнопка-текст c бордюром
+------------------------------------------------*/
+.bt-text.dark.bordered {
+    border: var(--btn-text-bordered-border) solid var(--c-brand-gray-800);
+    background-color: transparent;
+    color: var(--c-brand-gray-800);
+}
+
+.bt-text.dark.bordered:hover {
+    background-color: var(--c-brand-gray-800);
+    color: var(--c-brand-gray-200);
+}
+
+.bt-text.dark.bordered:disabled {
+    border: var(--btn-text-bordered-border) solid var(--c-brand-gray-700);
+    background-color: transparent!important;
+    color: var(--c-brand-gray-700)!important;
+    cursor: not-allowed;
+}
+
+
+/*-----------------------------------------------
+    SECTION: Кнопки текст с маленьким радиусом
+-----------------------------------------------*/
+.bt-text.sm-rd {
+    z-index: 1;
+    height: var(--btn-text-sm-rad-height);
+    border-radius: var(--btn-text-sm-rad-border-radius);
+}
+
+
+
+/*---------------------------------
+    SECTION: Кнопки подчеркнутые
+---------------------------------*/
+.bt-text-underline {
+    z-index: 1;
+    height: var(--btn-text-height);
+    cursor: pointer;
+    border: var(--btn-text-border);
+    font-weight: var(--btn-text-font-weight);
+    background-color: transparent;
+}
+
+.bt-text-underline.bordered {
+    border: var(--btn-text-bordered-border) ;
+}
+
+.bt-text-underline:hover {
+    outline: none;
+}
+
+.bt-text-underline.sm {
+    font-size: var(--sm-btn-text-font-size);
+}
+
+.bt-text-underline.md {
+    font-size: var(--md-btn-text-font-size);
+}
+
+.bt-text-underline.lg {
+    font-size: var(--lg-btn-text-font-size);
+}
+
+
+/*--------------------------------------------
+    Системная кнопка-текст с подчеркиванием
+--------------------------------------------*/
+.bt-text-underline.brand {
+    color: var(--accent-primary);
+    border-bottom: var(--btn-text-underline-border) solid var(--accent-primary);
+}
+
+.bt-text-underline.brand:hover {
+    color: var(--accent-600);
+    border-bottom: var(--btn-text-underline-border) solid var(--accent-600);
+    outline: none;
+}
+
+.bt-text-underline.brand:disabled {
+    color: var(--brand-disabled-bg) !important;
+    border-bottom: var(--btn-text-underline-border) solid var(--brand-disabled-bg);
+    cursor: not-allowed!important;
+}
+
+/*---------------------------------------------------------------
+    SUBSECTION: Второстепенная кнопка-текста с подчеркиванием
+---------------------------------------------------------------*/
+.bt-text-underline.secondary {
+    color: var(--c-brand-gray-600);
+    border-bottom: var(--btn-text-underline-border) solid var(--c-brand-gray-600);
+}
+
+.bt-text-underline.secondary:hover {
+    border-bottom: var(--btn-text-underline-border) solid var(--c-brand-gray-700);
+    outline: none;
+}
+
+.bt-text-underline.secondary:disabled {
+    color: var(--secondary-disabled-bg) !important;
+    border-bottom: var(--btn-text-underline-border) solid var(--secondary-disabled-bg);
+    cursor: not-allowed!important;
+}
+
+/*---------------------------------------------------------------
+    SUBSECTION: Success кнопка-текста с подчеркиванием
+---------------------------------------------------------------*/
+.bt-text-underline.success {
+    color: var(--success-primary);
+    border-bottom: var(--btn-text-underline-border) solid var(--success-primary);
+}
+
+.bt-text-underline.success:hover {
+    color: var(--success-600);
+    border-bottom: var(--btn-text-underline-border) solid var(--success-600);
+    outline: none;
+}
+
+.bt-text-underline.success:disabled {
+    color: var(--success-disabled-bg) !important;
+    border-bottom: var(--btn-text-underline-border) solid var(--success-disabled-bg);
+    cursor: not-allowed!important;
+}
+
+/*---------------------------------------------------------------
+    SUBSECTION: Danger кнопка-текста с подчеркиванием
+---------------------------------------------------------------*/
+.bt-text-underline.danger {
+    color: var(--danger-btn-bg);
+    border-bottom: var(--btn-text-underline-border) solid var(--danger-btn-bg);
+}
+
+.bt-text-underline.danger:hover {
+    color: var(--danger-btn-hover-bg);
+    border-bottom: var(--btn-text-underline-border) solid var(--danger-btn-hover-bg);
+    outline: none;
+}
+
+.bt-text-underline.danger:disabled {
+    color: var(--danger-disabled-bg) !important;
+    border-bottom: var(--btn-text-underline-border) solid var(--danger-disabled-bg);
+    cursor: not-allowed!important;
+}
+
+
+/*---------------------------------------------------------------
+    SUBSECTION: Warning кнопка-текста с подчеркиванием
+---------------------------------------------------------------*/
+.bt-text-underline.warning {
+    color: var(--warning-btn-bg);
+    border-bottom: var(--btn-text-underline-border) solid var(--warning-btn-bg);
+}
+
+.bt-text-underline.warning:hover {
+    color: var(--warning-btn-hover-bg);
+    border-bottom: var(--btn-text-underline-border) solid var(--warning-btn-hover-bg);
+    outline: none;
+}
+
+.bt-text-underline.warning:disabled {
+    color: var(--warning-disabled-bg) !important;
+    border-bottom: var(--btn-text-underline-border) solid var(--warning-disabled-bg);
+    cursor: not-allowed!important;
+}
+
+
+/*---------------------------------------------------------------
+    SUBSECTION: Light кнопка-текста с подчеркиванием
+---------------------------------------------------------------*/
+.bt-text-underline.light {
+    color: var(--c-brand-gray);
+    border-bottom: var(--btn-text-underline-border) solid var(--c-brand-gray);
+}
+
+.bt-text-underline.light:hover {
+    color: var(--c-brand-gray-400);
+    border-bottom: var(--btn-text-underline-border) solid var(--c-brand-gray-400);
+    outline: none;
+}
+
+.bt-text-underline.light:disabled {
+    color: var(--light-disabled-bg) !important;
+    border-bottom: var(--btn-text-underline-border) solid var(--light-disabled-bg);
+    cursor: not-allowed!important;
+}
+
+
+/*---------------------------------------------------------------
+    SUBSECTION: Dark кнопка-текста с подчеркиванием
+---------------------------------------------------------------*/
+.bt-text-underline.dark {
+    color: var(--c-brand-gray-800);
+    border-bottom: var(--btn-text-underline-border) solid var(--c-brand-gray-800);
+}
+
+.bt-text-underline.dark:hover {
+    color: var(--c-brand-gray-900);
+    border-bottom: var(--btn-text-underline-border) solid var(--c-brand-gray-900);
+    outline: none;
+}
+
+.bt-text-underline.dark:disabled {
+    color: var(--c-brand-gray-700) !important;
+    border-bottom: var(--btn-text-underline-border) solid var(--c-brand-gray-700);
+    cursor: not-allowed!important;
+}
+
+
+/*--------------------------------
+    SECTION: Кнопки неоморфизм
+--------------------------------*/
+.bt-text-neu {
+    height: var(--btn-text-height);
+    cursor: pointer;
+    border-radius: var(--btn-text-neu-border-radius);
+    font-weight: var(--btn-text-font-weight);
+    box-shadow: var(--btn-text-neu-box-shadow);
+    justify-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+    border: none;
+    padding: var(--vertical-btn-text-padding) var(--horizontal-btn-text-padding);
+}
+
+
+.bt-text-neu:hover {
+    outline: none;
+}
+
+.bt-text-neu.sm {
+    font-size: var(--sm-btn-text-font-size);
+}
+
+.bt-text-neu.md {
+    font-size: var(--md-btn-text-font-size);
+}
+
+.bt-text-neu.lg {
+    font-size: var(--lg-btn-text-font-size);
+}
+
+
+/*-------------------------------------
+    SECTION: Кнопка неоморфизм Brand
+-------------------------------------*/
+.bt-text-neu.brand {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+    background: var(--accent-primary);
+    box-shadow: inset 0.2rem 0.2rem 1rem var(--accent-400), inset -0.2rem -0.2rem 1rem var(--accent-600), 0.3rem 0.3rem 0.6rem var(--c-brand-gray-400), -0.2rem -0.2rem 0.5rem var(--c-brand-gray-100);
+    color: var(--c-brand-gray-400);
+}
+.bt-text-neu.brand:hover {
+    color: var(--c-brand-gray-100);
+}
+.bt-text-neu.brand:active {
+    box-shadow: inset 0.2rem 0.2rem 1rem var(--accent-600), inset -0.2rem -0.2rem 1rem var(--accent-400);
+}
+
+/*-------------------------------------
+    SECTION: Кнопка неоморфизм Secondary
+-------------------------------------*/
+
+.bt-text-neu.secondary {
+    grid-column: 1 / 2;
+    grid-row: 5 / 6;
+    color: var(--c-brand-gray-600);
+}
+.bt-text-neu.secondary:hover {
+    color: var(--accent-primary);
+}
+.bt-text-neu.secondary:active {
+    box-shadow: inset 0.2rem 0.2rem 0.5rem var(--c-brand-gray-400), inset -0.2rem -0.2rem 0.5rem var(--c-brand-gray-100);
+}
+
+
+/*-------------------------------------
+    SECTION: Кнопка неоморфизм Success
+-------------------------------------*/
+.bt-text-neu.success {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+    background: var(--success-primary);
+    box-shadow: inset 0.2rem 0.2rem 1rem var(--success-400), inset -0.2rem -0.2rem 1rem var(--success-600), 0.3rem 0.3rem 0.6rem var(--c-brand-gray-400), -0.2rem -0.2rem 0.5rem var(--c-brand-gray-100);
+    color: var(--c-brand-gray-400);
+}
+.bt-text-neu.success:hover {
+    color: var(--c-brand-gray-100);
+}
+.bt-text-neu.success:active {
+    box-shadow: inset 0.2rem 0.2rem 1rem var(--success-600), inset -0.2rem -0.2rem 1rem var(--success-400);
+}
+
+/*-------------------------------------
+    SECTION: Кнопка неоморфизм Danger
+-------------------------------------*/
+.bt-text-neu.danger {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+    background: var(--danger-btn-bg);
+    box-shadow: inset 0.2rem 0.2rem 1rem var(--danger-disabled-bg), inset -0.2rem -0.2rem 1rem var(--danger-btn-hover-bg), 0.3rem 0.3rem 0.6rem var(--c-brand-gray-400), -0.2rem -0.2rem 0.5rem var(--c-brand-gray-100);
+    color: var(--c-brand-gray-400);
+}
+.bt-text-neu.danger:hover {
+    color: var(--c-brand-gray-100);
+}
+.bt-text-neu.danger:active {
+    box-shadow: inset 0.2rem 0.2rem 1rem var(--danger-btn-hover-bg), inset -0.2rem -0.2rem 1rem var(--danger-disabled-bg);
+}
+
+/*-------------------------------------
+    SECTION: Кнопка неоморфизм Warning
+-------------------------------------*/
+.bt-text-neu.warning {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+    background: var(--warning-btn-bg);
+    box-shadow: inset 0.2rem 0.2rem 1rem var(--warning-disabled-bg), inset -0.2rem -0.2rem 1rem var(--warning-btn-hover-bg), 0.3rem 0.3rem 0.6rem var(--c-brand-gray-400), -0.2rem -0.2rem 0.5rem var(--c-brand-gray-100);
+    color: var(--c-brand-gray-400);
+}
+.bt-text-neu.warning:hover {
+    color: var(--c-brand-gray-100);
+}
+.bt-text-neu.warning:active {
+    box-shadow: inset 0.2rem 0.2rem 1rem var(--warning-btn-hover-bg), inset -0.2rem -0.2rem 1rem var(--warning-disabled-bg);
+}
+
+
+/*-------------------------------------
+    SECTION: Кнопка неоморфизм Warning
+-------------------------------------*/
+.bt-text-neu.warning {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+    background: var(--warning-btn-bg);
+    box-shadow: inset 0.2rem 0.2rem 1rem var(--warning-disabled-bg), inset -0.2rem -0.2rem 1rem var(--warning-btn-hover-bg), 0.3rem 0.3rem 0.6rem var(--c-brand-gray-400), -0.2rem -0.2rem 0.5rem var(--c-brand-gray-100);
+    color: var(--c-brand-gray-400);
+}
+.bt-text-neu.warning:hover {
+    color: var(--c-brand-gray-100);
+}
+.bt-text-neu.warning:active {
+    box-shadow: inset 0.2rem 0.2rem 1rem var(--warning-btn-hover-bg), inset -0.2rem -0.2rem 1rem var(--warning-disabled-bg);
+}
+
+/*-------------------------------------
+    SECTION: Кнопка неоморфизм Light
+-------------------------------------*/
+.bt-text-neu.light {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+    background: var(--c-brand-gray);
+    box-shadow: inset 0.2rem 0.2rem 1rem var(--c-brand-gray-400), inset -0.2rem -0.2rem 1rem var(--c-brand-gray-600), 0.3rem 0.3rem 0.6rem var(--c-brand-gray-400), -0.2rem -0.2rem 0.5rem var(--c-brand-gray-100);
+    color: var(--c-brand-gray-600);
+}
+.bt-text-neu.light:hover {
+    color: var(--c-brand-gray-800);
+}
+.bt-text-neu.light:active {
+    box-shadow: inset 0.2rem 0.2rem 1rem var(--c-brand-gray-600), inset -0.2rem -0.2rem 1rem var(--c-brand-gray-400);
+}
+
+

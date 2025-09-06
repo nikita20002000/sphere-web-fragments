@@ -1,3 +1,62 @@
 /* Sizes */
+// FIXME: Убрать из кода
 $btn-text-height: 1.2rem;
 $btn-text-border: .4rem;
+
+// Horizontal and vertical paddings
+$xxs-button-horizontal-padding: 0.5rem;
+$xxs-button-vertical-padding: 0.25rem;
+
+$xs-button-horizontal-padding: 0.75rem;
+$xs-button-vertical-padding: 0.375rem;
+
+$sm-button-horizontal-padding: 1rem;
+$sm-button-vertical-padding: 0.5rem;
+
+$md-button-horizontal-padding: 1.5rem;
+$md-button-vertical-padding: 0.75rem;
+
+$lg-button-horizontal-padding: 2rem;
+$lg-button-vertical-padding: 1rem;
+
+$xl-button-horizontal-padding: 2.5rem;
+$xl-button-vertical-padding: 1.25rem;
+
+$xxl-button-horizontal-padding: 3rem;
+$xxl-button-vertical-padding: 1.5rem;
+
+// Font sizes
+$xxs-button-font-size: 0.625rem; // 10px
+$xs-button-font-size: 0.75rem;  // 12px
+$sm-button-font-size: 0.875rem; // 14px
+$md-button-font-size: 1rem;     // 16px
+$lg-button-font-size: 1.125rem; // 18px
+$xl-button-font-size: 1.25rem;  // 20px
+$xxl-button-font-size: 1.5rem;  // 24px
+
+// Minimal height
+$xxs-button-min-height: 1.5rem;
+$xs-button-min-height: 1.75rem;
+$sm-button-min-height: 2.25rem;
+$md-button-min-height: 2.75rem;
+$lg-button-min-height: 3.25rem;
+$xl-button-min-height: 3.75rem;
+$xxl-button-min-height: 4.25rem;
+
+// Border radius
+$xxs-button-border-radius: 0.1875rem; // 3px
+$xs-button-border-radius: 0.25rem;  // 4px
+$sm-button-border-radius: 0.375rem; // 6px
+$md-button-border-radius: 0.5rem;   // 8px
+$lg-button-border-radius: 0.625rem; // 10px
+$xl-button-border-radius: 0.75rem;  // 12px
+$xxl-button-border-radius: 1rem;    // 16px
+
+// Letter spacing
+$xxs-button-letter-spacing: 0.01875rem; // 0.3px
+$xs-button-letter-spacing: 0.025rem;  // 0.4px
+$sm-button-letter-spacing: 0.03125rem; // 0.5px
+$md-button-letter-spacing: 0.0375rem;  // 0.6px
+$lg-button-letter-spacing: 0.04375rem; // 0.7px
+$xl-button-letter-spacing: 0.05rem;    // 0.8px
+$xxl-button-letter-spacing: 0.0625rem; // 1px

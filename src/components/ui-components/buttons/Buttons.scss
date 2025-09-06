@@ -3,711 +3,684 @@
 @use '../styles/fonts' as fonts;
 @use '../styles/sizes' as sizes;
 
+/* Common button styles */
+.bt {
+    cursor: pointer;
+
+    &.disabled {
+        cursor: not-allowed !important;
+    }
+}
+
+/* Button Size classes */
 .bt {
     font-family: fonts.$bt-default-font;
-    font-weight: fonts.$bt-default-font-weight;
-    color: colors.$main-text-color;
-    font-size: fonts.$font-size-sm;
+
+    &.xxs {
+        padding: sizes.$xxs-button-vertical-padding sizes.$xxs-button-horizontal-padding;
+        font-size: sizes.$xxs-button-font-size;
+        font-weight: fonts.$bt-light-font-weight;
+        letter-spacing: sizes.$xxs-button-letter-spacing;
+        border-radius: sizes.$xxs-button-border-radius;
+    }
+
+    &.xs {
+        padding: sizes.$xs-button-vertical-padding sizes.$xs-button-horizontal-padding;
+        font-size: sizes.$xs-button-font-size;
+        font-weight: fonts.$bt-light-font-weight;
+        letter-spacing: sizes.$xs-button-letter-spacing;
+        border-radius: sizes.$xs-button-border-radius;
+    }
+
+    &.sm {
+        padding: sizes.$sm-button-vertical-padding sizes.$sm-button-horizontal-padding;
+        font-size: sizes.$sm-button-font-size;
+        font-weight: fonts.$bt-light-font-weight;
+        letter-spacing: sizes.$sm-button-letter-spacing;
+        border-radius: sizes.$sm-button-border-radius;
+    }
+
+    &.md {
+        padding: sizes.$md-button-vertical-padding sizes.$md-button-horizontal-padding;
+        font-size: sizes.$md-button-font-size;
+        font-weight: fonts.$bt-light-font-weight;
+        letter-spacing: sizes.$md-button-letter-spacing;
+        border-radius: sizes.$md-button-border-radius;
+    }
+
+    &.lg {
+        padding: sizes.$lg-button-vertical-padding sizes.$lg-button-horizontal-padding;
+        font-size: sizes.$lg-button-font-size;
+        font-weight: fonts.$bt-light-font-weight;
+        letter-spacing: sizes.$lg-button-letter-spacing;
+        border-radius: sizes.$lg-button-border-radius;
+    }
+
+    &.xl {
+        padding: sizes.$xl-button-vertical-padding sizes.$xl-button-horizontal-padding;
+        font-size: sizes.$xl-button-font-size;
+        font-weight: fonts.$bt-light-font-weight;
+        letter-spacing: sizes.$xl-button-letter-spacing;
+        border-radius: sizes.$xl-button-border-radius;
+    }
+}
+
+/* Gradient default buttons */
+.bt-gradient {
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        outline: none;
+
+        &:hover {
+            transform: translateY(-3px);
+        }
+
+
+        &:active {
+            transform: translateY(1px);
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            transition: left 0.5s;
+            z-index: -1;
+        }
+
+        &:hover::before {
+            left: 0;
+        }
+
+        // Primary gradient button
+        &.primary {
+            color: colors.$full-white;
+            background: linear-gradient(135deg, colors.$primary-400 0%, colors.$color-primary 100%);
+            box-shadow: 0 6px 18px colors.$primary-600;
+
+            &:hover {
+                box-shadow: 0 10px 25px colors.$primary-700;
+            }
+
+            &:active {
+                box-shadow: 0 4px 12px colors.$primary-700;
+            }
+
+            &::before {
+                background: linear-gradient(135deg, colors.$color-primary 0%, colors.$primary-400 100%);
+            }
+        }
+
+        // Secondary gradient button
+        &.secondary {
+            color: colors.$gray-800;
+            background: linear-gradient(135deg, colors.$gray-200 0%, colors.$gray-600 100%);
+            box-shadow: 0 6px 18px colors.$gray-600;
+
+            &:hover {
+                box-shadow: 0 10px 25px colors.$gray-700;
+            }
+
+            &:active {
+                box-shadow: 0 4px 12px colors.$gray-700;
+            }
+
+            &::before {
+                background: linear-gradient(135deg, colors.$gray-600 0%, colors.$gray-200 100%);
+            }
+        }
+
+        // Success gradient buttons
+        &.success {
+            color: colors.$full-white;
+            background: linear-gradient(135deg, colors.$success-300 0%, colors.$color-success);
+            box-shadow: 0 6px 18px colors.$color-success;
+
+            &:hover {
+                box-shadow: 0 10px 25px colors.$success-700;
+            }
+
+            &:active {
+                box-shadow: 0 4px 12px colors.$success-700;
+            }
+
+            &::before {
+                background: linear-gradient(135deg, colors.$color-success 0%, colors.$success-200 100%);
+            }
+        }
+
+        // Danger gradient buttons
+        &.danger{
+            color: colors.$full-white;
+            background: linear-gradient(135deg, colors.$danger-400 0%, colors.$color-danger);
+            box-shadow: 0 6px 18px colors.$color-danger;
+
+            &:hover {
+                box-shadow: 0 10px 25px colors.$danger-700;
+            }
+
+            &:active {
+                box-shadow: 0 4px 12px colors.$danger-700;
+            }
+
+            &::before {
+                background: linear-gradient(135deg, colors.$color-danger 0%, colors.$danger-200 100%);
+            }
+        }
+
+        // Warning gradient buttons
+        &.warning{
+            color: colors.$gray-200;
+            background: linear-gradient(135deg, colors.$warning-400 0%, colors.$color-warning);
+            box-shadow: 0 6px 18px colors.$color-warning;
+
+            &:hover {
+                box-shadow: 0 10px 25px colors.$warning-700;
+            }
+
+            &:active {
+                box-shadow: 0 4px 12px colors.$warning-700;
+            }
+
+            &::before {
+                background: linear-gradient(135deg, colors.$color-warning 0%, colors.$warning-200 100%);
+            }
+        }
+
+        // Info gradient buttons
+        &.info{
+            color: colors.$full-white;
+            background: linear-gradient(135deg, colors.$info-400 0%, colors.$color-info);
+            box-shadow: 0 6px 18px colors.$color-info;
+
+            &:hover {
+                box-shadow: 0 10px 25px colors.$info-700;
+            }
+
+            &:active {
+                box-shadow: 0 4px 12px colors.$info-700;
+            }
+
+            &::before {
+                background: linear-gradient(135deg, colors.$color-info 0%, colors.$info-200 100%);
+            }
+        }
+
+        // Disabled gradient buttons
+        &.disabled {
+            background: colors.$color-gray!important;
+            color: colors.$gray-600!important;
+            box-shadow: none!important;
+
+            &:hover {
+                box-shadow: none!important;
+            }
+
+            &:active {
+                box-shadow: none!important;
+            }
+
+            &::before {
+                background: none!important;
+            }
+        }
+    }
+
+// FIXME: Исправить цвета текста кнопок при изменении с light на dark mode
+// FIXME: Исправить стили подъема некоторых кнопок
+
+/* Text buttons */
+.bt-text {
+    z-index: 1;
+    border: 2px solid transparent;
+    background: none;
+    border-radius: 0!important;
 
     &:hover {
-       outline: none;
+        outline: none;
     }
 
-    &-text {
-        z-index: 1;
-        height: sizes.$btn-text-height;
-        cursor: pointer;
-        border: none;
-        background: none;
-
-        &.primary {
-            &:hover {
-                border-bottom: 2px solid colors.$color-primary;
-            }
-        }
-
-        &.secondary {
-            &:hover {
-                border-bottom: 2px solid colors.$color-secondary;
-            }
-        }
-
-        &.success {
-            &:hover {
-                border-bottom: 2px solid colors.$success-color;
-            }
-        }
-
-        &.warning {
-            &:hover {
-                border-bottom: 2px solid colors.$warning-color;
-            }
-        }
-
-        &.danger {
-            &:hover {
-                border-bottom: 2px solid colors.$danger-color;
-            }
-        }
-
-        &.info {
-            &:hover {
-                border-bottom: 2px solid colors.$info-color;
-            }
+    &.primary {
+        &:hover {
+            border-bottom: 2px solid colors.$color-primary;
         }
     }
 
-    &-text-bordered {
-        z-index: 1;
-        height: sizes.$btn-text-height;
+    &.secondary {
+        &:hover {
+            border-bottom: 2px solid colors.$gray-600;
+        }
+    }
+
+    &.success {
+        &:hover {
+            border-bottom: 2px solid colors.$color-success;
+        }
+    }
+
+    &.warning {
+        &:hover {
+            border-bottom: 2px solid colors.$color-warning;
+        }
+    }
+
+    &.danger {
+        &:hover {
+            border-bottom: 2px solid colors.$color-danger;
+        }
+    }
+
+    &.info {
+        &:hover {
+            border-bottom: 2px solid colors.$color-info;
+        }
+    }
+
+    &.disabled {
+        color: colors.$gray-400;
+
+        &:hover {
+            border-bottom: 2px solid colors.$gray-400;
+        }
     }
 }
 
-.bt-text.bordered {
-    border: var(--btn-text-bordered-border) ;
-}
-
-.bt-text.sm {
-    font-size: var(--sm-btn-text-font-size);
-}
-
-.bt-text.md {
-    font-size: var(--md-btn-text-font-size);
-}
-
-.bt-text.lg {
-    font-size: var(--lg-btn-text-font-size);
-}
-
-
-
-/*-------------------------------
-    SECTION: Системные кнопки
--------------------------------*/
-/* -------------------------------------
-    SUBSECTION: Главная кнопка-текст
---------------------------------------*/
-.bt-text.brand {
-    background-color: var(--accent-primary);
-    color: var(--c-brand-gray-100);
-}
-
-.bt-text.brand:hover {
-    background: var(--accent-600);
-    outline: none;
-}
-
-.bt-text.brand:disabled {
-    background-color: var(--brand-disabled-bg) !important;
-    color: var(--c-brand-gray) !important;
-    cursor: not-allowed!important;
-}
-
-/*---------------------------------------------
-    SUBSECTION: Второстепенная кнопка-текста
----------------------------------------------*/
-//.bt-text.secondary {
-//    background-color: var(--c-brand-gray-600);
-//    color: var(--c-brand-gray-200);
-//}
-//
-//.bt-text.secondary:hover {
-//    background: var(--c-brand-gray-700);
-//}
-//
-//.bt-text.secondary:disabled {
-//    background-color: var(--secondary-disabled-bg) !important;
-//    color: var(--c-brand-gray) !important;
-//    cursor: not-allowed!important;
-//}
-
-
-/*---------------------------------------------
-    SUBSECTION: Кнопка текст success
----------------------------------------------*/
-.bt-text.success {
-    background-color: var(--success-primary);
-    color: var(--c-brand-gray-200);
-}
-
-.bt-text.success:hover {
-    background: var(--success-600);
-}
-
-.bt-text.success:disabled {
-    background-color: var(--success-disabled-bg) !important;
-    color: var(--c-brand-gray) !important;
-    cursor: not-allowed!important;
-}
-
-
-/*---------------------------------------------
-    SUBSECTION: Кнопка текст danger
----------------------------------------------*/
-.bt-text.danger {
-    background-color: var(--danger-btn-bg);
-    color: var(--c-brand-gray-200);
-}
-
-.bt-text.danger:hover {
-    background: var(--danger-btn-hover-bg);
-}
-
-.bt-text.danger:disabled {
-    background-color: var(--danger-disabled-bg) !important;
-    color: var(--c-brand-gray) !important;
-    cursor: not-allowed!important;
-}
-
-
-
-/*---------------------------------------------
-    SUBSECTION: Кнопка текст warning
----------------------------------------------*/
-.bt-text.warning {
-    background-color: var(--warning-btn-bg);
-    color: var(--c-brand-gray-200);
-}
-
-.bt-text.warning:hover {
-    background: var(--warning-btn-hover-bg);
-}
-
-.bt-text.warning:disabled {
-    background-color: var(--warning-disabled-bg) !important;
-    color: var(--c-brand-gray) !important;
-    cursor: not-allowed!important;
-}
-
-/*---------------------------------------------
-    SUBSECTION: Кнопка текст light
----------------------------------------------*/
-.bt-text.light {
-    background-color: var(--c-brand-gray);
-    color: var(--c-brand-gray-700);
-}
-
-.bt-text.light:hover {
-    background: var(--c-brand-gray-400);
-}
-
-.bt-text.light:disabled {
-    background-color: var(--light-disabled-bg) !important;
-    color: var(--c-brand-gray) !important;
-    cursor: not-allowed!important;
-}
-
-
-/*---------------------------------------------
-    SUBSECTION: Кнопка текст dark
----------------------------------------------*/
-.bt-text.dark {
-    background-color: var(--c-brand-gray-800);
-    color: var(--c-brand-gray-200);
-}
-.bt-text.dark:hover {
-    background: var(--c-brand-gray-900);
-}
-
-.bt-text.dark:disabled {
-    background-color: var(--c-brand-gray-700) !important;
-    color: var(--c-brand-gray) !important;
-    cursor: not-allowed!important;
-}
-
-
-/*------------------------------------------
-    SECTION: Системные кнопки с бордюром
-------------------------------------------*/
-/* -----------------------------------------------
-    SUBSECTION: Главная кнопка-текст c бордюром
-------------------------------------------------*/
-.bt-text.brand.bordered {
-    border: var(--btn-text-bordered-border) solid var(--accent-primary);
-    background-color: transparent;
-    color: var(--accent-primary);
-}
-
-.bt-text.brand.bordered:hover {
-    background-color: var(--accent-primary);
-    color: var(--c-brand-gray-200);
-}
-
-.bt-text.brand.bordered:disabled {
-    border: var(--btn-text-bordered-border) solid var(--brand-disabled-bg);
-    background-color: transparent!important;
-    color: var(--brand-disabled-bg)!important;
-    cursor: not-allowed;
-}
-
-/* -----------------------------------------------
-    SUBSECTION: Secondary кнопка-текст c бордюром
-------------------------------------------------*/
-.bt-text.secondary.bordered {
-    border: var(--btn-text-bordered-border) solid var(--c-brand-gray-600);
-    background-color: transparent;
-    color: var(--c-brand-gray-600);
-}
-
-.bt-text.secondary.bordered:hover {
-    background-color: var(--c-brand-gray-600);
-    color: var(--c-brand-gray-200);
-}
-
-.bt-text.secondary.bordered:disabled {
-    border: var(--btn-text-bordered-border) solid var(--secondary-disabled-bg);
-    background-color: transparent!important;
-    color: var(--secondary-disabled-bg)!important;
-    cursor: not-allowed;
-}
-
-/* -----------------------------------------------
-    SUBSECTION: Success кнопка-текст c бордюром
-------------------------------------------------*/
-.bt-text.success.bordered {
-    border: var(--btn-text-bordered-border) solid var(--success-primary);
-    background-color: transparent;
-    color: var(--success-primary);
-}
-
-.bt-text.success.bordered:hover {
-    background-color: var(--success-primary);
-    color: var(--c-brand-gray-200);
-}
-
-.bt-text.success.bordered:disabled {
-    border: var(--btn-text-bordered-border) solid var(--success-disabled-bg);
-    background-color: transparent!important;
-    color: var(--success-disabled-bg)!important;
-    cursor: not-allowed;
-}
-
-/* -----------------------------------------------
-    SUBSECTION: Danger кнопка-текст c бордюром
-------------------------------------------------*/
-.bt-text.danger.bordered {
-    border: var(--btn-text-bordered-border) solid var(--danger-btn-bg);
-    background-color: transparent;
-    color: var(--danger-btn-bg);
-}
-
-.bt-text.danger.bordered:hover {
-    background-color: var(--danger-btn-bg);
-    color: var(--c-brand-gray-200);
-}
-
-.bt-text.danger.bordered:disabled {
-    border: var(--btn-text-bordered-border) solid var(--danger-disabled-bg);
-    background-color: transparent!important;
-    color: var(--danger-disabled-bg)!important;
-    cursor: not-allowed;
-}
-
-/* -----------------------------------------------
-    SUBSECTION: Warning кнопка-текст c бордюром
-------------------------------------------------*/
-.bt-text.warning.bordered {
-    border: var(--btn-text-bordered-border) solid var(--warning-btn-bg);
-    background-color: transparent;
-    color: var(--warning-btn-bg);
-}
-
-.bt-text.warning.bordered:hover {
-    background-color: var(--warning-btn-bg);
-    color: var(--c-brand-gray-200);
-}
-
-.bt-text.warning.bordered:disabled {
-    border: var(--btn-text-bordered-border) solid var(--warning-disabled-bg);
-    background-color: transparent!important;
-    color: var(--warning-disabled-bg)!important;
-    cursor: not-allowed;
-}
-
-/* -----------------------------------------------
-    SUBSECTION: Light кнопка-текст c бордюром
-------------------------------------------------*/
-.bt-text.light.bordered {
-    border: var(--btn-text-bordered-border) solid var(--c-brand-gray);
-    background-color: transparent;
-    color: var(--c-brand-gray);
-}
-
-.bt-text.light.bordered:hover {
-    background-color: var(--c-brand-gray);
-    color: var(--c-brand-gray-200);
-}
-
-.bt-text.light.bordered:disabled {
-    border: var(--btn-text-bordered-border) solid var(--light-disabled-bg);
-    background-color: transparent!important;
-    color: var(--light-disabled-bg)!important;
-    cursor: not-allowed;
-}
-
-/* -----------------------------------------------
-    SUBSECTION: Dark кнопка-текст c бордюром
-------------------------------------------------*/
-.bt-text.dark.bordered {
-    border: var(--btn-text-bordered-border) solid var(--c-brand-gray-800);
-    background-color: transparent;
-    color: var(--c-brand-gray-800);
-}
-
-.bt-text.dark.bordered:hover {
-    background-color: var(--c-brand-gray-800);
-    color: var(--c-brand-gray-200);
-}
-
-.bt-text.dark.bordered:disabled {
-    border: var(--btn-text-bordered-border) solid var(--c-brand-gray-700);
-    background-color: transparent!important;
-    color: var(--c-brand-gray-700)!important;
-    cursor: not-allowed;
-}
-
-
-/*-----------------------------------------------
-    SECTION: Кнопки текст с маленьким радиусом
------------------------------------------------*/
-.bt-text.sm-rd {
-    z-index: 1;
-    height: var(--btn-text-sm-rad-height);
-    border-radius: var(--btn-text-sm-rad-border-radius);
-}
-
-
-
-/*---------------------------------
-    SECTION: Кнопки подчеркнутые
----------------------------------*/
-.bt-text-underline {
-    z-index: 1;
-    height: var(--btn-text-height);
-    cursor: pointer;
-    border: var(--btn-text-border);
-    font-weight: var(--btn-text-font-weight);
-    background-color: transparent;
-}
-
-.bt-text-underline.bordered {
-    border: var(--btn-text-bordered-border) ;
-}
-
-.bt-text-underline:hover {
-    outline: none;
-}
-
-.bt-text-underline.sm {
-    font-size: var(--sm-btn-text-font-size);
-}
-
-.bt-text-underline.md {
-    font-size: var(--md-btn-text-font-size);
-}
-
-.bt-text-underline.lg {
-    font-size: var(--lg-btn-text-font-size);
-}
-
-
-/*--------------------------------------------
-    Системная кнопка-текст с подчеркиванием
---------------------------------------------*/
-.bt-text-underline.brand {
-    color: var(--accent-primary);
-    border-bottom: var(--btn-text-underline-border) solid var(--accent-primary);
-}
-
-.bt-text-underline.brand:hover {
-    color: var(--accent-600);
-    border-bottom: var(--btn-text-underline-border) solid var(--accent-600);
-    outline: none;
-}
-
-.bt-text-underline.brand:disabled {
-    color: var(--brand-disabled-bg) !important;
-    border-bottom: var(--btn-text-underline-border) solid var(--brand-disabled-bg);
-    cursor: not-allowed!important;
-}
-
-/*---------------------------------------------------------------
-    SUBSECTION: Второстепенная кнопка-текста с подчеркиванием
----------------------------------------------------------------*/
-.bt-text-underline.secondary {
-    color: var(--c-brand-gray-600);
-    border-bottom: var(--btn-text-underline-border) solid var(--c-brand-gray-600);
-}
-
-.bt-text-underline.secondary:hover {
-    border-bottom: var(--btn-text-underline-border) solid var(--c-brand-gray-700);
-    outline: none;
-}
-
-.bt-text-underline.secondary:disabled {
-    color: var(--secondary-disabled-bg) !important;
-    border-bottom: var(--btn-text-underline-border) solid var(--secondary-disabled-bg);
-    cursor: not-allowed!important;
-}
-
-/*---------------------------------------------------------------
-    SUBSECTION: Success кнопка-текста с подчеркиванием
----------------------------------------------------------------*/
-.bt-text-underline.success {
-    color: var(--success-primary);
-    border-bottom: var(--btn-text-underline-border) solid var(--success-primary);
-}
-
-.bt-text-underline.success:hover {
-    color: var(--success-600);
-    border-bottom: var(--btn-text-underline-border) solid var(--success-600);
-    outline: none;
-}
-
-.bt-text-underline.success:disabled {
-    color: var(--success-disabled-bg) !important;
-    border-bottom: var(--btn-text-underline-border) solid var(--success-disabled-bg);
-    cursor: not-allowed!important;
-}
-
-/*---------------------------------------------------------------
-    SUBSECTION: Danger кнопка-текста с подчеркиванием
----------------------------------------------------------------*/
-.bt-text-underline.danger {
-    color: var(--danger-btn-bg);
-    border-bottom: var(--btn-text-underline-border) solid var(--danger-btn-bg);
-}
-
-.bt-text-underline.danger:hover {
-    color: var(--danger-btn-hover-bg);
-    border-bottom: var(--btn-text-underline-border) solid var(--danger-btn-hover-bg);
-    outline: none;
-}
-
-.bt-text-underline.danger:disabled {
-    color: var(--danger-disabled-bg) !important;
-    border-bottom: var(--btn-text-underline-border) solid var(--danger-disabled-bg);
-    cursor: not-allowed!important;
-}
-
-
-/*---------------------------------------------------------------
-    SUBSECTION: Warning кнопка-текста с подчеркиванием
----------------------------------------------------------------*/
-.bt-text-underline.warning {
-    color: var(--warning-btn-bg);
-    border-bottom: var(--btn-text-underline-border) solid var(--warning-btn-bg);
-}
-
-.bt-text-underline.warning:hover {
-    color: var(--warning-btn-hover-bg);
-    border-bottom: var(--btn-text-underline-border) solid var(--warning-btn-hover-bg);
-    outline: none;
-}
-
-.bt-text-underline.warning:disabled {
-    color: var(--warning-disabled-bg) !important;
-    border-bottom: var(--btn-text-underline-border) solid var(--warning-disabled-bg);
-    cursor: not-allowed!important;
-}
-
-
-/*---------------------------------------------------------------
-    SUBSECTION: Light кнопка-текста с подчеркиванием
----------------------------------------------------------------*/
-.bt-text-underline.light {
-    color: var(--c-brand-gray);
-    border-bottom: var(--btn-text-underline-border) solid var(--c-brand-gray);
-}
-
-.bt-text-underline.light:hover {
-    color: var(--c-brand-gray-400);
-    border-bottom: var(--btn-text-underline-border) solid var(--c-brand-gray-400);
-    outline: none;
-}
-
-.bt-text-underline.light:disabled {
-    color: var(--light-disabled-bg) !important;
-    border-bottom: var(--btn-text-underline-border) solid var(--light-disabled-bg);
-    cursor: not-allowed!important;
-}
-
-
-/*---------------------------------------------------------------
-    SUBSECTION: Dark кнопка-текста с подчеркиванием
----------------------------------------------------------------*/
-.bt-text-underline.dark {
-    color: var(--c-brand-gray-800);
-    border-bottom: var(--btn-text-underline-border) solid var(--c-brand-gray-800);
-}
-
-.bt-text-underline.dark:hover {
-    color: var(--c-brand-gray-900);
-    border-bottom: var(--btn-text-underline-border) solid var(--c-brand-gray-900);
-    outline: none;
-}
-
-.bt-text-underline.dark:disabled {
-    color: var(--c-brand-gray-700) !important;
-    border-bottom: var(--btn-text-underline-border) solid var(--c-brand-gray-700);
-    cursor: not-allowed!important;
-}
-
-
-/*--------------------------------
-    SECTION: Кнопки неоморфизм
---------------------------------*/
-.bt-text-neu {
-    height: var(--btn-text-height);
-    cursor: pointer;
-    border-radius: var(--btn-text-neu-border-radius);
-    font-weight: var(--btn-text-font-weight);
-    box-shadow: var(--btn-text-neu-box-shadow);
-    justify-self: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 0.3s ease;
+/* Outline buttons */
+.bt-outline {
+    background: transparent;
+    border: 2px solid;
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: translateY(-2px);
+    }
+
+    &.primary {
+        border-color: colors.$color-primary;
+        color: colors.$color-primary;
+
+        &:hover {
+            background: colors.$color-primary;
+            color: colors.$full-white;
+            box-shadow: 0 4px 12px colors.$primary-200-40-p;
+        }
+    }
+
+    &.secondary {
+        border-color: colors.$gray-400;
+        color: colors.$gray-600;
+
+        &:hover {
+            background: colors.$gray-400;
+            color: colors.$gray-700;
+            box-shadow: 0 4px 12px rgba(colors.$gray-400, 0.3);
+        }
+    }
+
+    &.success {
+        border-color: colors.$color-success;
+        color: colors.$color-success;
+
+        &:hover {
+            background: colors.$color-success;
+            color: colors.$full-white;
+            box-shadow: 0 4px 12px rgba(colors.$color-success, 0.3);
+        }
+    }
+
+    &.danger {
+        border-color: colors.$color-danger;
+        color: colors.$color-danger;
+
+        &:hover {
+            background: colors.$color-danger;
+            color: colors.$full-white;
+            box-shadow: 0 4px 12px rgba(colors.$color-danger, 0.3);
+        }
+    }
+
+    &.warning {
+        border-color: colors.$color-warning;
+        color: colors.$color-warning;
+
+        &:hover {
+            background: colors.$color-warning;
+            color: colors.$full-white;
+            box-shadow: 0 4px 12px rgba(colors.$color-warning, 0.3);
+        }
+    }
+
+    &.info {
+        border-color: colors.$color-info;
+        color: colors.$color-info;
+
+        &:hover {
+            background: colors.$color-info;
+            color: colors.$full-white;
+            box-shadow: 0 4px 12px rgba(colors.$color-info, 0.3);
+        }
+    }
+
+    &.disabled {
+        border-color: colors.$gray-400;
+        color: colors.$gray-600;
+
+        &:hover {
+            background: none!important;
+            color: colors.$gray-600!important;
+            border-bottom: 2px solid colors.$gray-400!important;
+            box-shadow: none!important;
+        }
+    }
+
+}
+
+/* Ghost buttons */
+.bt-ghost {
+    background: transparent;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background: colors.$ghost-bg;
+    }
+
+    &.primary:hover { background: colors.$primary-100; }
+    &.secondary:hover { background: colors.$color-gray; }
+    &.success:hover { background: colors.$success-100; }
+    &.danger:hover { background: colors.$danger-100; }
+    &.warning:hover { background: colors.$warning-100; }
+    &.info:hover { background: colors.$info-100; }
+    &.disabled:hover { background: colors.$gray-200!important;}
+
+}
+
+/* Neumorphic buttons */
+.bt-neumorphic {
+    color: colors.$gray-800;
     border: none;
-    padding: var(--vertical-btn-text-padding) var(--horizontal-btn-text-padding);
+    transition: all 0.3s ease;
+
+    &.primary {
+        background: colors.$primary-200;
+        box-shadow: 5px 5px 10px colors.$primary-200,
+        -5px -5px 10px colors.$primary-100;
+
+        &:hover {
+            box-shadow: 3px 3px 6px colors.$primary-400,
+            -3px -3px 6px colors.$primary-100;
+        }
+
+        &:active {
+            box-shadow: inset 3px 3px 6px colors.$primary-400,
+            inset -3px -3px 6px colors.$primary-100;
+        }
+    }
+
+    &.secondary {
+        background: colors.$gray-200;
+        box-shadow: 5px 5px 10px colors.$gray-400,
+        -5px -5px 10px colors.$gray-100;
+
+        &:hover {
+            box-shadow: 3px 3px 6px colors.$gray-400,
+            -3px -3px 6px colors.$gray-100;
+        }
+
+        &:active {
+            box-shadow: inset 3px 3px 6px colors.$gray-400,
+            inset -3px -3px 6px colors.$gray-100;
+        }
+    }
+
+    &.success {
+        background: colors.$success-200;
+        box-shadow: 5px 5px 10px colors.$success-200,
+        -5px -5px 10px colors.$success-100;
+
+        &:hover {
+            box-shadow: 3px 3px 6px colors.$success-400,
+            -3px -3px 6px colors.$success-100;
+        }
+
+        &:active {
+            box-shadow: inset 3px 3px 6px colors.$success-400,
+            inset -3px -3px 6px colors.$success-100;
+        }
+    }
+
+    &.danger {
+        background: colors.$danger-200;
+        box-shadow: 5px 5px 10px colors.$danger-200,
+        -5px -5px 10px colors.$danger-100;
+
+        &:hover {
+            box-shadow: 3px 3px 6px colors.$danger-400,
+            -3px -3px 6px colors.$danger-100;
+        }
+
+        &:active {
+            box-shadow: inset 3px 3px 6px colors.$danger-400,
+            inset -3px -3px 6px colors.$danger-100;
+        }
+    }
+
+    &.warning {
+        background: colors.$warning-200;
+        box-shadow: 5px 5px 10px colors.$warning-200,
+        -5px -5px 10px colors.$warning-100;
+
+        &:hover {
+            box-shadow: 3px 3px 6px colors.$warning-400,
+            -3px -3px 6px colors.$warning-100;
+        }
+
+        &:active {
+            box-shadow: inset 3px 3px 6px colors.$warning-400,
+            inset -3px -3px 6px colors.$warning-100;
+        }
+    }
+
+    &.info {
+        background: colors.$info-200;
+        box-shadow: 5px 5px 10px colors.$info-200,
+        -5px -5px 10px colors.$info-100;
+
+        &:hover {
+            box-shadow: 3px 3px 6px colors.$info-400,
+            -3px -3px 6px colors.$info-100;
+        }
+
+        &:active {
+            box-shadow: inset 3px 3px 6px colors.$info-400,
+            inset -3px -3px 6px colors.$info-100;
+        }
+    }
+
+    &.disabled {
+        background: colors.$gray-200;
+        box-shadow: 5px 5px 10px colors.$color-gray,
+        -5px -5px 10px colors.$gray-100;
+
+        &:hover {
+            box-shadow: 3px 3px 6px colors.$gray-100,
+            -3px -3px 6px colors.$gray-100;
+        }
+
+        &:active {
+            box-shadow: inset 3px 3px 6px colors.$color-gray,
+            inset -3px -3px 6px colors.$gray-100;
+        }
+    }
+
 }
 
+/* Elevated buttons */
+.bt-common {
+    border: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px colors.$soft-dark-shadow;
+    color: colors.$full-white;
 
-.bt-text-neu:hover {
-    outline: none;
-}
+    &:hover {
+        box-shadow: 0 6px 12px colors.$middle-dark-shadow;
+    }
 
-.bt-text-neu.sm {
-    font-size: var(--sm-btn-text-font-size);
-}
+    &.primary {
+        background: colors.$color-primary;
 
-.bt-text-neu.md {
-    font-size: var(--md-btn-text-font-size);
-}
+        &:hover {
+            background: colors.$primary-600;
+        }
+    }
 
-.bt-text-neu.lg {
-    font-size: var(--lg-btn-text-font-size);
-}
+    &.secondary {
+        background: colors.$color-gray;
+        color: colors.$gray-800;
 
+        &:hover {
+            background: colors.$gray-400;
+        }
+    }
 
-/*-------------------------------------
-    SECTION: Кнопка неоморфизм Brand
--------------------------------------*/
-.bt-text-neu.brand {
-    grid-column: 1 / 2;
-    grid-row: 4 / 5;
-    background: var(--accent-primary);
-    box-shadow: inset 0.2rem 0.2rem 1rem var(--accent-400), inset -0.2rem -0.2rem 1rem var(--accent-600), 0.3rem 0.3rem 0.6rem var(--c-brand-gray-400), -0.2rem -0.2rem 0.5rem var(--c-brand-gray-100);
-    color: var(--c-brand-gray-400);
-}
-.bt-text-neu.brand:hover {
-    color: var(--c-brand-gray-100);
-}
-.bt-text-neu.brand:active {
-    box-shadow: inset 0.2rem 0.2rem 1rem var(--accent-600), inset -0.2rem -0.2rem 1rem var(--accent-400);
-}
+    &.success {
+        background: colors.$color-success;
 
-/*-------------------------------------
-    SECTION: Кнопка неоморфизм Secondary
--------------------------------------*/
+        &:hover {
+            background: colors.$success-700;
+        }
+    }
 
-.bt-text-neu.secondary {
-    grid-column: 1 / 2;
-    grid-row: 5 / 6;
-    color: var(--c-brand-gray-600);
-}
-.bt-text-neu.secondary:hover {
-    color: var(--accent-primary);
-}
-.bt-text-neu.secondary:active {
-    box-shadow: inset 0.2rem 0.2rem 0.5rem var(--c-brand-gray-400), inset -0.2rem -0.2rem 0.5rem var(--c-brand-gray-100);
-}
+    &.danger {
+        background: colors.$color-danger;
 
+        &:hover {
+            background: colors.$danger-700;
+        }
+    }
 
-/*-------------------------------------
-    SECTION: Кнопка неоморфизм Success
--------------------------------------*/
-.bt-text-neu.success {
-    grid-column: 1 / 2;
-    grid-row: 4 / 5;
-    background: var(--success-primary);
-    box-shadow: inset 0.2rem 0.2rem 1rem var(--success-400), inset -0.2rem -0.2rem 1rem var(--success-600), 0.3rem 0.3rem 0.6rem var(--c-brand-gray-400), -0.2rem -0.2rem 0.5rem var(--c-brand-gray-100);
-    color: var(--c-brand-gray-400);
-}
-.bt-text-neu.success:hover {
-    color: var(--c-brand-gray-100);
-}
-.bt-text-neu.success:active {
-    box-shadow: inset 0.2rem 0.2rem 1rem var(--success-600), inset -0.2rem -0.2rem 1rem var(--success-400);
-}
+    &.warning {
+        background: colors.$color-warning;
+        &:hover {
+            background: colors.$warning-700;
+        }
+    }
 
-/*-------------------------------------
-    SECTION: Кнопка неоморфизм Danger
--------------------------------------*/
-.bt-text-neu.danger {
-    grid-column: 1 / 2;
-    grid-row: 4 / 5;
-    background: var(--danger-btn-bg);
-    box-shadow: inset 0.2rem 0.2rem 1rem var(--danger-disabled-bg), inset -0.2rem -0.2rem 1rem var(--danger-btn-hover-bg), 0.3rem 0.3rem 0.6rem var(--c-brand-gray-400), -0.2rem -0.2rem 0.5rem var(--c-brand-gray-100);
-    color: var(--c-brand-gray-400);
-}
-.bt-text-neu.danger:hover {
-    color: var(--c-brand-gray-100);
-}
-.bt-text-neu.danger:active {
-    box-shadow: inset 0.2rem 0.2rem 1rem var(--danger-btn-hover-bg), inset -0.2rem -0.2rem 1rem var(--danger-disabled-bg);
+    &.info {
+        background: colors.$color-info;
+
+        &:hover {
+            background: colors.$info-600;
+        }
+    }
+
+    &.disabled {
+        background: colors.$gray-200;
+        color: colors.$gray-600;
+
+        &:hover {
+            background: colors.$gray-200;
+        }
+    }
 }
 
-/*-------------------------------------
-    SECTION: Кнопка неоморфизм Warning
--------------------------------------*/
-.bt-text-neu.warning {
-    grid-column: 1 / 2;
-    grid-row: 4 / 5;
-    background: var(--warning-btn-bg);
-    box-shadow: inset 0.2rem 0.2rem 1rem var(--warning-disabled-bg), inset -0.2rem -0.2rem 1rem var(--warning-btn-hover-bg), 0.3rem 0.3rem 0.6rem var(--c-brand-gray-400), -0.2rem -0.2rem 0.5rem var(--c-brand-gray-100);
-    color: var(--c-brand-gray-400);
-}
-.bt-text-neu.warning:hover {
-    color: var(--c-brand-gray-100);
-}
-.bt-text-neu.warning:active {
-    box-shadow: inset 0.2rem 0.2rem 1rem var(--warning-btn-hover-bg), inset -0.2rem -0.2rem 1rem var(--warning-disabled-bg);
-}
+/* Glass morphizm button */
+//TODO: Придумать как выделить из всех (добавить фон)
+.bt-glass {
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
 
+    &.classic {
+        color: colors.$main-text-color;
+        background: colors.$light-glass;
+        border: 1px solid colors.$medium-glass;
 
-/*-------------------------------------
-    SECTION: Кнопка неоморфизм Warning
--------------------------------------*/
-.bt-text-neu.warning {
-    grid-column: 1 / 2;
-    grid-row: 4 / 5;
-    background: var(--warning-btn-bg);
-    box-shadow: inset 0.2rem 0.2rem 1rem var(--warning-disabled-bg), inset -0.2rem -0.2rem 1rem var(--warning-btn-hover-bg), 0.3rem 0.3rem 0.6rem var(--c-brand-gray-400), -0.2rem -0.2rem 0.5rem var(--c-brand-gray-100);
-    color: var(--c-brand-gray-400);
-}
-.bt-text-neu.warning:hover {
-    color: var(--c-brand-gray-100);
-}
-.bt-text-neu.warning:active {
-    box-shadow: inset 0.2rem 0.2rem 1rem var(--warning-btn-hover-bg), inset -0.2rem -0.2rem 1rem var(--warning-disabled-bg);
-}
+        &:hover {
+            background: colors.$medium-glass;
+            border-color: colors.$dark-glass;
+        }
+    }
 
-/*-------------------------------------
-    SECTION: Кнопка неоморфизм Light
--------------------------------------*/
-.bt-text-neu.light {
-    grid-column: 1 / 2;
-    grid-row: 4 / 5;
-    background: var(--c-brand-gray);
-    box-shadow: inset 0.2rem 0.2rem 1rem var(--c-brand-gray-400), inset -0.2rem -0.2rem 1rem var(--c-brand-gray-600), 0.3rem 0.3rem 0.6rem var(--c-brand-gray-400), -0.2rem -0.2rem 0.5rem var(--c-brand-gray-100);
-    color: var(--c-brand-gray-600);
-}
-.bt-text-neu.light:hover {
-    color: var(--c-brand-gray-800);
-}
-.bt-text-neu.light:active {
-    box-shadow: inset 0.2rem 0.2rem 1rem var(--c-brand-gray-600), inset -0.2rem -0.2rem 1rem var(--c-brand-gray-400);
-}
+    &.primary {
+        color: colors.$full-white;
+        background: rgba(colors.$primary-400, 0.2);
+        border: 1px solid rgba(colors.$primary-400, 0.3);
 
+        &:hover {
+            background: rgba(colors.$primary-400, 0.3);;
+            border-color: rgba(colors.$primary-400, 0.4);;
+        }
+    }
 
+    &.secondary {
+        color: colors.$gray-800;
+        background: rgba(colors.$gray-600, 0.2);
+        border: 1px solid rgba(colors.$gray-600, 0.3);
+
+        &:hover {
+            background: rgba(colors.$gray-600, 0.3);;
+            border-color: rgba(colors.$gray-600, 0.4);;
+        }
+    }
+
+    &.success {
+        color: colors.$full-white;
+        background: rgba(colors.$color-success, 0.2);
+        border: 1px solid rgba(colors.$color-success, 0.3);
+
+        &:hover {
+            background: rgba(colors.$color-success, 0.3);;
+            border-color: rgba(colors.$color-success, 0.4);;
+        }
+    }
+
+    &.danger {
+        color: colors.$full-white;
+        background: rgba(colors.$color-danger, 0.2);
+        border: 1px solid rgba(colors.$color-danger, 0.3);
+
+        &:hover {
+            background: rgba(colors.$color-danger, 0.3);;
+            border-color: rgba(colors.$color-danger, 0.4);;
+        }
+    }
+
+    &.warning {
+        color: colors.$gray-700;
+        background: rgba(colors.$color-warning, 0.2);
+        border: 1px solid rgba(colors.$color-warning, 0.3);
+
+        &:hover {
+            background: rgba(colors.$color-warning, 0.3);;
+            border-color: rgba(colors.$color-warning, 0.4);;
+        }
+    }
+
+    &.info {
+        color: colors.$full-white;
+        background: rgba(colors.$color-info, 0.2);
+        border: 1px solid rgba(colors.$color-info, 0.3);
+
+        &:hover {
+            background: rgba(colors.$color-info, 0.3);;
+            border-color: rgba(colors.$color-info, 0.4);;
+        }
+    }
+
+    &.disabled {
+        color: colors.$gray-500;
+        background: rgba(colors.$gray-400, 0.2);
+        border: 1px solid rgba(colors.$gray-400, 0.3);
+
+        &:hover {
+            background: rgba(colors.$gray-400, 0.3);;
+            border-color: rgba(colors.$gray-400, 0.4);;
+        }
+    }
+}
