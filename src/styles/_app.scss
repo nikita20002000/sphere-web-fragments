@@ -66,10 +66,15 @@ body {
 
 
 /* Responsive Design */
-@media (max-width: var(--adaptive-mobile)) {
+@media (max-width: sizes.$adaptive-mobile) {
+  .sidebar {
+    display: none!important;
+  }
+
   .content {
     margin-left: 0;
   }
+
   .main-content {
     flex-direction: column;
   }

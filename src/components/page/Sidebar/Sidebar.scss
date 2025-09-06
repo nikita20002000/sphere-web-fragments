@@ -74,10 +74,3 @@
         padding: sizes.$spacing-md sizes.$spacing-lg;
     }
 }
-
-@media (max-width: sizes.$adaptive-mobile) {
-    .sidebar {
-        position: static;
-        height: auto;
-    }
-}

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Header, Sidebar, ElementsWrapper } from './components';
+import { Header, Sidebar, ElementsWrapper, Menu } from './components';
 import { filterElements } from './utils/filterElements';
 import categories from './data/categories';
 import { ThemeProvider } from './context/ThemeContext';
@@ -35,6 +35,11 @@ const App = () => {
 
                 <div className="main-content">
                     <Sidebar
+                        categories={categories}
+                        selectedCategory={selectedCategory}
+                        onSelect={setSelectedCategory}
+                    />
+                    <Menu
                         categories={categories}
                         selectedCategory={selectedCategory}
                         onSelect={setSelectedCategory}
