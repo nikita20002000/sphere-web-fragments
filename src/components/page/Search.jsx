@@ -37,7 +37,7 @@ Search.propTypes = {
 };
 
 Search.defaultProps = {
-    placeholder: 'Поиск компонентов...'
+    placeholder: 'Components search...'
 };
 
 export default Search;
