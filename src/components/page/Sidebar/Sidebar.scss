@@ -61,6 +61,7 @@
                 right: -1rem;
                 display: none;
                 transition: sizes.$all-ease-slow;
+                z-index: 1000;
 
                 span {
                     font-size: sizes.$font-size-sm;
