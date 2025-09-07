@@ -19,7 +19,7 @@ const Sidebar = ({ categories = {}, selectedCategory, onSelect }) => {
                         {getCategoryIcon('search')}
                     </div>
                     <div className="sidebar-nav__item__hint">
-                        <span>Поиск</span>
+                        <span>Search</span>
                     </div>
                 </div>
 
@@ -76,14 +76,14 @@ const Sidebar = ({ categories = {}, selectedCategory, onSelect }) => {
 };
 
 
-// Добавим проверку типов
+// Type search
 Sidebar.propTypes = {
     categories: PropTypes.object.isRequired,
     selectedCategory: PropTypes.string,
     onSelect: PropTypes.func.isRequired
 };
 
-// Значения по умолчанию
+// Default values
 Sidebar.defaultProps = {
     selectedCategory: ''
 };

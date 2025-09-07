@@ -39,7 +39,7 @@ const Menu = ({categories = {}, selectedCategory, onSelect}) => {
                                 {getCategoryIcon('search')}
                             </div>
                             <div className="menu-nav__item-text">
-                                <span>Поиск</span>
+                                <span>Search</span>
                             </div>
                         </div>
 
@@ -98,14 +98,14 @@ const Menu = ({categories = {}, selectedCategory, onSelect}) => {
     );
 };
 
-// Добавим проверку типов
+// Type check
 Menu.propTypes = {
     categories: PropTypes.object.isRequired,
     selectedCategory: PropTypes.string,
     onSelect: PropTypes.func.isRequired
 };
 
-// Значения по умолчанию
+// Default values
 Menu.defaultProps = {
     selectedCategory: ''
 };
