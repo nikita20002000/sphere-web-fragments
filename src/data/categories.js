@@ -1,8 +1,11 @@
 import buttonsConfig from '../components/ui-components/buttons/buttons.json';
 import { Button } from '../components/ui-components/buttons/Button';
+import inputsConfig from '../components/ui-components/inputs/inputs.json';
+import { Input } from '../components/ui-components/inputs/Input';
 
 const componentsMap = {
-    Button
+    Button,
+    Input,
 };
 
 const createComponentFromJSON = (config) => {
@@ -21,7 +24,6 @@ const createComponentFromJSON = (config) => {
     };
 }
 
-// TODO: Поменять иконки бокового меню в соответствии с новыми пунктами
 export default {
     buttons: {
         name: buttonsConfig.name,
@@ -30,7 +32,10 @@ export default {
             .filter(el => el !== null)
     },
     inputs: {
-        name: 'Inputs',
+        name: inputsConfig.name,
+        elements: inputsConfig.elements
+            .map(el => createComponentFromJSON(el))
+            .filter(el => el !== null)
     },
     checkboxes: {
         name: 'Checkboxes',

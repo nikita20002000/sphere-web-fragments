@@ -1,0 +1,858 @@
+/* Inputs */
+@use '../styles/colors' as colors;
+@use '../styles/fonts' as fonts;
+@use '../styles/sizes' as sizes;
+
+/* Common input styles */
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    width: 100%;
+
+    &.disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+    }
+}
+
+.input-label {
+    font-family: fonts.$bt-default-font;
+    font-weight: fonts.$bt-normal-font-weight;
+    margin-bottom: 0.5rem;
+    color: colors.$main-text-color;
+
+    .required {
+        color: colors.$color-danger;
+        margin-left: 0.25rem;
+    }
+}
+
+.input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.input-icon {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.helper-text {
+    font-size: fonts.$font-size-xs;
+    margin-top: 0.25rem;
+    color: colors.$gray-600;
+
+    &.error {
+        color: colors.$color-danger;
+    }
+}
+
+/* Input base styles */
+.input {
+    font-family: fonts.$bt-default-font;
+    width: 100%;
+    border: 2px solid colors.$gray-400;
+    background-color: colors.$full-white;
+    transition: all 0.3s ease;
+    outline: none;
+    box-sizing: border-box;
+
+    &:focus {
+        border-color: colors.$color-primary;
+        box-shadow: 0 0 0 3px colors.$primary-200-40-p;
+    }
+
+    &.error {
+        border-color: colors.$color-danger;
+
+        &:focus {
+            box-shadow: 0 0 0 3px rgba(colors.$color-danger, 0.3);
+        }
+    }
+
+    &.with-icon {
+        &.icon-left {
+            padding-left: 2.5rem;
+        }
+
+        &.icon-right {
+            padding-right: 2.5rem;
+        }
+    }
+
+    &:disabled {
+        background-color: colors.$gray-200;
+        cursor: not-allowed;
+        border-color: colors.$gray-400;
+    }
+}
+
+/* Input Size classes */
+.input {
+    &.xxs {
+        padding: sizes.$xxs-button-vertical-padding sizes.$xxs-button-horizontal-padding;
+        font-size: sizes.$xxs-button-font-size;
+        font-weight: fonts.$bt-light-font-weight;
+        letter-spacing: sizes.$xxs-button-letter-spacing;
+        border-radius: sizes.$xxs-button-border-radius;
+        min-height: sizes.$xxs-button-min-height;
+    }
+
+    &.xs {
+        padding: sizes.$xs-button-vertical-padding sizes.$xs-button-horizontal-padding;
+        font-size: sizes.$xs-button-font-size;
+        font-weight: fonts.$bt-light-font-weight;
+        letter-spacing: sizes.$xs-button-letter-spacing;
+        border-radius: sizes.$xs-button-border-radius;
+        min-height: sizes.$xs-button-min-height;
+    }
+
+    &.sm {
+        padding: sizes.$sm-button-vertical-padding sizes.$sm-button-horizontal-padding;
+        font-size: sizes.$sm-button-font-size;
+        font-weight: fonts.$bt-light-font-weight;
+        letter-spacing: sizes.$sm-button-letter-spacing;
+        border-radius: sizes.$sm-button-border-radius;
+        min-height: sizes.$sm-button-min-height;
+    }
+
+    &.md {
+        padding: sizes.$md-button-vertical-padding sizes.$md-button-horizontal-padding;
+        font-size: sizes.$md-button-font-size;
+        font-weight: fonts.$bt-light-font-weight;
+        letter-spacing: sizes.$md-button-letter-spacing;
+        border-radius: sizes.$md-button-border-radius;
+        min-height: sizes.$md-button-min-height;
+    }
+
+    &.lg {
+        padding: sizes.$lg-button-vertical-padding sizes.$lg-button-horizontal-padding;
+        font-size: sizes.$lg-button-font-size;
+        font-weight: fonts.$bt-light-font-weight;
+        letter-spacing: sizes.$lg-button-letter-spacing;
+        border-radius: sizes.$lg-button-border-radius;
+        min-height: sizes.$lg-button-min-height;
+    }
+
+    &.xl {
+        padding: sizes.$xl-button-vertical-padding sizes.$xl-button-horizontal-padding;
+        font-size: sizes.$xl-button-font-size;
+        font-weight: fonts.$bt-light-font-weight;
+        letter-spacing: sizes.$xl-button-letter-spacing;
+        border-radius: sizes.$xl-button-border-radius;
+        min-height: sizes.$xl-button-min-height;
+    }
+}
+
+/* Gradient inputs */
+.input-gradient {
+    border: none;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    outline: none;
+    background-clip: padding-box;
+
+    &:focus {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px colors.$soft-dark-shadow;
+    }
+
+    // Primary gradient input
+    &.primary {
+        border: 2px solid transparent;
+        background-image: linear-gradient(colors.$full-white, colors.$full-white), 
+                          linear-gradient(135deg, colors.$primary-400 0%, colors.$color-primary 100%);
+        background-origin: border-box;
+        background-clip: padding-box, border-box;
+
+        &:focus {
+            box-shadow: 0 4px 12px colors.$primary-200-40-p;
+        }
+    }
+
+    // Secondary gradient input
+    &.secondary {
+        border: 2px solid transparent;
+        background-image: linear-gradient(colors.$full-white, colors.$full-white), 
+                          linear-gradient(135deg, colors.$gray-200 0%, colors.$gray-600 100%);
+        background-origin: border-box;
+        background-clip: padding-box, border-box;
+
+        &:focus {
+            box-shadow: 0 4px 12px rgba(colors.$gray-400, 0.3);
+        }
+    }
+
+    // Success gradient input
+    &.success {
+        border: 2px solid transparent;
+        background-image: linear-gradient(colors.$full-white, colors.$full-white), 
+                          linear-gradient(135deg, colors.$success-300 0%, colors.$color-success 100%);
+        background-origin: border-box;
+        background-clip: padding-box, border-box;
+
+        &:focus {
+            box-shadow: 0 4px 12px rgba(colors.$color-success, 0.3);
+        }
+    }
+
+    // Danger gradient input
+    &.danger {
+        border: 2px solid transparent;
+        background-image: linear-gradient(colors.$full-white, colors.$full-white), 
+                          linear-gradient(135deg, colors.$danger-400 0%, colors.$color-danger 100%);
+        background-origin: border-box;
+        background-clip: padding-box, border-box;
+
+        &:focus {
+            box-shadow: 0 4px 12px rgba(colors.$color-danger, 0.3);
+        }
+    }
+
+    // Warning gradient input
+    &.warning {
+        border: 2px solid transparent;
+        background-image: linear-gradient(colors.$full-white, colors.$full-white), 
+                          linear-gradient(135deg, colors.$warning-400 0%, colors.$color-warning 100%);
+        background-origin: border-box;
+        background-clip: padding-box, border-box;
+
+        &:focus {
+            box-shadow: 0 4px 12px rgba(colors.$color-warning, 0.3);
+        }
+    }
+
+    // Info gradient input
+    &.info {
+        border: 2px solid transparent;
+        background-image: linear-gradient(colors.$full-white, colors.$full-white), 
+                          linear-gradient(135deg, colors.$info-400 0%, colors.$color-info 100%);
+        background-origin: border-box;
+        background-clip: padding-box, border-box;
+
+        &:focus {
+            box-shadow: 0 4px 12px rgba(colors.$color-info, 0.3);
+        }
+    }
+
+    // Disabled gradient input
+    &.disabled {
+        background-image: linear-gradient(colors.$gray-200, colors.$gray-200), 
+                          linear-gradient(135deg, colors.$gray-400 0%, colors.$gray-500 100%);
+        color: colors.$gray-600;
+        cursor: not-allowed;
+
+        &:focus {
+            transform: none;
+            box-shadow: none;
+        }
+    }
+}
+
+/* Outline inputs */
+.input-outline {
+    background: transparent;
+    border: 2px solid;
+    transition: all 0.3s ease;
+
+    &:focus {
+        transform: translateY(-2px);
+    }
+
+    &.primary {
+        border-color: colors.$color-primary;
+        color: colors.$main-text-color;
+
+        &:focus {
+            box-shadow: 0 4px 12px colors.$primary-200-40-p;
+        }
+    }
+
+    &.secondary {
+        border-color: colors.$gray-400;
+        color: colors.$main-text-color;
+
+        &:focus {
+            box-shadow: 0 4px 12px rgba(colors.$gray-400, 0.3);
+        }
+    }
+
+    &.success {
+        border-color: colors.$color-success;
+        color: colors.$main-text-color;
+
+        &:focus {
+            box-shadow: 0 4px 12px rgba(colors.$color-success, 0.3);
+        }
+    }
+
+    &.danger {
+        border-color: colors.$color-danger;
+        color: colors.$main-text-color;
+
+        &:focus {
+            box-shadow: 0 4px 12px rgba(colors.$color-danger, 0.3);
+        }
+    }
+
+    &.warning {
+        border-color: colors.$color-warning;
+        color: colors.$main-text-color;
+
+        &:focus {
+            box-shadow: 0 4px 12px rgba(colors.$color-warning, 0.3);
+        }
+    }
+
+    &.info {
+        border-color: colors.$color-info;
+        color: colors.$main-text-color;
+
+        &:focus {
+            box-shadow: 0 4px 12px rgba(colors.$color-info, 0.3);
+        }
+    }
+
+    &.disabled {
+        border-color: colors.$gray-400;
+        color: colors.$gray-600;
+        background-color: colors.$gray-200;
+
+        &:focus {
+            transform: none;
+            box-shadow: none;
+        }
+    }
+}
+
+/* Underline inputs */
+.input-underline {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid;
+    border-radius: 0 !important;
+    padding-left: 0;
+    padding-right: 0;
+    transition: all 0.3s ease;
+
+    &:focus {
+        padding-left: 0.5rem;
+    }
+
+    &.primary {
+        border-color: colors.$color-primary;
+        color: colors.$main-text-color;
+
+        &:focus {
+            border-color: colors.$primary-600;
+            box-shadow: 0 4px 8px -4px colors.$primary-200-40-p;
+        }
+    }
+
+    &.secondary {
+        border-color: colors.$gray-400;
+        color: colors.$main-text-color;
+
+        &:focus {
+            border-color: colors.$gray-600;
+            box-shadow: 0 4px 8px -4px rgba(colors.$gray-400, 0.3);
+        }
+    }
+
+    &.success {
+        border-color: colors.$color-success;
+        color: colors.$main-text-color;
+
+        &:focus {
+            border-color: colors.$success-700;
+            box-shadow: 0 4px 8px -4px rgba(colors.$color-success, 0.3);
+        }
+    }
+
+    &.danger {
+        border-color: colors.$color-danger;
+        color: colors.$main-text-color;
+
+        &:focus {
+            border-color: colors.$danger-700;
+            box-shadow: 0 4px 8px -4px rgba(colors.$color-danger, 0.3);
+        }
+    }
+
+    &.warning {
+        border-color: colors.$color-warning;
+        color: colors.$main-text-color;
+
+        &:focus {
+            border-color: colors.$warning-700;
+            box-shadow: 0 4px 8px -4px rgba(colors.$color-warning, 0.3);
+        }
+    }
+
+    &.info {
+        border-color: colors.$color-info;
+        color: colors.$main-text-color;
+
+        &:focus {
+            border-color: colors.$info-600;
+            box-shadow: 0 4px 8px -4px rgba(colors.$color-info, 0.3);
+        }
+    }
+
+    &.disabled {
+        border-color: colors.$gray-400;
+        color: colors.$gray-600;
+        background-color: colors.$gray-200;
+
+        &:focus {
+            padding-left: 0;
+            box-shadow: none;
+        }
+    }
+}
+
+/* Neumorphic inputs */
+.input-neumorphic {
+    color: colors.$gray-800;
+    border: none;
+    transition: all 0.3s ease;
+
+    &.primary {
+        background: colors.$primary-200;
+        box-shadow: 5px 5px 10px colors.$primary-200,
+        -5px -5px 10px colors.$primary-100;
+
+        &:focus {
+            box-shadow: inset 3px 3px 6px colors.$primary-400,
+            inset -3px -3px 6px colors.$primary-100;
+        }
+    }
+
+    &.secondary {
+        background: colors.$gray-200;
+        box-shadow: 5px 5px 10px colors.$gray-400,
+        -5px -5px 10px colors.$gray-100;
+
+        &:focus {
+            box-shadow: inset 3px 3px 6px colors.$gray-400,
+            inset -3px -3px 6px colors.$gray-100;
+        }
+    }
+
+    &.success {
+        background: colors.$success-200;
+        box-shadow: 5px 5px 10px colors.$success-200,
+        -5px -5px 10px colors.$success-100;
+
+        &:focus {
+            box-shadow: inset 3px 3px 6px colors.$success-400,
+            inset -3px -3px 6px colors.$success-100;
+        }
+    }
+
+    &.danger {
+        background: colors.$danger-200;
+        box-shadow: 5px 5px 10px colors.$danger-200,
+        -5px -5px 10px colors.$danger-100;
+
+        &:focus {
+            box-shadow: inset 3px 3px 6px colors.$danger-400,
+            inset -3px -3px 6px colors.$danger-100;
+        }
+    }
+
+    &.warning {
+        background: colors.$warning-200;
+        box-shadow: 5px 5px 10px colors.$warning-200,
+        -5px -5px 10px colors.$warning-100;
+
+        &:focus {
+            box-shadow: inset 3px 3px 6px colors.$warning-400,
+            inset -3px -3px 6px colors.$warning-100;
+        }
+    }
+
+    &.info {
+        background: colors.$info-200;
+        box-shadow: 5px 5px 10px colors.$info-200,
+        -5px -5px 10px colors.$info-100;
+
+        &:focus {
+            box-shadow: inset 3px 3px 6px colors.$info-400,
+            inset -3px -3px 6px colors.$info-100;
+        }
+    }
+
+    &.disabled {
+        background: colors.$gray-200;
+        box-shadow: 5px 5px 10px colors.$color-gray,
+        -5px -5px 10px colors.$gray-100;
+        color: colors.$gray-600;
+
+        &:focus {
+            box-shadow: 5px 5px 10px colors.$color-gray,
+            -5px -5px 10px colors.$gray-100;
+        }
+    }
+}
+
+/* Elevated inputs */
+.input-elevated {
+    border: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px colors.$soft-dark-shadow;
+    color: colors.$main-text-color;
+
+    &:focus {
+        box-shadow: 0 6px 12px colors.$middle-dark-shadow;
+    }
+
+    &.primary {
+        border-left: 4px solid colors.$color-primary;
+
+        &:focus {
+            border-left-color: colors.$primary-600;
+        }
+    }
+
+    &.secondary {
+        border-left: 4px solid colors.$gray-400;
+
+        &:focus {
+            border-left-color: colors.$gray-600;
+        }
+    }
+
+    &.success {
+        border-left: 4px solid colors.$color-success;
+
+        &:focus {
+            border-left-color: colors.$success-700;
+        }
+    }
+
+    &.danger {
+        border-left: 4px solid colors.$color-danger;
+
+        &:focus {
+            border-left-color: colors.$danger-700;
+        }
+    }
+
+    &.warning {
+        border-left: 4px solid colors.$color-warning;
+
+        &:focus {
+            border-left-color: colors.$warning-700;
+        }
+    }
+
+    &.info {
+        border-left: 4px solid colors.$color-info;
+
+        &:focus {
+            border-left-color: colors.$info-600;
+        }
+    }
+
+    &.disabled {
+        background: colors.$gray-200;
+        color: colors.$gray-600;
+        border-left: 4px solid colors.$gray-400;
+
+        &:focus {
+            box-shadow: 0 2px 4px colors.$soft-dark-shadow;
+        }
+    }
+}
+
+/* Glass morphism inputs */
+.input-glass {
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    &.classic {
+        color: colors.$main-text-color;
+        background: colors.$light-glass;
+        border: 1px solid colors.$medium-glass;
+
+        &:focus {
+            background: colors.$medium-glass;
+            border-color: colors.$dark-glass;
+        }
+    }
+
+    &.primary {
+        color: colors.$main-text-color;
+        background: rgba(colors.$primary-400, 0.1);
+        border: 1px solid rgba(colors.$primary-400, 0.2);
+
+        &:focus {
+            background: rgba(colors.$primary-400, 0.15);
+            border-color: rgba(colors.$primary-400, 0.3);
+        }
+    }
+
+    &.secondary {
+        color: colors.$main-text-color;
+        background: rgba(colors.$gray-600, 0.1);
+        border: 1px solid rgba(colors.$gray-600, 0.2);
+
+        &:focus {
+            background: rgba(colors.$gray-600, 0.15);
+            border-color: rgba(colors.$gray-600, 0.3);
+        }
+    }
+
+    &.success {
+        color: colors.$main-text-color;
+        background: rgba(colors.$color-success, 0.1);
+        border: 1px solid rgba(colors.$color-success, 0.2);
+
+        &:focus {
+            background: rgba(colors.$color-success, 0.15);
+            border-color: rgba(colors.$color-success, 0.3);
+        }
+    }
+
+    &.danger {
+        color: colors.$main-text-color;
+        background: rgba(colors.$color-danger, 0.1);
+        border: 1px solid rgba(colors.$color-danger, 0.2);
+
+        &:focus {
+            background: rgba(colors.$color-danger, 0.15);
+            border-color: rgba(colors.$color-danger, 0.3);
+        }
+    }
+
+    &.warning {
+        color: colors.$main-text-color;
+        background: rgba(colors.$color-warning, 0.1);
+        border: 1px solid rgba(colors.$color-warning, 0.2);
+
+        &:focus {
+            background: rgba(colors.$color-warning, 0.15);
+            border-color: rgba(colors.$color-warning, 0.3);
+        }
+    }
+
+    &.info {
+        color: colors.$main-text-color;
+        background: rgba(colors.$color-info, 0.1);
+        border: 1px solid rgba(colors.$color-info, 0.2);
+
+        &:focus {
+            background: rgba(colors.$color-info, 0.15);
+            border-color: rgba(colors.$color-info, 0.3);
+        }
+    }
+
+    &.disabled {
+        color: colors.$gray-500;
+        background: rgba(colors.$gray-400, 0.1);
+        border: 1px solid rgba(colors.$gray-400, 0.2);
+
+        &:focus {
+            background: rgba(colors.$gray-400, 0.1);
+            border-color: rgba(colors.$gray-400, 0.2);
+        }
+    }
+}
+
+/* Floating label inputs */
+.input-floating {
+    position: relative;
+    background: transparent;
+    border: 2px solid colors.$gray-400;
+    padding-top: 1.5rem !important;
+    transition: all 0.3s ease;
+
+    & + label {
+        position: absolute;
+        top: 0.5rem;
+        left: 0.5rem;
+        font-size: 0.75rem;
+        color: colors.$gray-600;
+        transition: all 0.3s ease;
+        pointer-events: none;
+    }
+
+    &:placeholder-shown + label {
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1rem;
+    }
+
+    &:focus + label {
+        top: 0.5rem;
+        font-size: 0.75rem;
+        color: colors.$color-primary;
+    }
+
+    &.primary {
+        &:focus {
+            border-color: colors.$color-primary;
+            box-shadow: 0 4px 12px colors.$primary-200-40-p;
+        }
+
+        &:focus + label {
+            color: colors.$color-primary;
+        }
+    }
+
+    &.secondary {
+        &:focus {
+            border-color: colors.$gray-600;
+            box-shadow: 0 4px 12px rgba(colors.$gray-400, 0.3);
+        }
+
+        &:focus + label {
+            color: colors.$gray-600;
+        }
+    }
+
+    &.success {
+        &:focus {
+            border-color: colors.$color-success;
+            box-shadow: 0 4px 12px rgba(colors.$color-success, 0.3);
+        }
+
+        &:focus + label {
+            color: colors.$color-success;
+        }
+    }
+
+    &.danger {
+        &:focus {
+            border-color: colors.$color-danger;
+            box-shadow: 0 4px 12px rgba(colors.$color-danger, 0.3);
+        }
+
+        &:focus + label {
+            color: colors.$color-danger;
+        }
+    }
+
+    &.warning {
+        &:focus {
+            border-color: colors.$color-warning;
+            box-shadow: 0 4px 12px rgba(colors.$color-warning, 0.3);
+        }
+
+        &:focus + label {
+            color: colors.$color-warning;
+        }
+    }
+
+    &.info {
+        &:focus {
+            border-color: colors.$color-info;
+            box-shadow: 0 4px 12px rgba(colors.$color-info, 0.3);
+        }
+
+        &:focus + label {
+            color: colors.$color-info;
+        }
+    }
+
+    &.disabled {
+        background-color: colors.$gray-200;
+        border-color: colors.$gray-400;
+        color: colors.$gray-600;
+
+        & + label {
+            color: colors.$gray-600;
+        }
+
+        &:focus {
+            box-shadow: none;
+        }
+    }
+}
+
+/* Material design inputs */
+.input-material {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid colors.$gray-400;
+    border-radius: 0 !important;
+    padding-left: 0;
+    padding-right: 0;
+    transition: all 0.3s ease;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background: colors.$color-primary;
+        transition: all 0.3s ease;
+    }
+
+    &:focus {
+        border-bottom-color: transparent;
+
+        &::after {
+            width: 100%;
+            left: 0;
+        }
+    }
+
+    &.primary {
+        &:focus::after {
+            background: colors.$color-primary;
+        }
+    }
+
+    &.secondary {
+        &:focus::after {
+            background: colors.$gray-600;
+        }
+    }
+
+    &.success {
+        &:focus::after {
+            background: colors.$color-success;
+        }
+    }
+
+    &.danger {
+        &:focus::after {
+            background: colors.$color-danger;
+        }
+    }
+
+    &.warning {
+        &:focus::after {
+            background: colors.$color-warning;
+        }
+    }
+
+    &.info {
+        &:focus::after {
+            background: colors.$color-info;
+        }
+    }
+
+    &.disabled {
+        border-bottom-color: colors.$gray-400;
+        color: colors.$gray-600;
+        background-color: colors.$gray-200;
+
+        &:focus::after {
+            width: 0;
+        }
+    }
+}

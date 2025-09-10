@@ -1,0 +1,560 @@
+{
+  "name": "Inputs",
+
+  "elements": [
+    {
+      "id": "input-0",
+      "name": "Default input",
+      "component": "Input",
+      "props": {
+        "className": "sm",
+        "placeholder": "Default input",
+        "label": "Default input"
+      }
+    },
+    {
+      "id": "input-1",
+      "name": "Small input",
+      "component": "Input",
+      "props": {
+        "className": "xs",
+        "placeholder": "Small input",
+        "label": "Small input"
+      }
+    },
+    {
+      "id": "input-2",
+      "name": "Medium input",
+      "component": "Input",
+      "props": {
+        "className": "md",
+        "placeholder": "Medium input",
+        "label": "Medium input"
+      }
+    },
+    {
+      "id": "input-3",
+      "name": "Large input",
+      "component": "Input",
+      "props": {
+        "className": "lg",
+        "placeholder": "Large input",
+        "label": "Large input"
+      }
+    },
+    {
+      "id": "input-4",
+      "name": "Required input",
+      "component": "Input",
+      "props": {
+        "className": "sm",
+        "placeholder": "Required input",
+        "label": "Required input",
+        "required": true
+      }
+    },
+    {
+      "id": "input-5",
+      "name": "Disabled input",
+      "component": "Input",
+      "props": {
+        "className": "sm",
+        "placeholder": "Disabled input",
+        "label": "Disabled input",
+        "disabled": true
+      }
+    },
+    {
+      "id": "input-6",
+      "name": "Input with helper text",
+      "component": "Input",
+      "props": {
+        "className": "sm",
+        "placeholder": "Input with helper text",
+        "label": "Input with helper text",
+        "helperText": "This is a helper text"
+      }
+    },
+    {
+      "id": "input-7",
+      "name": "Input with error",
+      "component": "Input",
+      "props": {
+        "className": "sm",
+        "placeholder": "Input with error",
+        "label": "Input with error",
+        "error": true,
+        "helperText": "This field has an error"
+      }
+    },
+    {
+      "id": "input-8",
+      "name": "Email input",
+      "component": "Input",
+      "props": {
+        "className": "sm",
+        "type": "email",
+        "placeholder": "Enter your email",
+        "label": "Email"
+      }
+    },
+    {
+      "id": "input-9",
+      "name": "Password input",
+      "component": "Input",
+      "props": {
+        "className": "sm",
+        "type": "password",
+        "placeholder": "Enter your password",
+        "label": "Password"
+      }
+    },
+    {
+      "id": "input-10",
+      "name": "Number input",
+      "component": "Input",
+      "props": {
+        "className": "sm",
+        "type": "number",
+        "placeholder": "Enter a number",
+        "label": "Number"
+      }
+    },
+    {
+      "id": "input-11",
+      "name": "Primary gradient input",
+      "component": "Input",
+      "props": {
+        "className": "input-gradient sm primary",
+        "placeholder": "Primary gradient input",
+        "label": "Primary gradient"
+      }
+    },
+    {
+      "id": "input-12",
+      "name": "Secondary gradient input",
+      "component": "Input",
+      "props": {
+        "className": "input-gradient sm secondary",
+        "placeholder": "Secondary gradient input",
+        "label": "Secondary gradient"
+      }
+    },
+    {
+      "id": "input-13",
+      "name": "Success gradient input",
+      "component": "Input",
+      "props": {
+        "className": "input-gradient sm success",
+        "placeholder": "Success gradient input",
+        "label": "Success gradient"
+      }
+    },
+    {
+      "id": "input-14",
+      "name": "Danger gradient input",
+      "component": "Input",
+      "props": {
+        "className": "input-gradient sm danger",
+        "placeholder": "Danger gradient input",
+        "label": "Danger gradient"
+      }
+    },
+    {
+      "id": "input-15",
+      "name": "Warning gradient input",
+      "component": "Input",
+      "props": {
+        "className": "input-gradient sm warning",
+        "placeholder": "Warning gradient input",
+        "label": "Warning gradient"
+      }
+    },
+    {
+      "id": "input-16",
+      "name": "Info gradient input",
+      "component": "Input",
+      "props": {
+        "className": "input-gradient sm info",
+        "placeholder": "Info gradient input",
+        "label": "Info gradient"
+      }
+    },
+    {
+      "id": "input-17",
+      "name": "Disabled gradient input",
+      "component": "Input",
+      "props": {
+        "className": "input-gradient sm disabled",
+        "placeholder": "Disabled gradient input",
+        "label": "Disabled gradient",
+        "disabled": true
+      }
+    },
+    {
+      "id": "input-18",
+      "name": "Primary outline input",
+      "component": "Input",
+      "props": {
+        "className": "input-outline sm primary",
+        "placeholder": "Primary outline input",
+        "label": "Primary outline"
+      }
+    },
+    {
+      "id": "input-19",
+      "name": "Secondary outline input",
+      "component": "Input",
+      "props": {
+        "className": "input-outline sm secondary",
+        "placeholder": "Secondary outline input",
+        "label": "Secondary outline"
+      }
+    },
+    {
+      "id": "input-20",
+      "name": "Success outline input",
+      "component": "Input",
+      "props": {
+        "className": "input-outline sm success",
+        "placeholder": "Success outline input",
+        "label": "Success outline"
+      }
+    },
+    {
+      "id": "input-21",
+      "name": "Danger outline input",
+      "component": "Input",
+      "props": {
+        "className": "input-outline sm danger",
+        "placeholder": "Danger outline input",
+        "label": "Danger outline"
+      }
+    },
+    {
+      "id": "input-22",
+      "name": "Warning outline input",
+      "component": "Input",
+      "props": {
+        "className": "input-outline sm warning",
+        "placeholder": "Warning outline input",
+        "label": "Warning outline"
+      }
+    },
+    {
+      "id": "input-23",
+      "name": "Info outline input",
+      "component": "Input",
+      "props": {
+        "className": "input-outline sm info",
+        "placeholder": "Info outline input",
+        "label": "Info outline"
+      }
+    },
+    {
+      "id": "input-24",
+      "name": "Disabled outline input",
+      "component": "Input",
+      "props": {
+        "className": "input-outline sm disabled",
+        "placeholder": "Disabled outline input",
+        "label": "Disabled outline",
+        "disabled": true
+      }
+    },
+    {
+      "id": "input-25",
+      "name": "Primary underline input",
+      "component": "Input",
+      "props": {
+        "className": "input-underline sm primary",
+        "placeholder": "Primary underline input",
+        "label": "Primary underline"
+      }
+    },
+    {
+      "id": "input-26",
+      "name": "Secondary underline input",
+      "component": "Input",
+      "props": {
+        "className": "input-underline sm secondary",
+        "placeholder": "Secondary underline input",
+        "label": "Secondary underline"
+      }
+    },
+    {
+      "id": "input-27",
+      "name": "Success underline input",
+      "component": "Input",
+      "props": {
+        "className": "input-underline sm success",
+        "placeholder": "Success underline input",
+        "label": "Success underline"
+      }
+    },
+    {
+      "id": "input-28",
+      "name": "Danger underline input",
+      "component": "Input",
+      "props": {
+        "className": "input-underline sm danger",
+        "placeholder": "Danger underline input",
+        "label": "Danger underline"
+      }
+    },
+    {
+      "id": "input-29",
+      "name": "Warning underline input",
+      "component": "Input",
+      "props": {
+        "className": "input-underline sm warning",
+        "placeholder": "Warning underline input",
+        "label": "Warning underline"
+      }
+    },
+    {
+      "id": "input-30",
+      "name": "Info underline input",
+      "component": "Input",
+      "props": {
+        "className": "input-underline sm info",
+        "placeholder": "Info underline input",
+        "label": "Info underline"
+      }
+    },
+    {
+      "id": "input-31",
+      "name": "Disabled underline input",
+      "component": "Input",
+      "props": {
+        "className": "input-underline sm disabled",
+        "placeholder": "Disabled underline input",
+        "label": "Disabled underline",
+        "disabled": true
+      }
+    },
+    {
+      "id": "input-32",
+      "name": "Primary neumorphic input",
+      "component": "Input",
+      "props": {
+        "className": "input-neumorphic sm primary",
+        "placeholder": "Primary neumorphic input",
+        "label": "Primary neumorphic"
+      }
+    },
+    {
+      "id": "input-33",
+      "name": "Secondary neumorphic input",
+      "component": "Input",
+      "props": {
+        "className": "input-neumorphic sm secondary",
+        "placeholder": "Secondary neumorphic input",
+        "label": "Secondary neumorphic"
+      }
+    },
+    {
+      "id": "input-34",
+      "name": "Success neumorphic input",
+      "component": "Input",
+      "props": {
+        "className": "input-neumorphic sm success",
+        "placeholder": "Success neumorphic input",
+        "label": "Success neumorphic"
+      }
+    },
+    {
+      "id": "input-35",
+      "name": "Danger neumorphic input",
+      "component": "Input",
+      "props": {
+        "className": "input-neumorphic sm danger",
+        "placeholder": "Danger neumorphic input",
+        "label": "Danger neumorphic"
+      }
+    },
+    {
+      "id": "input-36",
+      "name": "Warning neumorphic input",
+      "component": "Input",
+      "props": {
+        "className": "input-neumorphic sm warning",
+        "placeholder": "Warning neumorphic input",
+        "label": "Warning neumorphic"
+      }
+    },
+    {
+      "id": "input-37",
+      "name": "Info neumorphic input",
+      "component": "Input",
+      "props": {
+        "className": "input-neumorphic sm info",
+        "placeholder": "Info neumorphic input",
+        "label": "Info neumorphic"
+      }
+    },
+    {
+      "id": "input-38",
+      "name": "Disabled neumorphic input",
+      "component": "Input",
+      "props": {
+        "className": "input-neumorphic sm disabled",
+        "placeholder": "Disabled neumorphic input",
+        "label": "Disabled neumorphic",
+        "disabled": true
+      }
+    },
+    {
+      "id": "input-39",
+      "name": "Primary elevated input",
+      "component": "Input",
+      "props": {
+        "className": "input-elevated sm primary",
+        "placeholder": "Primary elevated input",
+        "label": "Primary elevated"
+      }
+    },
+    {
+      "id": "input-40",
+      "name": "Secondary elevated input",
+      "component": "Input",
+      "props": {
+        "className": "input-elevated sm secondary",
+        "placeholder": "Secondary elevated input",
+        "label": "Secondary elevated"
+      }
+    },
+    {
+      "id": "input-41",
+      "name": "Success elevated input",
+      "component": "Input",
+      "props": {
+        "className": "input-elevated sm success",
+        "placeholder": "Success elevated input",
+        "label": "Success elevated"
+      }
+    },
+    {
+      "id": "input-42",
+      "name": "Danger elevated input",
+      "component": "Input",
+      "props": {
+        "className": "input-elevated sm danger",
+        "placeholder": "Danger elevated input",
+        "label": "Danger elevated"
+      }
+    },
+    {
+      "id": "input-43",
+      "name": "Warning elevated input",
+      "component": "Input",
+      "props": {
+        "className": "input-elevated sm warning",
+        "placeholder": "Warning elevated input",
+        "label": "Warning elevated"
+      }
+    },
+    {
+      "id": "input-44",
+      "name": "Info elevated input",
+      "component": "Input",
+      "props": {
+        "className": "input-elevated sm info",
+        "placeholder": "Info elevated input",
+        "label": "Info elevated"
+      }
+    },
+    {
+      "id": "input-45",
+      "name": "Disabled elevated input",
+      "component": "Input",
+      "props": {
+        "className": "input-elevated sm disabled",
+        "placeholder": "Disabled elevated input",
+        "label": "Disabled elevated",
+        "disabled": true
+      }
+    },
+    {
+      "id": "input-46",
+      "name": "Classic glass input",
+      "component": "Input",
+      "props": {
+        "className": "input-glass sm classic",
+        "placeholder": "Classic glass input",
+        "label": "Classic glass"
+      }
+    },
+    {
+      "id": "input-47",
+      "name": "Primary glass input",
+      "component": "Input",
+      "props": {
+        "className": "input-glass sm primary",
+        "placeholder": "Primary glass input",
+        "label": "Primary glass"
+      }
+    },
+    {
+      "id": "input-48",
+      "name": "Secondary glass input",
+      "component": "Input",
+      "props": {
+        "className": "input-glass sm secondary",
+        "placeholder": "Secondary glass input",
+        "label": "Secondary glass"
+      }
+    },
+    {
+      "id": "input-49",
+      "name": "Success glass input",
+      "component": "Input",
+      "props": {
+        "className": "input-glass sm success",
+        "placeholder": "Success glass input",
+        "label": "Success glass"
+      }
+    },
+    {
+      "id": "input-50",
+      "name": "Danger glass input",
+      "component": "Input",
+      "props": {
+        "className": "input-glass sm danger",
+        "placeholder": "Danger glass input",
+        "label": "Danger glass"
+      }
+    },
+    {
+      "id": "input-51",
+      "name": "Warning glass input",
+      "component": "Input",
+      "props": {
+        "className": "input-glass sm warning",
+        "placeholder": "Warning glass input",
+        "label": "Warning glass"
+      }
+    },
+    {
+      "id": "input-52",
+      "name": "Info glass input",
+      "component": "Input",
+      "props": {
+        "className": "input-glass sm info",
+        "placeholder": "Info glass input",
+        "label": "Info glass"
+      }
+    },
+    {
+      "id": "input-53",
+      "name": "Disabled glass input",
+      "component": "Input",
+      "props": {
+        "className": "input-glass sm disabled",
+        "placeholder": "Disabled glass input",
+        "label": "Disabled glass",
+        "disabled": true
+      }
+    }
+  ]
+}

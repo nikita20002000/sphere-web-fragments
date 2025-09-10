@@ -3,6 +3,7 @@ import React, {StrictMode} from 'react';
 import ReactDOM from 'react-dom/client';
 import './styles/index.scss'
 export {  Button } from './components/ui-components/buttons/Button';
+export {  Input } from './components/ui-components/inputs/Input';
 
 // Импорт корневого компонента приложения
 import App from './app';
