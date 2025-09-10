@@ -37,7 +37,7 @@ body {
   display: flex;
   flex: 1;
   overflow: hidden;
-  min-height: calc(100vh - var(--header-height));
+  min-height: calc(100dvh - var(--header-height));
 }
 
 /* Content */

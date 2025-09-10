@@ -4,7 +4,7 @@
 .elements {
   &-container {
     position: relative;
-    height: calc(100vh - var(--header-height) - var(--category-header-height) - var(--spacing-lg) - var(--spacing-md) - (var(--spacing-s) * 2) - 1rem);
+    height: calc(100dvh - var(--header-height) - var(--category-header-height) - var(--spacing-lg) - var(--spacing-md) - (var(--spacing-s) * 2) - 1rem);
     overflow-y: auto;
     margin-bottom: sizes.$spacing-md;
   }
@@ -70,7 +70,7 @@
     border-radius: sizes.$border-radius-md;
     width: 90%;
     max-width: 800px;
-    max-height: 90vh;
+    max-height: 90dvh;
     overflow-y: auto;
     box-shadow: var(--box-shadow);
   }
