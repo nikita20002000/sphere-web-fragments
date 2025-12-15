@@ -1,0 +1,178 @@
+{
+  "name": "Tables",
+  "elements": [
+    {
+      "id": "tbl-1",
+      "name": "Simple elevated table",
+      "component": "Table",
+      "props": {
+        "variant": "elevated",
+        "columns": [
+          { "key": "name", "title": "Name" },
+          { "key": "role", "title": "Role" },
+          { "key": "status", "title": "Status" }
+        ],
+        "rows": [
+          { "id": 1, "name": "Alice", "role": "Designer", "status": "Active" },
+          { "id": 2, "name": "Bob", "role": "Developer", "status": "Offline" },
+          { "id": 3, "name": "Charlie", "role": "Manager", "status": "Busy" }
+        ]
+      }
+    },
+    {
+      "id": "tbl-2",
+      "name": "Bordered table",
+      "component": "Table",
+      "props": {
+        "variant": "bordered",
+        "columns": [
+          { "key": "id", "title": "#" },
+          { "key": "product", "title": "Product" },
+          { "key": "price", "title": "Price" }
+        ],
+        "rows": [
+          { "id": 1, "product": "Subscription", "price": "$19/mo" },
+          { "id": 2, "product": "License", "price": "$199" },
+          { "id": 3, "product": "Support", "price": "$49/mo" }
+        ]
+      }
+    },
+    {
+      "id": "tbl-3",
+      "name": "Striped table",
+      "component": "Table",
+      "props": {
+        "variant": "striped",
+        "columns": [
+          { "key": "country", "title": "Country" },
+          { "key": "city", "title": "City" },
+          { "key": "population", "title": "Population" }
+        ],
+        "rows": [
+          { "id": 1, "country": "USA", "city": "New York", "population": "8.3M" },
+          { "id": 2, "country": "Germany", "city": "Berlin", "population": "3.6M" },
+          { "id": 3, "country": "Japan", "city": "Tokyo", "population": "13.9M" }
+        ]
+      }
+    },
+    {
+      "id": "tbl-4",
+      "name": "Small table",
+      "component": "Table",
+      "props": {
+        "size": "sm",
+        "columns": [
+          { "key": "time", "title": "Time" },
+          { "key": "event", "title": "Event" }
+        ],
+        "rows": [
+          { "id": 1, "time": "09:00", "event": "Standup" },
+          { "id": 2, "time": "11:30", "event": "Design review" },
+          { "id": 3, "time": "16:00", "event": "Demo" }
+        ]
+      }
+    },
+    {
+      "id": "tbl-5",
+      "name": "Large table",
+      "component": "Table",
+      "props": {
+        "size": "lg",
+        "columns": [
+          { "key": "plan", "title": "Plan" },
+          { "key": "users", "title": "Users" },
+          { "key": "storage", "title": "Storage" }
+        ],
+        "rows": [
+          { "id": 1, "plan": "Free", "users": "1", "storage": "5 GB" },
+          { "id": 2, "plan": "Team", "users": "10", "storage": "100 GB" },
+          { "id": 3, "plan": "Enterprise", "users": "Unlimited", "storage": "Custom" }
+        ]
+      }
+    },
+    {
+      "id": "tbl-6",
+      "name": "Status table",
+      "component": "Table",
+      "props": {
+        "columns": [
+          { "key": "service", "title": "Service" },
+          { "key": "region", "title": "Region" },
+          { "key": "state", "title": "State" }
+        ],
+        "rows": [
+          { "id": 1, "service": "Auth", "region": "EU", "state": "Operational" },
+          { "id": 2, "service": "API", "region": "US", "state": "Degraded" },
+          { "id": 3, "service": "Billing", "region": "Global", "state": "Maintenance" }
+        ]
+      }
+    },
+    {
+      "id": "tbl-7",
+      "name": "Compact log table",
+      "component": "Table",
+      "props": {
+        "size": "sm",
+        "variant": "striped",
+        "columns": [
+          { "key": "level", "title": "Level" },
+          { "key": "message", "title": "Message" }
+        ],
+        "rows": [
+          { "id": 1, "level": "info", "message": "Server started" },
+          { "id": 2, "level": "warn", "message": "High memory usage" },
+          { "id": 3, "level": "error", "message": "Database connection lost" }
+        ]
+      }
+    },
+    {
+      "id": "tbl-8",
+      "name": "Two-column table",
+      "component": "Table",
+      "props": {
+        "columns": [
+          { "key": "key", "title": "Key" },
+          { "key": "value", "title": "Value" }
+        ],
+        "rows": [
+          { "id": 1, "key": "Theme", "value": "Dark" },
+          { "id": 2, "key": "Language", "value": "English" },
+          { "id": 3, "key": "Timezone", "value": "UTC+3" }
+        ]
+      }
+    },
+    {
+      "id": "tbl-9",
+      "name": "Empty rows table",
+      "component": "Table",
+      "props": {
+        "columns": [
+          { "key": "column1", "title": "Column 1" },
+          { "key": "column2", "title": "Column 2" }
+        ],
+        "rows": []
+      }
+    },
+    {
+      "id": "tbl-10",
+      "name": "Many rows table",
+      "component": "Table",
+      "props": {
+        "variant": "striped",
+        "columns": [
+          { "key": "index", "title": "#" },
+          { "key": "value", "title": "Value" }
+        ],
+        "rows": [
+          { "id": 1, "index": 1, "value": "Row 1" },
+          { "id": 2, "index": 2, "value": "Row 2" },
+          { "id": 3, "index": 3, "value": "Row 3" },
+          { "id": 4, "index": 4, "value": "Row 4" },
+          { "id": 5, "index": 5, "value": "Row 5" }
+        ]
+      }
+    }
+  ]
+}
+
+

@@ -1,0 +1,70 @@
+@use '../styles/_colors' as colors;
+@use '../styles/_fonts' as fonts;
+
+.sf-table {
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid colors.$gray-400;
+  background: colors.$gray-100;
+  box-shadow: 0 4px 12px colors.$soft-dark-shadow;
+  overflow: hidden;
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: fonts.$bt-default-font;
+    font-size: fonts.$font-size-sm;
+    color: colors.$gray-800;
+  }
+
+  thead {
+    background: colors.$primary-100;
+
+    th {
+      text-align: left;
+      padding: 0.75rem 1rem;
+      font-weight: fonts.$bt-semibold-font-weight;
+      border-bottom: 1px solid colors.$primary-200;
+    }
+  }
+
+  tbody tr {
+    transition: 0.15s ease;
+  }
+
+  tbody td {
+    padding: 0.6rem 1rem;
+    border-bottom: 1px solid colors.$gray-400;
+  }
+
+  &--bordered {
+    background: colors.$gray-100;
+    box-shadow: none;
+
+    tbody td {
+      border-right: 1px solid colors.$gray-400;
+    }
+  }
+
+  &--striped {
+    tbody tr:nth-child(odd) {
+      background: colors.$gray-200;
+    }
+  }
+
+  &--sm {
+    thead th,
+    tbody td {
+      padding: 0.4rem 0.7rem;
+    }
+  }
+
+  &--lg {
+    thead th,
+    tbody td {
+      padding: 0.9rem 1.2rem;
+    }
+  }
+}
+
+

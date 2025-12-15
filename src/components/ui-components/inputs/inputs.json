@@ -1,0 +1,107 @@
+{
+  "name": "Inputs",
+  "elements": [
+    {
+      "id": "input-1",
+      "name": "Filled input",
+      "component": "Input",
+      "props": {
+        "label": "Full name",
+        "placeholder": "John Doe"
+      }
+    },
+    {
+      "id": "input-2",
+      "name": "Filled input with helper",
+      "component": "Input",
+      "props": {
+        "label": "Email",
+        "placeholder": "you@example.com",
+        "helperText": "We will never share your email."
+      }
+    },
+    {
+      "id": "input-3",
+      "name": "Filled input with error",
+      "component": "Input",
+      "props": {
+        "label": "Email",
+        "placeholder": "you@example.com",
+        "error": "Please enter a valid email"
+      }
+    },
+    {
+      "id": "input-4",
+      "name": "Outlined input",
+      "component": "Input",
+      "props": {
+        "label": "Company",
+        "placeholder": "Sphere Studio",
+        "variant": "outline"
+      }
+    },
+    {
+      "id": "input-5",
+      "name": "Ghost input",
+      "component": "Input",
+      "props": {
+        "label": "Search",
+        "placeholder": "Type to search...",
+        "variant": "ghost"
+      }
+    },
+    {
+      "id": "input-6",
+      "name": "Small input",
+      "component": "Input",
+      "props": {
+        "label": "Initials",
+        "placeholder": "JD",
+        "size": "sm"
+      }
+    },
+    {
+      "id": "input-7",
+      "name": "Large input",
+      "component": "Input",
+      "props": {
+        "label": "Address",
+        "placeholder": "Street, house, apartment",
+        "size": "lg"
+      }
+    },
+    {
+      "id": "input-8",
+      "name": "Disabled-looking input",
+      "component": "Input",
+      "props": {
+        "label": "Disabled",
+        "placeholder": "Read only value",
+        "value": "Readonly",
+        "readOnly": true
+      }
+    },
+    {
+      "id": "input-9",
+      "name": "Password input",
+      "component": "Input",
+      "props": {
+        "label": "Password",
+        "placeholder": "••••••••",
+        "type": "password"
+      }
+    },
+    {
+      "id": "input-10",
+      "name": "Input with long helper text",
+      "component": "Input",
+      "props": {
+        "label": "Promo code",
+        "placeholder": "SUMMER2025",
+        "helperText": "Optional field. If you have a promo code, enter it here to get a discount."
+      }
+    }
+  ]
+}
+
+

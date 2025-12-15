@@ -29,6 +29,14 @@ const Header = ({ searchQuery, onSearchChange }) => {
                 </svg>
                 <h1>СФЕРА UI Components</h1>
             </div>
+
+            <div className="header-search">
+                <Search
+                    value={searchQuery}
+                    onChange={onSearchChange}
+                    placeholder="Search components…"
+                />
+            </div>
         </header>
     );
 };

@@ -1,0 +1,106 @@
+{
+  "name": "Toggles",
+  "elements": [
+    {
+      "id": "tg-1",
+      "name": "Primary toggle",
+      "component": "Toggle",
+      "props": {
+        "label": "Enable feature",
+        "description": "Turns on the main feature"
+      }
+    },
+    {
+      "id": "tg-2",
+      "name": "Primary checked",
+      "component": "Toggle",
+      "props": {
+        "label": "Enabled by default",
+        "description": "Already switched on",
+        "defaultChecked": true
+      }
+    },
+    {
+      "id": "tg-3",
+      "name": "Success toggle",
+      "component": "Toggle",
+      "props": {
+        "label": "Success",
+        "description": "Indicates a positive state",
+        "color": "success",
+        "defaultChecked": true
+      }
+    },
+    {
+      "id": "tg-4",
+      "name": "Danger toggle",
+      "component": "Toggle",
+      "props": {
+        "label": "Danger",
+        "description": "Use with risky settings",
+        "color": "danger"
+      }
+    },
+    {
+      "id": "tg-5",
+      "name": "Warning toggle",
+      "component": "Toggle",
+      "props": {
+        "label": "Beta features",
+        "description": "May be unstable",
+        "color": "warning",
+        "defaultChecked": true
+      }
+    },
+    {
+      "id": "tg-6",
+      "name": "Info toggle",
+      "component": "Toggle",
+      "props": {
+        "label": "Analytics",
+        "description": "Share anonymous usage data",
+        "color": "info"
+      }
+    },
+    {
+      "id": "tg-7",
+      "name": "Small toggle",
+      "component": "Toggle",
+      "props": {
+        "label": "Compact",
+        "description": "Used in dense lists",
+        "size": "sm"
+      }
+    },
+    {
+      "id": "tg-8",
+      "name": "Large toggle",
+      "component": "Toggle",
+      "props": {
+        "label": "Mobile friendly",
+        "description": "Extra large thumb for touch",
+        "size": "lg"
+      }
+    },
+    {
+      "id": "tg-9",
+      "name": "Toggle without description",
+      "component": "Toggle",
+      "props": {
+        "label": "Label only"
+      }
+    },
+    {
+      "id": "tg-10",
+      "name": "Long description toggle",
+      "component": "Toggle",
+      "props": {
+        "label": "Background sync",
+        "description": "Keep data synchronized in the background even when the app is closed. May slightly increase battery usage.",
+        "defaultChecked": true
+      }
+    }
+  ]
+}
+
+

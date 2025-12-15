@@ -1,0 +1,105 @@
+{
+  "name": "Checkboxes",
+  "elements": [
+    {
+      "id": "cb-1",
+      "name": "Default checkbox",
+      "component": "Checkbox",
+      "props": {
+        "label": "Default checkbox",
+        "description": "Simple checkbox for generic use"
+      }
+    },
+    {
+      "id": "cb-2",
+      "name": "Checked checkbox",
+      "component": "Checkbox",
+      "props": {
+        "label": "Checked",
+        "description": "Pre-checked checkbox",
+        "defaultChecked": true
+      }
+    },
+    {
+      "id": "cb-3",
+      "name": "Success checkbox",
+      "component": "Checkbox",
+      "props": {
+        "label": "Success state",
+        "description": "Used for successful operations",
+        "state": "success",
+        "defaultChecked": true
+      }
+    },
+    {
+      "id": "cb-4",
+      "name": "Danger checkbox",
+      "component": "Checkbox",
+      "props": {
+        "label": "Danger state",
+        "description": "Use with destructive actions",
+        "state": "danger"
+      }
+    },
+    {
+      "id": "cb-5",
+      "name": "Warning checkbox",
+      "component": "Checkbox",
+      "props": {
+        "label": "Warning state",
+        "description": "For potentially risky actions",
+        "state": "warning"
+      }
+    },
+    {
+      "id": "cb-6",
+      "name": "Small checkbox",
+      "component": "Checkbox",
+      "props": {
+        "label": "Small",
+        "description": "Compact checkbox for dense UIs",
+        "size": "sm"
+      }
+    },
+    {
+      "id": "cb-7",
+      "name": "Large checkbox",
+      "component": "Checkbox",
+      "props": {
+        "label": "Large",
+        "description": "For touch devices or high emphasis",
+        "size": "lg"
+      }
+    },
+    {
+      "id": "cb-8",
+      "name": "Checkbox with long description",
+      "component": "Checkbox",
+      "props": {
+        "label": "Terms and conditions",
+        "description": "I agree to the processing of my personal data and accept the terms of the user agreement.",
+        "defaultChecked": true
+      }
+    },
+    {
+      "id": "cb-9",
+      "name": "Settings-like checkbox",
+      "component": "Checkbox",
+      "props": {
+        "label": "Enable notifications",
+        "description": "Receive weekly email updates"
+      }
+    },
+    {
+      "id": "cb-10",
+      "name": "Muted checkbox",
+      "component": "Checkbox",
+      "props": {
+        "label": "Muted style",
+        "description": "Checkbox without description"
+      }
+    }
+  ]
+}
+
+

@@ -64,6 +64,29 @@ body {
   font-size: sizes.$font-size-md;
 }
 
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: sizes.$spacing-xl;
+  border-radius: sizes.$border-radius-lg;
+  background-color: var(--color-bg-secondary);
+  border: 1px dashed var(--color-border-light);
+  color: var(--color-text-secondary);
+  box-shadow: var(--shadow-sm);
+
+  h2 {
+    margin-bottom: sizes.$spacing-sm;
+    font-size: sizes.$font-size-xl;
+    color: var(--color-text-primary);
+  }
+
+  p {
+    font-size: sizes.$font-size-md;
+  }
+}
+
 
 /* Responsive App Design */
 @media (max-width: sizes.$adaptive-mobile) {

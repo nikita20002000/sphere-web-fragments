@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Header, Sidebar, ElementsWrapper, Menu } from './components';
 import { filterElements } from './utils/filterElements';
 import categories from './data/categories';
@@ -7,6 +7,14 @@ import { ThemeProvider } from './context/ThemeContext';
 const App = () => {
     const [selectedCategory, setSelectedCategory] = useState('buttons');
     const [searchQuery, setSearchQuery] = useState('');
+
+    // Автоматически переключаемся в режим поиска,
+    // когда пользователь что‑то вводит в строку поиска
+    useEffect(() => {
+        if (searchQuery && selectedCategory !== 'search') {
+            setSelectedCategory('search');
+        }
+    }, [searchQuery, selectedCategory]);
 
     // Get elements of the current category
     let currentCategory = [];
@@ -47,14 +55,27 @@ const App = () => {
 
                     <div className="content">
                         <div className="category-header">
-                            <h1>{selectedCategory === 'search' ? 'Search Results' : categories[selectedCategory]?.name || 'UI Components'}</h1>
+                            <h1>
+                                {selectedCategory === 'search'
+                                    ? 'Search results'
+                                    : categories[selectedCategory]?.name || 'UI Components'}
+                            </h1>
                             <p className="component-count">
                                 {filteredElements.length} component{filteredElements.length !== 1 ? 's' : ''}
-                                {searchQuery && ` matching "${searchQuery}"`}
+                                {searchQuery && ` matching “${searchQuery}”`}
                             </p>
                         </div>
 
-                        <ElementsWrapper elements={filteredElements} />
+                        {filteredElements.length === 0 ? (
+                            <div className="empty-state">
+                                <h2>No components found</h2>
+                                <p>
+                                    Try changing your search query or select another category in the navigation.
+                                </p>
+                            </div>
+                        ) : (
+                            <ElementsWrapper elements={filteredElements} />
+                        )}
                     </div>
                 </div>
             </div>
